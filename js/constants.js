@@ -17,3 +17,25 @@ window.CA_DEFAULTS = {
   annualInsurance: 1500,            // CA homeowners avg
   appreciationRate: 0.03,           // 3% CA long-term avg
 };
+
+// Comfort level presets for affordability calculation
+window.COMFORT_LEVELS = {
+  conservative: {
+    label: 'Conservative',
+    frontEndDTI: 0.25,    // 25% of income to housing
+    backEndDTI: 0.33,     // 33% of income to all debts
+    bufferRate: 0.15,     // Keep 15% of income as cushion
+  },
+  standard: {
+    label: 'Standard',
+    frontEndDTI: 0.28,    // 28% of income to housing
+    backEndDTI: 0.36,     // 36% of income to all debts
+    bufferRate: 0.10,     // Keep 10% of income as cushion
+  },
+  aggressive: {
+    label: 'Aggressive',
+    frontEndDTI: 0.31,    // 31% of income to housing
+    backEndDTI: 0.43,     // 43% of income to all debts (max lenders accept)
+    bufferRate: 0.05,     // Keep 5% of income as cushion
+  },
+};
