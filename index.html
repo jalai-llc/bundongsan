@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bundongsan — California Real Estate Investment Evaluator</title>
+  <title>NestReady — Your Path to Homeownership & Investment</title>
   <meta name="description" content="Free California real estate investment calculator. Find affordable neighborhoods ranked by ROI based on your financial situation.">
 
   <!-- Tailwind CSS v4 Play CDN -->
@@ -14,6 +14,7 @@
   <script src="js/utils.js"></script>
   <script src="js/formulas.js"></script>
   <script src="js/neighborhood-data.js"></script>
+  <script src="js/zipcode-coords.js"></script>
 
   <!-- Alpine.js Persist Plugin (must come before Alpine core) -->
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3/dist/cdn.min.js"></script>
@@ -26,299 +27,380 @@
     [x-cloak] { display: none !important; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col" x-data="bundongsan">
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col" x-data="nestready">
 
   <!-- Header -->
   <header class="bg-slate-900 text-white px-4 py-3">
-    <div class="max-w-5xl mx-auto">
-      <h1 class="text-lg font-bold tracking-tight">Bundongsan</h1>
-      <p class="text-xs text-slate-400">California Real Estate Investment Evaluator</p>
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-lg font-bold tracking-tight">NestReady</h1>
+      <p class="text-xs text-slate-400">Your Path to Homeownership & Investment</p>
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto w-full px-4 py-6 flex-1 space-y-8">
+  <main class="max-w-7xl mx-auto w-full px-4 py-6 flex-1">
+    <!-- Instruction Steps -->
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-600 mb-6">
+      <div class="flex items-center gap-2">
+        <span class="flex items-center justify-center w-5 h-5 rounded-full bg-slate-900 text-white text-xs font-medium">1</span>
+        <span>Enter your finances</span>
+      </div>
+      <span class="text-slate-300 hidden sm:inline">→</span>
+      <div class="flex items-center gap-2">
+        <span class="flex items-center justify-center w-5 h-5 rounded-full bg-slate-900 text-white text-xs font-medium">2</span>
+        <span>See your buying power & what's limiting you</span>
+      </div>
+      <span class="text-slate-300 hidden sm:inline">→</span>
+      <div class="flex items-center gap-2">
+        <span class="flex items-center justify-center w-5 h-5 rounded-full bg-slate-900 text-white text-xs font-medium">3</span>
+        <span>Explore neighborhoods you can afford</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-6">
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- SECTION 1: Your Finances                                        -->
+    <!-- LEFT COLUMN: Financial Inputs (appears first on mobile)        -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <section>
-      <h2 class="text-lg font-semibold text-slate-800 mb-1">Your Finances</h2>
-      <p class="text-sm text-slate-500 mb-4">Enter your financial situation to see which neighborhoods you can afford</p>
+    <div class="space-y-4">
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="bg-white rounded-lg border p-4">
-          <label class="block text-sm font-medium text-slate-600 mb-1">
-            Gross Annual Income <span class="text-red-500">*</span>
-          </label>
-          <div class="relative">
-            <span class="absolute left-3 top-2 text-slate-400 text-sm">$</span>
-            <input type="text" x-model.number="grossAnnualIncome" inputmode="decimal"
-              placeholder="e.g. 150000"
-              class="w-full rounded-lg border border-slate-300 pl-7 pr-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none">
+    <!-- Your Finances -->
+    <section class="bg-white rounded-lg border p-4">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="text-sm font-semibold text-slate-800">Your Finances</h2>
+        <button @click="resetAll()" class="text-xs text-slate-500 hover:text-red-600 transition-colors">Reset All</button>
+      </div>
+      <div class="space-y-3">
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-medium text-slate-600 mb-1">Annual Income <span class="text-red-500">*</span></label>
+            <div class="relative">
+              <span class="absolute left-2 top-1.5 text-slate-400 text-xs">$</span>
+              <input type="text" inputmode="decimal"
+                x-effect="if (document.activeElement !== $el) $el.value = formatNumberWithCommas(grossAnnualIncome)"
+                @input="grossAnnualIncome = parseNumberInput($event.target.value)"
+                @blur="$event.target.value = formatNumberWithCommas(grossAnnualIncome)"
+                placeholder="150,000"
+                class="w-full rounded border border-slate-300 pl-5 pr-2 py-1.5 text-sm focus:border-blue-500 outline-none">
+            </div>
           </div>
-          <p class="text-xs text-slate-400 mt-1" x-show="grossAnnualIncome > 0" x-text="fmt(grossMonthlyIncome) + '/mo gross'"></p>
+          <div>
+            <label class="block text-xs font-medium text-slate-600 mb-1">Savings <span class="text-red-500">*</span></label>
+            <div class="relative">
+              <span class="absolute left-2 top-1.5 text-slate-400 text-xs">$</span>
+              <input type="text" inputmode="decimal"
+                x-effect="if (document.activeElement !== $el) $el.value = formatNumberWithCommas(savingsAvailable)"
+                @input="savingsAvailable = parseNumberInput($event.target.value)"
+                @blur="$event.target.value = formatNumberWithCommas(savingsAvailable)"
+                placeholder="100,000"
+                class="w-full rounded border border-slate-300 pl-5 pr-2 py-1.5 text-sm focus:border-blue-500 outline-none">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-600 mb-1">Monthly Debts</label>
+            <div class="relative">
+              <span class="absolute left-2 top-1.5 text-slate-400 text-xs">$</span>
+              <input type="text" inputmode="decimal"
+                x-effect="if (document.activeElement !== $el) $el.value = formatNumberWithCommas(monthlyDebts)"
+                @input="monthlyDebts = parseNumberInput($event.target.value)"
+                @blur="$event.target.value = formatNumberWithCommas(monthlyDebts)"
+                placeholder="500"
+                class="w-full rounded border border-slate-300 pl-5 pr-2 py-1.5 text-sm focus:border-blue-500 outline-none">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-600 mb-1">Current Rent</label>
+            <div class="relative">
+              <span class="absolute left-2 top-1.5 text-slate-400 text-xs">$</span>
+              <input type="text" inputmode="decimal"
+                x-effect="if (document.activeElement !== $el) $el.value = formatNumberWithCommas(currentRent)"
+                @input="currentRent = parseNumberInput($event.target.value)"
+                @blur="$event.target.value = formatNumberWithCommas(currentRent)"
+                placeholder="2,500"
+                class="w-full rounded border border-slate-300 pl-5 pr-2 py-1.5 text-sm focus:border-blue-500 outline-none">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-600 mb-1">Other Expenses</label>
+            <div class="relative">
+              <span class="absolute left-2 top-1.5 text-slate-400 text-xs">$</span>
+              <input type="text" inputmode="decimal"
+                x-effect="if (document.activeElement !== $el) $el.value = formatNumberWithCommas(otherExpenses)"
+                @input="otherExpenses = parseNumberInput($event.target.value)"
+                @blur="$event.target.value = formatNumberWithCommas(otherExpenses)"
+                placeholder="0"
+                class="w-full rounded border border-slate-300 pl-5 pr-2 py-1.5 text-sm focus:border-blue-500 outline-none">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-600 mb-1">Monthly Savings</label>
+            <div class="relative">
+              <span class="absolute left-2 top-1.5 text-slate-400 text-xs">$</span>
+              <input type="text" inputmode="decimal"
+                x-effect="if (document.activeElement !== $el) $el.value = formatNumberWithCommas(monthlySavings)"
+                @input="monthlySavings = parseNumberInput($event.target.value)"
+                @blur="$event.target.value = formatNumberWithCommas(monthlySavings)"
+                placeholder="0"
+                class="w-full rounded border border-slate-300 pl-5 pr-2 py-1.5 text-sm focus:border-blue-500 outline-none">
+            </div>
+          </div>
         </div>
-        <div class="bg-white rounded-lg border p-4">
-          <label class="block text-sm font-medium text-slate-600 mb-1">
-            Monthly Debt Payments
-          </label>
-          <div class="relative">
-            <span class="absolute left-3 top-2 text-slate-400 text-sm">$</span>
-            <input type="text" x-model.number="monthlyDebts" inputmode="decimal"
-              placeholder="Car, student loans, CC"
-              class="w-full rounded-lg border border-slate-300 pl-7 pr-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none">
-          </div>
-        </div>
-        <div class="bg-white rounded-lg border p-4">
-          <label class="block text-sm font-medium text-slate-600 mb-1">
-            Current Rent
-          </label>
-          <div class="relative">
-            <span class="absolute left-3 top-2 text-slate-400 text-sm">$</span>
-            <input type="text" x-model.number="currentRent" inputmode="decimal"
-              placeholder="What you pay now"
-              class="w-full rounded-lg border border-slate-300 pl-7 pr-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none">
-          </div>
-          <p class="text-xs text-slate-400 mt-1">For rent vs buy comparison</p>
-        </div>
-        <div class="bg-white rounded-lg border p-4">
-          <label class="block text-sm font-medium text-slate-600 mb-1">
-            Other Expenses
-          </label>
-          <div class="relative">
-            <span class="absolute left-3 top-2 text-slate-400 text-sm">$</span>
-            <input type="text" x-model.number="otherExpenses" inputmode="decimal"
-              placeholder="Food, utilities, etc."
-              class="w-full rounded-lg border border-slate-300 pl-7 pr-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none">
-          </div>
-        </div>
-        <div class="bg-white rounded-lg border p-4">
-          <label class="block text-sm font-medium text-slate-600 mb-1">
-            Savings Available <span class="text-red-500">*</span>
-          </label>
-          <div class="relative">
-            <span class="absolute left-3 top-2 text-slate-400 text-sm">$</span>
-            <input type="text" x-model.number="savingsAvailable" inputmode="decimal"
-              placeholder="For down payment + closing"
-              class="w-full rounded-lg border border-slate-300 pl-7 pr-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none">
-          </div>
-        </div>
-        <div class="bg-white rounded-lg border p-4">
-          <label class="block text-sm font-medium text-slate-600 mb-1">
-            Monthly Savings
-          </label>
-          <div class="relative">
-            <span class="absolute left-3 top-2 text-slate-400 text-sm">$</span>
-            <input type="text" x-model.number="monthlySavings" inputmode="decimal"
-              placeholder="How much you save/mo"
-              class="w-full rounded-lg border border-slate-300 pl-7 pr-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none">
-          </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-600 mb-1">Tax Rate: <span x-text="effectiveTaxRate + '%'"></span></label>
+          <input type="range" x-model.number="effectiveTaxRate" min="15" max="50" step="1"
+            class="w-full accent-blue-600">
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- SECTION 2: Loan Preferences                                     -->
-    <!-- ═══════════════════════════════════════════════════════════════ -->
-    <section>
-      <h2 class="text-base font-semibold text-slate-700 mb-1">Loan Preferences</h2>
-      <p class="text-xs text-slate-400 mb-3">Adjust these to match your expected financing terms</p>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="bg-white rounded-lg border p-4">
-          <label class="block text-xs font-medium text-slate-600 mb-1">Interest Rate</label>
-          <div class="flex items-center gap-2">
+    <!-- Loan Preferences -->
+    <section class="bg-white rounded-lg border p-4">
+      <h2 class="text-sm font-semibold text-slate-800 mb-3">Loan Preferences</h2>
+      <div class="space-y-3">
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-medium text-slate-600 mb-1">Down Payment: <span x-text="downPaymentPercent + '%'"></span></label>
+            <input type="range" x-model.number="downPaymentPercent" min="3" max="50" step="1"
+              class="w-full accent-blue-600">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-600 mb-1">Interest: <span x-text="interestRate.toFixed(2) + '%'"></span></label>
             <input type="range" x-model.number="interestRate" min="2" max="12" step="0.125"
-              class="flex-1 accent-blue-600">
-            <span class="text-sm font-mono w-14 text-right" x-text="interestRate.toFixed(2) + '%'"></span>
+              class="w-full accent-blue-600">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-600 mb-1">Property Tax: <span x-text="propertyTaxRate.toFixed(2) + '%'"></span></label>
+            <input type="range" x-model.number="propertyTaxRate" min="0.5" max="2" step="0.05"
+              class="w-full accent-blue-600">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-600 mb-1">Closing: <span x-text="closingCostRate + '%'"></span></label>
+            <input type="range" x-model.number="closingCostRate" min="1" max="6" step="0.5"
+              class="w-full accent-blue-600">
           </div>
         </div>
-        <div class="bg-white rounded-lg border p-4">
-          <label class="block text-xs font-medium text-slate-600 mb-2">Loan Term</label>
+        <div>
+          <label class="block text-xs font-medium text-slate-600 mb-1">Loan Term</label>
           <div class="flex gap-2">
             <button @click="loanTermYears = 30"
-              :class="loanTermYears === 30 ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'"
-              class="flex-1 py-1.5 rounded-lg text-sm font-medium transition-colors">30 yr</button>
+              :class="loanTermYears === 30 ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'"
+              class="flex-1 py-1.5 rounded text-xs font-medium">30 yr</button>
             <button @click="loanTermYears = 15"
-              :class="loanTermYears === 15 ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'"
-              class="flex-1 py-1.5 rounded-lg text-sm font-medium transition-colors">15 yr</button>
+              :class="loanTermYears === 15 ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'"
+              class="flex-1 py-1.5 rounded text-xs font-medium">15 yr</button>
           </div>
         </div>
-        <div class="bg-white rounded-lg border p-4">
-          <label class="block text-xs font-medium text-slate-600 mb-1">Down Payment</label>
-          <div class="flex items-center gap-2">
-            <input type="range" x-model.number="downPaymentPercent" min="3" max="50" step="1"
-              class="flex-1 accent-blue-600">
-            <span class="text-sm font-mono w-10 text-right" x-text="downPaymentPercent + '%'"></span>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg border p-4">
-          <label class="block text-xs font-medium text-slate-600 mb-1">Property Tax Rate</label>
-          <div class="flex items-center gap-2">
-            <input type="range" x-model.number="propertyTaxRate" min="0.5" max="2" step="0.05"
-              class="flex-1 accent-blue-600">
-            <span class="text-sm font-mono w-14 text-right" x-text="propertyTaxRate.toFixed(2) + '%'"></span>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg border p-4">
-          <label class="block text-xs font-medium text-slate-600 mb-1">Closing Costs</label>
-          <div class="flex items-center gap-2">
-            <input type="range" x-model.number="closingCostRate" min="1" max="6" step="0.5"
-              class="flex-1 accent-blue-600">
-            <span class="text-sm font-mono w-10 text-right" x-text="closingCostRate + '%'"></span>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg border p-4">
-          <label class="block text-xs font-medium text-slate-600 mb-2">County Area</label>
-          <div class="flex gap-2">
-            <button @click="isHighCostCounty = true"
-              :class="isHighCostCounty ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'"
-              class="flex-1 py-1.5 rounded-lg text-xs font-medium transition-colors">High-Cost</button>
-            <button @click="isHighCostCounty = false"
-              :class="!isHighCostCounty ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'"
-              class="flex-1 py-1.5 rounded-lg text-xs font-medium transition-colors">Standard</button>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg border p-4 md:col-span-2">
-          <label class="block text-xs font-medium text-slate-600 mb-2">Comfort Level</label>
-          <div class="flex gap-2">
+        <div>
+          <label class="block text-xs font-medium text-slate-600 mb-1">Comfort Level</label>
+          <div class="flex gap-1">
             <button @click="comfortLevel = 'conservative'"
-              :class="comfortLevel === 'conservative' ? 'bg-emerald-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'"
-              class="flex-1 py-1.5 rounded-lg text-xs font-medium transition-colors">Conservative</button>
+              :class="comfortLevel === 'conservative' ? 'bg-emerald-600 text-white' : 'bg-slate-100 text-slate-600'"
+              class="flex-1 py-1 rounded text-xs font-medium">Safe</button>
             <button @click="comfortLevel = 'standard'"
-              :class="comfortLevel === 'standard' ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'"
-              class="flex-1 py-1.5 rounded-lg text-xs font-medium transition-colors">Standard</button>
+              :class="comfortLevel === 'standard' ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'"
+              class="flex-1 py-1 rounded text-xs font-medium">Standard</button>
             <button @click="comfortLevel = 'aggressive'"
-              :class="comfortLevel === 'aggressive' ? 'bg-amber-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'"
-              class="flex-1 py-1.5 rounded-lg text-xs font-medium transition-colors">Aggressive</button>
+              :class="comfortLevel === 'aggressive' ? 'bg-amber-600 text-white' : 'bg-slate-100 text-slate-600'"
+              class="flex-1 py-1 rounded text-xs font-medium">Stretch</button>
           </div>
-          <p class="text-xs text-slate-400 mt-2">
-            <span x-text="comfortConfig.label"></span>:
-            <span x-text="(comfortConfig.frontEndDTI * 100).toFixed(0) + '%'"></span> housing /
-            <span x-text="(comfortConfig.backEndDTI * 100).toFixed(0) + '%'"></span> total debt /
-            <span x-text="(comfortConfig.bufferRate * 100).toFixed(0) + '%'"></span> buffer
-          </p>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-600 mb-1">County</label>
+          <div class="flex gap-1">
+            <button @click="isHighCostCounty = true"
+              :class="isHighCostCounty ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'"
+              class="flex-1 py-1 rounded text-xs">High-Cost</button>
+            <button @click="isHighCostCounty = false"
+              :class="!isHighCostCounty ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'"
+              class="flex-1 py-1 rounded text-xs">Standard</button>
+          </div>
         </div>
       </div>
     </section>
 
+    </div><!-- end LEFT COLUMN -->
+
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- SECTION 3: Your Buying Power (shown when financials entered)    -->
+    <!-- RIGHT COLUMN: Buying Power + Neighborhoods                      -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
+    <div class="space-y-6">
+
+    <!-- Buying Power Placeholder (when no financials entered) -->
+    <section x-show="!hasFinancials" class="text-center py-16 bg-slate-50 rounded-lg border border-dashed border-slate-300">
+      <div class="text-slate-300 text-5xl mb-4">💰</div>
+      <p class="text-lg text-slate-600 mb-2">Your Buying Power</p>
+      <p class="text-sm text-slate-400">Enter your income and savings to see how much home you can afford</p>
+    </section>
+
+    <!-- Buying Power (detailed version with tutorial) -->
     <section x-show="hasFinancials" x-transition class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200 p-5 space-y-5">
+      <!-- Two Constraints Side by Side -->
       <div>
-        <h2 class="text-base font-semibold text-blue-900 mb-3">Your Buying Power</h2>
+        <h2 class="text-base font-semibold text-blue-900 mb-4">Your Buying Power</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Cash Constraint Card -->
+          <div class="rounded-xl p-4 border-2 transition-all"
+            :class="limitingConstraint === 'cash' ? 'bg-amber-50 border-amber-400' : 'bg-white/60 border-transparent'">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="text-sm font-semibold" :class="limitingConstraint === 'cash' ? 'text-amber-800' : 'text-slate-600'">Cash Constraint</h3>
+              <span x-show="limitingConstraint === 'cash'" class="bg-amber-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">LIMITING</span>
+            </div>
+            <p class="text-2xl font-bold mb-3" :class="limitingConstraint === 'cash' ? 'text-amber-900' : 'text-slate-700'" x-text="fmt(maxPriceByCash)"></p>
+            <div class="space-y-1 text-sm" :class="limitingConstraint === 'cash' ? 'text-amber-700' : 'text-slate-500'">
+              <div class="flex justify-between"><span>Your savings</span><span class="font-medium" x-text="fmt(savingsAvailable)"></span></div>
+              <div class="flex justify-between"><span>Down + closing</span><span class="font-medium" x-text="downPaymentPercent + '% + ' + closingCostRate + '%'"></span></div>
+            </div>
+          </div>
+          <!-- Income Constraint Card -->
+          <div class="rounded-xl p-4 border-2 transition-all"
+            :class="limitingConstraint === 'income' ? 'bg-blue-50 border-blue-400' : 'bg-white/60 border-transparent'">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="text-sm font-semibold" :class="limitingConstraint === 'income' ? 'text-blue-800' : 'text-slate-600'">Income Constraint</h3>
+              <span x-show="limitingConstraint === 'income'" class="bg-blue-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">LIMITING</span>
+            </div>
+            <p class="text-2xl font-bold mb-3" :class="limitingConstraint === 'income' ? 'text-blue-900' : 'text-slate-700'" x-text="fmt(maxPriceByIncome)"></p>
+            <div class="space-y-1 text-sm" :class="limitingConstraint === 'income' ? 'text-blue-700' : 'text-slate-500'">
+              <div class="flex justify-between"><span>Monthly income</span><span class="font-medium" x-text="fmt(grossMonthlyIncome)"></span></div>
+              <div class="flex justify-between"><span>Max housing (<span x-text="(comfortConfig.frontEndDTI * 100).toFixed(0)"></span>% DTI)</span><span class="font-medium" x-text="fmt(monthlyHousingBudget)"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Summary -->
+      <div class="bg-white rounded-xl p-4 border border-blue-200">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div>
-            <p class="text-xs text-blue-600 mb-1">Max Affordable Price</p>
-            <p class="text-2xl font-bold text-blue-900" x-text="fmt(maxAffordablePrice)"></p>
-            <p class="text-xs text-blue-500" x-text="comfortConfig.label + ' comfort'"></p>
+          <div class="md:col-span-2">
+            <p class="text-xs text-blue-600 mb-1">Your Max Affordable Price</p>
+            <p class="text-3xl font-bold text-blue-900" x-text="fmt(maxAffordablePrice)"></p>
+            <p class="text-sm mt-1" :class="limitingConstraint === 'cash' ? 'text-amber-600' : 'text-blue-600'">
+              <span x-show="limitingConstraint === 'cash'">Save more to unlock your income potential</span>
+              <span x-show="limitingConstraint === 'income'">Increase income or adjust comfort level</span>
+            </p>
           </div>
           <div>
-            <p class="text-xs text-blue-600 mb-1">Monthly Housing Budget</p>
-            <p class="text-2xl font-bold text-blue-900" x-text="fmt(monthlyHousingBudget)"></p>
-            <p class="text-xs text-blue-500" x-text="(comfortConfig.frontEndDTI * 100).toFixed(0) + '% of gross'"></p>
+            <p class="text-xs text-slate-500 mb-1">Monthly Housing</p>
+            <p class="text-xl font-bold text-slate-800" x-text="pitiAtMaxPrice ? fmt(pitiAtMaxPrice.total) : '-'"></p>
+            <p class="text-xs text-slate-400">at max price</p>
           </div>
           <div>
-            <p class="text-xs text-blue-600 mb-1">Cash Available</p>
-            <p class="text-2xl font-bold text-blue-900" x-text="fmt(savingsAvailable)"></p>
-            <p class="text-xs text-blue-500">Down payment + closing</p>
+            <p class="text-xs text-slate-500 mb-1">Monthly Cushion</p>
+            <p class="text-xl font-bold" :class="monthlyCushion >= 0 ? 'text-emerald-600' : 'text-red-600'" x-text="fmt(monthlyCushion)"></p>
+            <p class="text-xs text-slate-400">after tax & expenses</p>
           </div>
-          <div>
-            <p class="text-xs text-blue-600 mb-1">Monthly Cushion</p>
-            <p class="text-2xl font-bold" :class="monthlyCushion >= 0 ? 'text-emerald-700' : 'text-red-600'" x-text="fmt(monthlyCushion)"></p>
-            <p class="text-xs" :class="monthlyCushion >= 0 ? 'text-emerald-600' : 'text-red-500'" x-text="monthlyCushion >= 0 ? 'Left after all expenses' : 'Warning: negative!'"></p>
-          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial -->
+      <div class="bg-white/60 rounded-lg p-4 text-sm text-slate-600 space-y-3">
+        <p class="font-medium text-slate-700">How do these constraints work?</p>
+        <div class="flex gap-3">
+          <div class="w-5 h-5 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center flex-shrink-0 text-xs font-bold">1</div>
+          <p><strong class="text-slate-700">Cash:</strong> Savings must cover down payment + closing. With <span x-text="downPaymentPercent + '%'"></span> down and <span x-text="closingCostRate + '%'"></span> closing, every <span x-text="fmt((downPaymentPercent + closingCostRate) * 1000)"></span> unlocks $100k.</p>
+        </div>
+        <div class="flex gap-3">
+          <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center flex-shrink-0 text-xs font-bold">2</div>
+          <p><strong class="text-slate-700">Income:</strong> Lenders limit housing to <span x-text="(comfortConfig.frontEndDTI * 100).toFixed(0) + '%'"></span> of gross income (DTI). Your comfort level adjusts this.</p>
+        </div>
+        <div class="flex gap-3">
+          <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 text-xs font-bold">3</div>
+          <p><strong class="text-slate-700">Result:</strong> You're limited by whichever is lower.
+            <span x-show="limitingConstraint === 'cash'" class="text-amber-700">Save more to increase buying power.</span>
+            <span x-show="limitingConstraint === 'income'" class="text-blue-700">Try "Stretch" comfort or increase income.</span>
+          </p>
         </div>
       </div>
 
       <!-- PITI Breakdown -->
       <div x-show="pitiAtMaxPrice" class="bg-white/60 rounded-lg p-4">
-        <h3 class="text-sm font-semibold text-blue-800 mb-3">Monthly Payment Breakdown <span class="font-normal text-blue-500">(at max price)</span></h3>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-3 text-sm">
-          <div class="bg-white rounded-lg p-3 text-center">
-            <p class="text-xs text-slate-500 mb-1">Principal & Interest</p>
+        <h3 class="text-sm font-semibold text-blue-800 mb-3">Monthly Payment Breakdown</h3>
+        <div class="grid grid-cols-5 gap-2 text-sm">
+          <div class="bg-white rounded-lg p-2 text-center">
+            <p class="text-xs text-slate-500">P&I</p>
             <p class="font-bold text-slate-800" x-text="pitiAtMaxPrice ? fmt(pitiAtMaxPrice.principalInterest) : '-'"></p>
           </div>
-          <div class="bg-white rounded-lg p-3 text-center">
-            <p class="text-xs text-slate-500 mb-1">Property Taxes</p>
+          <div class="bg-white rounded-lg p-2 text-center">
+            <p class="text-xs text-slate-500">Taxes</p>
             <p class="font-bold text-slate-800" x-text="pitiAtMaxPrice ? fmt(pitiAtMaxPrice.taxes) : '-'"></p>
           </div>
-          <div class="bg-white rounded-lg p-3 text-center">
-            <p class="text-xs text-slate-500 mb-1">Insurance</p>
+          <div class="bg-white rounded-lg p-2 text-center">
+            <p class="text-xs text-slate-500">Insurance</p>
             <p class="font-bold text-slate-800" x-text="pitiAtMaxPrice ? fmt(pitiAtMaxPrice.insurance) : '-'"></p>
           </div>
-          <div class="bg-white rounded-lg p-3 text-center">
-            <p class="text-xs text-slate-500 mb-1">PMI</p>
+          <div class="bg-white rounded-lg p-2 text-center">
+            <p class="text-xs text-slate-500">PMI</p>
             <p class="font-bold" :class="pitiAtMaxPrice && pitiAtMaxPrice.pmi > 0 ? 'text-amber-600' : 'text-slate-800'" x-text="pitiAtMaxPrice ? fmt(pitiAtMaxPrice.pmi) : '-'"></p>
-            <p x-show="pitiAtMaxPrice && pitiAtMaxPrice.pmi > 0" class="text-xs text-amber-500">LTV > 80%</p>
           </div>
-          <div class="bg-blue-100 rounded-lg p-3 text-center">
-            <p class="text-xs text-blue-600 mb-1">Total Housing</p>
+          <div class="bg-blue-100 rounded-lg p-2 text-center">
+            <p class="text-xs text-blue-600">Total</p>
             <p class="font-bold text-blue-900" x-text="pitiAtMaxPrice ? fmt(pitiAtMaxPrice.total) : '-'"></p>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Savings Timeline -->
-      <div x-show="monthlySavings > 0" class="bg-white/60 rounded-lg p-4">
-        <h3 class="text-sm font-semibold text-blue-800 mb-3">Savings Timeline</h3>
-        <div class="space-y-3">
-          <div class="flex justify-between text-sm">
-            <span class="text-slate-600">Cash needed for max price</span>
-            <span class="font-medium text-slate-800" x-text="fmt(cashNeededAtMaxPrice)"></span>
+    <!-- Find Neighborhoods -->
+    <section>
+      <h2 class="text-xl font-bold text-slate-800 mb-1">Find Neighborhoods</h2>
+      <p class="text-sm text-slate-500 mb-4">Enter your zipcode to discover investment opportunities nearby</p>
+
+      <!-- Zipcode Entry - Always Visible -->
+      <div class="bg-white rounded-lg border p-4 mb-4">
+        <div class="flex flex-wrap items-center gap-4">
+          <div class="flex items-center gap-2">
+            <label class="text-sm font-medium text-slate-600">Your Zipcode</label>
+            <input type="text" x-model="filterFromZipcode" placeholder="e.g. 92618"
+              maxlength="5" inputmode="numeric"
+              class="w-24 rounded-lg border border-slate-300 px-3 py-2 text-sm font-mono focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none"
+              :class="filterFromZipcode && filterFromZipcode.length === 5 && !getZipCoords(filterFromZipcode) ? 'border-red-300 bg-red-50' : ''">
+            <span x-show="filterFromZipcode && filterFromZipcode.length === 5 && !getZipCoords(filterFromZipcode)"
+              class="text-xs text-red-500">Not found in SoCal</span>
           </div>
-          <div class="flex justify-between text-sm">
-            <span class="text-slate-600">You have</span>
-            <span class="font-medium text-slate-800" x-text="fmt(savingsAvailable)"></span>
+
+          <div class="flex items-center gap-2" x-show="hasValidZipcode">
+            <label class="text-sm text-slate-500">within</label>
+            <select x-model.number="filterDistanceMiles"
+              class="text-sm border border-slate-300 rounded-lg px-2 py-2 focus:border-blue-500 outline-none">
+              <option value="10">10 miles</option>
+              <option value="25">25 miles</option>
+              <option value="50">50 miles</option>
+              <option value="100">100 miles</option>
+            </select>
           </div>
-          <div class="w-full bg-slate-200 rounded-full h-3">
-            <div class="h-3 rounded-full transition-all duration-300"
-              :class="savingsProgress >= 100 ? 'bg-emerald-500' : 'bg-blue-500'"
-              :style="'width: ' + Math.min(100, savingsProgress) + '%'"></div>
-          </div>
-          <div class="flex justify-between text-sm">
-            <span class="text-slate-600" x-text="savingsProgress.toFixed(0) + '% saved'"></span>
-            <span class="font-medium" :class="monthsToAfford === 0 ? 'text-emerald-600' : 'text-blue-600'">
-              <template x-if="monthsToAfford === 0">
-                <span>Ready to buy!</span>
-              </template>
-              <template x-if="monthsToAfford > 0 && monthsToAfford !== Infinity">
-                <span x-text="monthsToAfford + ' months to go'"></span>
-              </template>
+
+          <div class="flex items-center gap-2 ml-auto" x-show="hasValidZipcode">
+            <span class="text-sm text-slate-500" x-show="seededLoaded">
+              <span x-text="rankedNeighborhoods.length"></span> neighborhoods found
             </span>
+            <button @click="clearSeededNeighborhoods(); filterFromZipcode = ''"
+              x-show="seededLoaded"
+              class="text-xs text-slate-400 hover:text-red-500 transition-colors">
+              Reset
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- Hint when no monthly savings entered -->
-      <p x-show="monthlySavings <= 0" class="text-xs text-blue-400 italic">
-        Enter your monthly savings above to see how long until you can afford your max price.
-      </p>
-    </section>
+      <!-- Prompt to enter zipcode -->
+      <div x-show="!hasValidZipcode" class="text-center py-16 bg-slate-50 rounded-lg border border-dashed border-slate-300">
+        <div class="text-slate-300 text-5xl mb-4">📍</div>
+        <p class="text-lg text-slate-600 mb-2">Where are you looking to invest?</p>
+        <p class="text-sm text-slate-400">Enter your zipcode above to find nearby neighborhoods</p>
+        <p class="text-xs text-slate-300 mt-4">Currently covers 600+ Southern California zipcodes</p>
+      </div>
 
-    <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- SECTION 4: Neighborhood Rankings                                -->
-    <!-- ═══════════════════════════════════════════════════════════════ -->
-    <section>
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <!-- Neighborhood Rankings (shown after zipcode entered)            -->
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <div x-show="hasValidZipcode" x-transition>
+
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
         <div>
-          <h2 class="text-lg font-semibold text-slate-800">Neighborhood Rankings</h2>
-          <p class="text-sm text-slate-500" x-show="neighborhoods.length > 0">
-            <span x-text="affordableCount"></span> of <span x-text="neighborhoods.length"></span> neighborhoods within your budget
+          <h3 class="text-base font-semibold text-slate-700">Neighborhood Rankings</h3>
+          <p class="text-sm text-slate-500" x-show="hasFinancials && rankedNeighborhoods.length > 0">
+            <span x-text="rankedNeighborhoods.filter(n => n.affordability.affordable).length"></span> of <span x-text="rankedNeighborhoods.length"></span> within your budget
           </p>
         </div>
         <div class="flex gap-2">
-          <button @click="loadSeededNeighborhoods()"
-            x-show="!seededLoaded"
-            class="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-emerald-700 transition-colors">
-            Load CA Neighborhoods
-          </button>
-          <button @click="clearSeededNeighborhoods()"
-            x-show="seededLoaded"
-            class="bg-slate-200 text-slate-600 px-3 py-2 rounded-lg text-sm font-medium hover:bg-slate-300 transition-colors">
-            Clear Defaults
-          </button>
           <button @click="showAddForm = !showAddForm"
             class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
             + Add Custom
@@ -326,8 +408,8 @@
         </div>
       </div>
 
-      <!-- Controls Row (shown when neighborhoods exist) -->
-      <div x-show="neighborhoods.length > 0" class="bg-white rounded-lg border p-3 mb-4 space-y-3">
+      <!-- Controls Row -->
+      <div x-show="rankedNeighborhoods.length > 0" class="bg-white rounded-lg border p-3 mb-4 space-y-3">
         <!-- Row 1: Filters -->
         <div class="flex flex-wrap items-center gap-3">
           <!-- Region Filter -->
@@ -387,8 +469,12 @@
             <span class="text-xs text-slate-500">Sort:</span>
             <select x-model="sortBy"
               class="text-xs border border-slate-300 rounded-lg px-2 py-1.5 focus:border-blue-500 outline-none">
+              <option value="totalROI">Total ROI (Best)</option>
               <option value="capRate">Cap Rate</option>
               <option value="monthlyCashFlow">Cash Flow</option>
+              <option value="totalValue5">5yr Net Gain</option>
+              <option value="totalValue10">10yr Net Gain</option>
+              <option value="appreciation">Appreciation Rate</option>
               <option value="price">Price (Low→High)</option>
               <option value="priceDesc">Price (High→Low)</option>
               <option value="city">City A-Z</option>
@@ -400,10 +486,6 @@
             </button>
           </div>
 
-          <!-- Results count -->
-          <span class="text-xs text-slate-400 ml-auto">
-            <span x-text="rankedNeighborhoods.length"></span> of <span x-text="neighborhoods.length"></span> shown
-          </span>
         </div>
       </div>
 
@@ -411,6 +493,77 @@
         class="text-xs text-amber-600 italic mb-2 block">
         (Enter income + savings first)
       </span>
+
+      <!-- Top Picks Section -->
+      <div x-show="topPicks && neighborhoods.length > 0" class="mb-6">
+        <h3 class="text-sm font-semibold text-slate-600 mb-3 flex items-center gap-2">
+          <span class="text-lg">&#9733;</span> Priority Neighborhoods
+          <span class="text-xs font-normal text-slate-400" x-show="hasFinancials">(within your budget)</span>
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+
+          <!-- Best Cap Rate -->
+          <div class="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-lg border border-emerald-200 p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="bg-emerald-500 text-white text-xs font-bold px-2 py-0.5 rounded">BEST CAP RATE</span>
+            </div>
+            <div x-show="topPicks?.capRate">
+              <p class="font-semibold text-slate-800 text-sm truncate" x-text="topPicks?.capRate?.city + (topPicks?.capRate?.name !== topPicks?.capRate?.city ? ' - ' + topPicks?.capRate?.name : '')"></p>
+              <p class="text-xs text-slate-500 font-mono" x-text="topPicks?.capRate?.zipcode"></p>
+              <div class="mt-2 flex justify-between items-baseline">
+                <span class="text-2xl font-bold text-emerald-700" x-text="pct(topPicks?.capRate?.metrics?.capRate)"></span>
+                <span class="text-xs text-slate-500" x-text="fmt(topPicks?.capRate?.medianPrice)"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Best Cash Flow -->
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg border border-blue-200 p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="bg-blue-500 text-white text-xs font-bold px-2 py-0.5 rounded">BEST CASH FLOW</span>
+            </div>
+            <div x-show="topPicks?.cashFlow">
+              <p class="font-semibold text-slate-800 text-sm truncate" x-text="topPicks?.cashFlow?.city + (topPicks?.cashFlow?.name !== topPicks?.cashFlow?.city ? ' - ' + topPicks?.cashFlow?.name : '')"></p>
+              <p class="text-xs text-slate-500 font-mono" x-text="topPicks?.cashFlow?.zipcode"></p>
+              <div class="mt-2 flex justify-between items-baseline">
+                <span class="text-2xl font-bold text-blue-700" x-text="fmt(topPicks?.cashFlow?.metrics?.monthlyCashFlow) + '/mo'"></span>
+                <span class="text-xs text-slate-500" x-text="fmt(topPicks?.cashFlow?.medianPrice)"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cheapest Entry -->
+          <div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-lg border border-amber-200 p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="bg-amber-500 text-white text-xs font-bold px-2 py-0.5 rounded">LOWEST ENTRY</span>
+            </div>
+            <div x-show="topPicks?.cheapest">
+              <p class="font-semibold text-slate-800 text-sm truncate" x-text="topPicks?.cheapest?.city + (topPicks?.cheapest?.name !== topPicks?.cheapest?.city ? ' - ' + topPicks?.cheapest?.name : '')"></p>
+              <p class="text-xs text-slate-500 font-mono" x-text="topPicks?.cheapest?.zipcode"></p>
+              <div class="mt-2 flex justify-between items-baseline">
+                <span class="text-2xl font-bold text-amber-700" x-text="fmt(topPicks?.cheapest?.metrics?.cashInvested)"></span>
+                <span class="text-xs text-slate-500">cash needed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Best Total ROI -->
+          <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg border border-purple-200 p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="bg-purple-500 text-white text-xs font-bold px-2 py-0.5 rounded">BEST TOTAL ROI</span>
+            </div>
+            <div x-show="topPicks?.totalROI">
+              <p class="font-semibold text-slate-800 text-sm truncate" x-text="topPicks?.totalROI?.city + (topPicks?.totalROI?.name !== topPicks?.totalROI?.city ? ' - ' + topPicks?.totalROI?.name : '')"></p>
+              <p class="text-xs text-slate-500 font-mono" x-text="topPicks?.totalROI?.zipcode"></p>
+              <div class="mt-2 flex justify-between items-baseline">
+                <span class="text-2xl font-bold text-purple-700" x-text="pct(topPicks?.totalROI?.metrics?.totalAnnualReturn)"></span>
+                <span class="text-xs text-slate-500">cash + apprec.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
 
       <!-- Add Neighborhood Form -->
       <div x-show="showAddForm" x-transition class="bg-white rounded-lg border p-5 mb-4">
@@ -440,7 +593,10 @@
             <label class="block text-xs font-medium text-slate-600 mb-1">Median Home Price <span class="text-red-500">*</span></label>
             <div class="relative">
               <span class="absolute left-3 top-2 text-slate-400 text-sm">$</span>
-              <input type="text" x-model.number="form.medianPrice" inputmode="decimal" placeholder="e.g. 750000"
+              <input type="text" inputmode="decimal" placeholder="e.g. 750,000"
+                x-effect="if (document.activeElement !== $el) $el.value = formatNumberWithCommas(form.medianPrice)"
+                @input="form.medianPrice = parseNumberInput($event.target.value)"
+                @blur="$event.target.value = formatNumberWithCommas(form.medianPrice)"
                 class="w-full rounded-lg border border-slate-300 pl-7 pr-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none">
             </div>
           </div>
@@ -448,7 +604,10 @@
             <label class="block text-xs font-medium text-slate-600 mb-1">Expected Monthly Rent <span class="text-red-500">*</span></label>
             <div class="relative">
               <span class="absolute left-3 top-2 text-slate-400 text-sm">$</span>
-              <input type="text" x-model.number="form.expectedRent" inputmode="decimal" placeholder="e.g. 3200"
+              <input type="text" inputmode="decimal" placeholder="e.g. 3,200"
+                x-effect="if (document.activeElement !== $el) $el.value = formatNumberWithCommas(form.expectedRent)"
+                @input="form.expectedRent = parseNumberInput($event.target.value)"
+                @blur="$event.target.value = formatNumberWithCommas(form.expectedRent)"
                 class="w-full rounded-lg border border-slate-300 pl-7 pr-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none">
             </div>
           </div>
@@ -463,7 +622,10 @@
             <label class="block text-xs font-medium text-slate-600 mb-1">Monthly HOA</label>
             <div class="relative">
               <span class="absolute left-3 top-2 text-slate-400 text-sm">$</span>
-              <input type="text" x-model.number="form.monthlyHOA" inputmode="decimal" placeholder="0"
+              <input type="text" inputmode="decimal" placeholder="0"
+                x-effect="if (document.activeElement !== $el) $el.value = formatNumberWithCommas(form.monthlyHOA)"
+                @input="form.monthlyHOA = parseNumberInput($event.target.value)"
+                @blur="$event.target.value = formatNumberWithCommas(form.monthlyHOA)"
                 class="w-full rounded-lg border border-slate-300 pl-7 pr-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none">
             </div>
           </div>
@@ -471,7 +633,10 @@
             <label class="block text-xs font-medium text-slate-600 mb-1">Annual Insurance</label>
             <div class="relative">
               <span class="absolute left-3 top-2 text-slate-400 text-sm">$</span>
-              <input type="text" x-model.number="form.annualInsurance" inputmode="decimal"
+              <input type="text" inputmode="decimal"
+                x-effect="if (document.activeElement !== $el) $el.value = formatNumberWithCommas(form.annualInsurance)"
+                @input="form.annualInsurance = parseNumberInput($event.target.value)"
+                @blur="$event.target.value = formatNumberWithCommas(form.annualInsurance)"
                 class="w-full rounded-lg border border-slate-300 pl-7 pr-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none">
             </div>
           </div>
@@ -517,7 +682,7 @@
       </div>
 
       <!-- Investment Mode: Comparison Table -->
-      <div x-show="mode === 'investment' && neighborhoods.length > 0" class="overflow-x-auto bg-white rounded-lg border">
+      <div x-show="mode === 'investment' && rankedNeighborhoods.length > 0" class="overflow-x-auto bg-white rounded-lg border">
         <table class="w-full text-sm">
           <thead>
             <tr class="border-b text-left text-xs text-slate-500 uppercase tracking-wide bg-slate-50">
@@ -532,6 +697,12 @@
               </th>
               <th class="py-3 px-3 cursor-pointer hover:text-slate-700" @click="toggleSort('monthlyCashFlow')">
                 Cash Flow <span x-show="sortBy === 'monthlyCashFlow'" x-text="sortDirection === 'desc' ? '↓' : '↑'" class="text-blue-600"></span>
+              </th>
+              <th class="py-3 px-3 cursor-pointer hover:text-slate-700" @click="toggleSort('appreciation')">
+                5yr Apprec. <span x-show="sortBy === 'appreciation'" x-text="sortDirection === 'desc' ? '↓' : '↑'" class="text-blue-600"></span>
+              </th>
+              <th class="py-3 px-3 cursor-pointer hover:text-slate-700" @click="toggleSort('totalROI')">
+                Total ROI <span x-show="sortBy === 'totalROI'" x-text="sortDirection === 'desc' ? '↓' : '↑'" class="text-blue-600"></span>
               </th>
               <th class="py-3 px-3" x-show="hasFinancials">Afford?</th>
               <th class="py-3 px-3"></th>
@@ -557,6 +728,16 @@
                 <td class="py-3 px-3 font-medium"
                   :class="n.metrics.monthlyCashFlow >= 0 ? 'text-green-600' : 'text-red-600'"
                   x-text="fmt(n.metrics.monthlyCashFlow) + '/mo'"></td>
+                <td class="py-3 px-3 font-medium text-xs">
+                  <span :class="n.metrics.appreciation5yr >= 0 ? 'text-green-600' : 'text-red-600'"
+                    x-text="(n.metrics.appreciation5yr >= 0 ? '+' : '') + n.metrics.appreciation5yr + '%'"></span>
+                  <span class="text-slate-400 text-[10px] block"
+                    :class="n.appreciationRate >= 0 ? '' : 'text-red-400'"
+                    x-text="'1yr: ' + (n.appreciationRate >= 0 ? '+' : '') + n.appreciationRate + '%'"></span>
+                </td>
+                <td class="py-3 px-3 font-bold"
+                  :class="n.metrics.totalAnnualReturn >= 0.08 ? 'text-emerald-600' : n.metrics.totalAnnualReturn >= 0 ? 'text-amber-600' : 'text-red-600'"
+                  x-text="pct(n.metrics.totalAnnualReturn)"></td>
                 <td class="py-3 px-3" x-show="hasFinancials">
                   <span x-show="n.affordability.affordable === true"
                     class="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs font-medium">Yes</span>
@@ -571,14 +752,10 @@
             </template>
           </tbody>
         </table>
-        <div x-show="filterAffordable && hasFinancials && neighborhoods.length !== rankedNeighborhoods.length"
-          class="py-2 px-4 text-xs text-slate-400 text-center border-t bg-slate-50">
-          <span x-text="neighborhoods.length - rankedNeighborhoods.length"></span> neighborhood(s) hidden by affordability filter
-        </div>
       </div>
 
       <!-- Personal Home Mode: Cards -->
-      <div x-show="mode === 'personal' && neighborhoods.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div x-show="mode === 'personal' && rankedNeighborhoods.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <template x-for="(n, index) in rankedNeighborhoods" :key="n.id">
           <div class="bg-white rounded-lg border p-4"
             :class="hasFinancials && n.affordability.affordable === false ? 'opacity-60' : ''">
@@ -622,33 +799,49 @@
                 <span class="font-medium" x-text="fmt(n.metrics.cashInvested)"></span>
               </div>
               <div class="pt-2 border-t">
-                <p class="text-xs text-slate-500 mb-1">Equity Projection</p>
+                <div class="flex justify-between items-center mb-1">
+                  <p class="text-xs text-slate-500">Total Value Projection</p>
+                  <div class="flex gap-2">
+                    <span class="text-xs px-1.5 py-0.5 rounded"
+                      :class="n.metrics.appreciation5yr >= 0 ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'"
+                      x-text="'5yr: ' + (n.metrics.appreciation5yr >= 0 ? '+' : '') + n.metrics.appreciation5yr + '%'"></span>
+                    <span class="text-xs px-1.5 py-0.5 rounded"
+                      :class="n.metrics.appreciationRate >= 0 ? 'bg-slate-100 text-slate-600' : 'bg-red-50 text-red-500'"
+                      x-text="'1yr: ' + (n.metrics.appreciationRate >= 0 ? '+' : '') + n.metrics.appreciationRate + '%'"></span>
+                  </div>
+                </div>
                 <div class="flex gap-3 text-xs">
                   <template x-for="yr in [4, 9]" :key="yr">
-                    <div class="flex-1 bg-slate-50 rounded p-2 text-center" x-show="n.metrics.equityProjection[yr]">
+                    <div class="flex-1 bg-slate-50 rounded p-2 text-center" x-show="n.metrics.totalValueProjection[yr]">
                       <p class="text-slate-500" x-text="'Year ' + (yr + 1)"></p>
-                      <p class="font-bold text-blue-600" x-text="n.metrics.equityProjection[yr] ? fmt(n.metrics.equityProjection[yr].equity) : ''"></p>
+                      <p class="font-bold"
+                        :class="n.metrics.totalValueProjection[yr]?.netGain >= 0 ? 'text-emerald-600' : 'text-red-600'"
+                        x-text="n.metrics.totalValueProjection[yr] ? fmt(n.metrics.totalValueProjection[yr].netGain) : ''"></p>
+                      <p class="text-slate-400 text-[10px]"
+                        x-text="n.metrics.totalValueProjection[yr] ? pct(n.metrics.totalValueProjection[yr].annualizedROI) + '/yr' : ''"></p>
                     </div>
                   </template>
                 </div>
+                <p class="text-[10px] text-slate-400 mt-1 text-center">Net gain = equity + cash flow − cash invested</p>
               </div>
             </div>
           </div>
         </template>
       </div>
 
-      <!-- Empty State -->
-      <div x-show="neighborhoods.length === 0" class="text-center py-16 bg-white rounded-lg border">
-        <div class="text-slate-300 text-5xl mb-4">🏠</div>
-        <p class="text-lg text-slate-600 mb-2">No neighborhoods to compare yet</p>
-        <p class="text-sm text-slate-400 mb-6">Load California neighborhood data or add your own</p>
-        <button @click="loadSeededNeighborhoods()"
-          class="bg-emerald-600 text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-emerald-700 transition-colors">
-          Load California Neighborhoods
-        </button>
+      <!-- Empty State: No results in range -->
+      <div x-show="rankedNeighborhoods.length === 0 && seededLoaded" class="text-center py-12 bg-slate-50 rounded-lg border">
+        <div class="text-slate-300 text-4xl mb-3">🔍</div>
+        <p class="text-slate-600 mb-1">No neighborhoods found within <span x-text="filterDistanceMiles"></span> miles</p>
+        <p class="text-sm text-slate-400">Try increasing the distance or changing your zipcode</p>
       </div>
+
+      </div><!-- end hasValidZipcode -->
     </section>
 
+    </div><!-- end RIGHT COLUMN -->
+
+    </div><!-- end grid -->
   </main>
 
   <!-- Footer -->

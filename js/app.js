@@ -2,7 +2,7 @@ document.addEventListener('alpine:init', function() {
   var F = window.Formulas;
   var D = window.CA_DEFAULTS;
 
-  Alpine.data('bundongsan', function() {
+  Alpine.data('nestready', function() {
     return {
       // ── Financial Inputs (persisted) ──────────────────────────
       grossAnnualIncome: Alpine.$persist(0).as('fin_grossAnnualIncome'),
@@ -11,6 +11,7 @@ document.addEventListener('alpine:init', function() {
       otherExpenses: Alpine.$persist(0).as('fin_otherExpenses'),
       savingsAvailable: Alpine.$persist(0).as('fin_savings'),
       monthlySavings: Alpine.$persist(0).as('fin_monthlySavings'),
+      effectiveTaxRate: Alpine.$persist(35).as('fin_effectiveTaxRate'),
 
       // Comfort level (conservative, standard, aggressive)
       comfortLevel: Alpine.$persist('standard').as('fin_comfortLevel'),
@@ -28,6 +29,10 @@ document.addEventListener('alpine:init', function() {
         return this.grossAnnualIncome / 12;
       },
 
+      get netMonthlyIncome() {
+        return this.grossMonthlyIncome * (1 - this.effectiveTaxRate / 100);
+      },
+
       get comfortConfig() {
         return window.COMFORT_LEVELS[this.comfortLevel] || window.COMFORT_LEVELS.standard;
       },
@@ -36,31 +41,35 @@ document.addEventListener('alpine:init', function() {
         return this.isHighCostCounty ? D.conformingLoanLimitHighCost : D.conformingLoanLimit;
       },
 
-      get maxAffordablePrice() {
+      // ── Constraint Calculations ──────────────────────────────
+      // Cash constraint: savings must cover down payment + closing
+      get maxPriceByCash() {
+        var dpPct = this.downPaymentPercent / 100;
+        var ccPct = this.closingCostRate / 100;
+        var cashDenom = dpPct + ccPct;
+        return cashDenom > 0 ? Math.floor(this.savingsAvailable / cashDenom) : 0;
+      },
+
+      // Income/DTI constraint: max price based on what monthly payment you can afford
+      get maxPriceByIncome() {
         var grossMonthly = this.grossMonthlyIncome;
         if (grossMonthly <= 0) return 0;
 
         var dpPct = this.downPaymentPercent / 100;
-        var ccPct = this.closingCostRate / 100;
         var rate = this.interestRate / 100;
         var taxRate = this.propertyTaxRate / 100;
         var insRate = D.homeownersInsuranceRate;
         var comfort = this.comfortConfig;
 
-        // Cash constraint: savings must cover down payment + closing
-        var cashDenom = dpPct + ccPct;
-        var maxPriceByCash = cashDenom > 0 ? this.savingsAvailable / cashDenom : 0;
-
         // DTI constraints using comfort level settings
         var maxHousingFront = grossMonthly * comfort.frontEndDTI;
         var maxHousingBack = grossMonthly * comfort.backEndDTI - this.monthlyDebts;
 
-        // Budget constraint: income - debts - other expenses - buffer = available for housing
-        // Note: current rent is excluded because it goes away when you buy
+        // Budget constraint: income - debts - other expenses - buffer
         var buffer = grossMonthly * comfort.bufferRate;
         var maxHousingBudget = grossMonthly - this.monthlyDebts - this.otherExpenses - buffer;
 
-        // Take the most restrictive of all three constraints
+        // Take the most restrictive of all three
         var maxMonthlyHousing = Math.min(maxHousingFront, maxHousingBack, maxHousingBudget);
         if (maxMonthlyHousing <= 0) return 0;
 
@@ -76,9 +85,18 @@ document.addEventListener('alpine:init', function() {
           if (piti.total + pmi < maxMonthlyHousing) lo = mid;
           else hi = mid;
         }
-        var maxPriceByDTI = Math.floor(lo);
+        return Math.floor(lo);
+      },
 
-        return Math.min(maxPriceByCash, maxPriceByDTI);
+      // Final max affordable price = minimum of both constraints
+      get maxAffordablePrice() {
+        return Math.min(this.maxPriceByCash, this.maxPriceByIncome);
+      },
+
+      // Which constraint is limiting?
+      get limitingConstraint() {
+        if (this.grossMonthlyIncome <= 0) return null;
+        return this.maxPriceByCash <= this.maxPriceByIncome ? 'cash' : 'income';
       },
 
       get monthlyHousingBudget() {
@@ -122,13 +140,13 @@ document.addEventListener('alpine:init', function() {
         };
       },
 
-      // Monthly cushion after all expenses and housing
+      // Monthly cushion after taxes, expenses, and housing (uses NET income for realism)
       get monthlyCushion() {
-        var grossMonthly = this.grossMonthlyIncome;
-        if (grossMonthly <= 0) return 0;
+        var netMonthly = this.netMonthlyIncome;
+        if (netMonthly <= 0) return 0;
         var piti = this.pitiAtMaxPrice;
         var housing = piti ? piti.total : 0;
-        return grossMonthly - this.monthlyDebts - this.otherExpenses - housing;
+        return netMonthly - this.monthlyDebts - this.otherExpenses - housing;
       },
 
       // Cash needed for down payment + closing at max price
@@ -164,6 +182,8 @@ document.addEventListener('alpine:init', function() {
       filterRegion: '',
       filterCity: '',
       searchQuery: '',
+      filterFromZipcode: '',
+      filterDistanceMiles: 50,
       mode: Alpine.$persist('investment').as('hood_mode'),
       showAddForm: false,
 
@@ -186,10 +206,37 @@ document.addEventListener('alpine:init', function() {
       // ── Initialization ────────────────────────────────────────
       init: function() {
         var self = this;
-        this.neighborhoods = this.neighborhoods.map(function(n) {
-          n.metrics = self.computeMetrics(n);
-          return n;
+
+        // Merge latest seed data into persisted neighborhoods (e.g. new appreciation fields)
+        // Metrics are computed lazily in rankedNeighborhoods, not here (performance)
+        if (window.CA_NEIGHBORHOODS) {
+          var seededByKey = {};
+          window.CA_NEIGHBORHOODS.forEach(function(data) {
+            seededByKey[data.zipcode || data.name] = data;
+          });
+
+          this.neighborhoods.forEach(function(n) {
+            var seedData = seededByKey[n.zipcode || n.name];
+            if (seedData) {
+              if (seedData.appreciation5yr !== undefined) n.appreciation5yr = seedData.appreciation5yr;
+              if (seedData.appreciationRate !== undefined) n.appreciationRate = seedData.appreciationRate;
+            }
+          });
+        }
+
+        // Watch for zipcode changes and auto-load neighborhoods
+        this.$watch('filterFromZipcode', function(newZip) {
+          if (newZip && newZip.length === 5 && self.getZipCoords(newZip) && !self.seededLoaded) {
+            self.loadSeededNeighborhoods();
+          }
         });
+      },
+
+      // Check if user has entered a valid zipcode
+      get hasValidZipcode() {
+        return this.filterFromZipcode &&
+               this.filterFromZipcode.length === 5 &&
+               this.getZipCoords(this.filterFromZipcode);
       },
 
       // ── Neighborhood Methods ──────────────────────────────────
@@ -209,6 +256,30 @@ document.addEventListener('alpine:init', function() {
           managementFee: 0,
           appreciationRate: 3,
         };
+      },
+
+      resetAll: function() {
+        // Reset financial inputs
+        this.grossAnnualIncome = 0;
+        this.monthlyDebts = 0;
+        this.currentRent = 0;
+        this.otherExpenses = 0;
+        this.savingsAvailable = 0;
+        this.monthlySavings = 0;
+        this.effectiveTaxRate = 35;
+        this.comfortLevel = 'standard';
+        // Reset loan preferences
+        this.interestRate = 6.75;
+        this.loanTermYears = 30;
+        this.downPaymentPercent = 20;
+        this.propertyTaxRate = 1.25;
+        this.closingCostRate = 3;
+        this.isHighCostCounty = true;
+        // Reset filters
+        this.filterFromZipcode = '';
+        this.filterDistanceMiles = 50;
+        this.filterAffordable = false;
+        this.searchQuery = '';
       },
 
       addNeighborhood: function() {
@@ -236,6 +307,30 @@ document.addEventListener('alpine:init', function() {
       loadSeededNeighborhoods: function() {
         if (!window.CA_NEIGHBORHOODS) return;
         var self = this;
+
+        // Build lookup of seeded data by zipcode
+        var seededByKey = {};
+        window.CA_NEIGHBORHOODS.forEach(function(data) {
+          var key = data.zipcode || data.name;
+          seededByKey[key] = data;
+        });
+
+        // Update existing neighborhoods with any new fields from seed data
+        this.neighborhoods.forEach(function(n) {
+          var key = n.zipcode || n.name;
+          var seedData = seededByKey[key];
+          if (seedData) {
+            // Merge new fields (like appreciation5yr) without overwriting user customizations
+            Object.keys(seedData).forEach(function(field) {
+              if (n[field] === undefined) {
+                n[field] = seedData[field];
+              }
+            });
+            // Always update appreciation data from latest seed
+            if (seedData.appreciation5yr !== undefined) n.appreciation5yr = seedData.appreciation5yr;
+            if (seedData.appreciationRate !== undefined) n.appreciationRate = seedData.appreciationRate;
+          }
+        });
 
         // Use zipcode as unique key (fall back to name for legacy data)
         var existingKeys = {};
@@ -318,10 +413,21 @@ document.addEventListener('alpine:init', function() {
         var monthlyCostOfOwnership = piti.total + pmi + (n.monthlyHOA || 0) + annualMaintenance / 12;
         // Compare ownership cost to user's current rent (not neighborhood market rent)
         var rentVsBuyDiff = monthlyCostOfOwnership - (this.currentRent || 0);
+        // Use 5-year historical appreciation for projections (more stable than 1yr)
+        var appreciation5yr = (n.appreciation5yr != null ? n.appreciation5yr : 3) / 100;
         var equityProjection = F.equityProjection(
           n.medianPrice, downPayment, loan,
-          n.interestRate / 100, n.loanTermYears, (n.appreciationRate || 3) / 100, 10
+          n.interestRate / 100, n.loanTermYears, appreciation5yr, 10
         );
+        var totalValueProjection = F.totalValueProjection(
+          n.medianPrice, downPayment, loan,
+          n.interestRate / 100, n.loanTermYears, appreciation5yr, annualCashFlow, 10
+        );
+
+        // Combined Total Annual Return: leveraged appreciation (5yr) + cash-on-cash
+        // This shows the power of leverage - appreciation on full home value, but only your down payment invested
+        var leveragedAppreciationReturn = cashInvested > 0 ? (n.medianPrice * appreciation5yr) / cashInvested : 0;
+        var totalAnnualReturn = cocReturn + leveragedAppreciationReturn;
 
         return {
           capRate: cr,
@@ -336,6 +442,11 @@ document.addEventListener('alpine:init', function() {
           monthlyCostOfOwnership: monthlyCostOfOwnership,
           rentVsBuyDiff: rentVsBuyDiff,
           equityProjection: equityProjection,
+          totalValueProjection: totalValueProjection,
+          appreciationRate: n.appreciationRate || 3,
+          appreciation5yr: n.appreciation5yr,
+          leveragedAppreciationReturn: leveragedAppreciationReturn,
+          totalAnnualReturn: totalAnnualReturn,
         };
       },
 
@@ -421,17 +532,26 @@ document.addEventListener('alpine:init', function() {
         var filterRegion = this.filterRegion;
         var filterCity = this.filterCity;
 
-        // Recompute metrics reactively when financing inputs change
-        var list = this.neighborhoods.map(function(n) {
-          var updated = Object.assign({}, n, {
-            downPaymentPercent: self.downPaymentPercent,
-            interestRate: self.interestRate,
-            loanTermYears: self.loanTermYears,
-            closingCostRate: self.closingCostRate,
-          });
-          var metrics = self.computeMetrics(updated);
-          var affordability = self.checkAffordability(updated);
-          return Object.assign({}, updated, { metrics: metrics, affordability: affordability });
+        // Require zipcode filter - return empty if not set (performance optimization)
+        if (!self.filterFromZipcode || !window.ZIPCODE_COORDS) {
+          return [];
+        }
+        var refCoords = self.getZipCoords(self.filterFromZipcode);
+        if (!refCoords) {
+          return [];  // Invalid zipcode
+        }
+
+        // Start with all neighborhoods
+        var list = this.neighborhoods;
+
+        // 1. FILTER FIRST (cheap operations on raw data)
+
+        // Distance filter - primary filter
+        var maxDist = self.filterDistanceMiles;
+        list = list.filter(function(n) {
+          var nCoords = self.getZipCoords(n.zipcode);
+          if (!nCoords) return false;  // Exclude if no coords
+          return haversineDistanceMiles(refCoords.lat, refCoords.lng, nCoords.lat, nCoords.lng) <= maxDist;
         });
 
         // Region filter
@@ -457,20 +577,44 @@ document.addEventListener('alpine:init', function() {
           });
         }
 
-        // Affordability filter
+        // 2. NOW compute metrics (only on filtered subset)
+        list = list.map(function(n) {
+          var updated = Object.assign({}, n, {
+            downPaymentPercent: self.downPaymentPercent,
+            interestRate: self.interestRate,
+            loanTermYears: self.loanTermYears,
+            closingCostRate: self.closingCostRate,
+          });
+          var metrics = self.computeMetrics(updated);
+          var affordability = self.checkAffordability(updated);
+          return Object.assign({}, updated, { metrics: metrics, affordability: affordability });
+        });
+
+        // 3. Affordability filter (needs metrics)
         if (this.filterAffordable && this.hasFinancials) {
           list = list.filter(function(n) { return n.affordability.affordable; });
         }
 
-        // Sort
+        // 4. Sort
         list.sort(function(a, b) {
           var valA, valB;
-          if (sortBy === 'capRate') { valA = a.metrics.capRate; valB = b.metrics.capRate; }
+          if (sortBy === 'totalROI') { valA = a.metrics.totalAnnualReturn; valB = b.metrics.totalAnnualReturn; }
+          else if (sortBy === 'capRate') { valA = a.metrics.capRate; valB = b.metrics.capRate; }
           else if (sortBy === 'monthlyCashFlow') { valA = a.metrics.monthlyCashFlow; valB = b.metrics.monthlyCashFlow; }
+          else if (sortBy === 'totalValue5') {
+            valA = a.metrics.totalValueProjection[4] ? a.metrics.totalValueProjection[4].netGain : -Infinity;
+            valB = b.metrics.totalValueProjection[4] ? b.metrics.totalValueProjection[4].netGain : -Infinity;
+          }
+          else if (sortBy === 'totalValue10') {
+            valA = a.metrics.totalValueProjection[9] ? a.metrics.totalValueProjection[9].netGain : -Infinity;
+            valB = b.metrics.totalValueProjection[9] ? b.metrics.totalValueProjection[9].netGain : -Infinity;
+          }
+          else if (sortBy === 'appreciation') { valA = a.metrics.appreciation5yr || 0; valB = b.metrics.appreciation5yr || 0; }
+          else if (sortBy === 'appreciation1yr') { valA = a.appreciationRate || 0; valB = b.appreciationRate || 0; }
           else if (sortBy === 'city') { return (a.city || '').localeCompare(b.city || ''); }
           else if (sortBy === 'priceDesc') { valA = a.medianPrice; valB = b.medianPrice; return valB - valA; }
           else if (sortBy === 'price') { valA = a.medianPrice; valB = b.medianPrice; }
-          else { valA = a.metrics.capRate; valB = b.metrics.capRate; }
+          else { valA = a.metrics.totalAnnualReturn; valB = b.metrics.totalAnnualReturn; }
           return direction === 'desc' ? (valB - valA) : (valA - valB);
         });
 
@@ -483,6 +627,58 @@ document.addEventListener('alpine:init', function() {
         return this.neighborhoods.filter(function(n) {
           return self.checkAffordability(n).affordable;
         }).length;
+      },
+
+      // ── Top Picks (Priority Neighborhoods) ─────────────────────
+      get topPicks() {
+        var self = this;
+
+        // Get affordable neighborhoods with valid rent data
+        var candidates = this.rankedNeighborhoods.filter(function(n) {
+          var isAffordable = !self.hasFinancials || n.affordability.affordable;
+          var hasRent = n.expectedRent > 0;
+          return isAffordable && hasRent;
+        });
+
+        if (candidates.length === 0) return null;
+
+        // Best Cap Rate
+        var bestCapRate = candidates.slice().sort(function(a, b) {
+          return b.metrics.capRate - a.metrics.capRate;
+        })[0];
+
+        // Best Cash Flow
+        var bestCashFlow = candidates.slice().sort(function(a, b) {
+          return b.metrics.monthlyCashFlow - a.metrics.monthlyCashFlow;
+        })[0];
+
+        // Cheapest Entry (lowest cash needed)
+        var cheapestEntry = candidates.slice().sort(function(a, b) {
+          return a.metrics.cashInvested - b.metrics.cashInvested;
+        })[0];
+
+        // Best Total ROI (cash flow + leveraged appreciation)
+        var bestTotalROI = candidates.slice().sort(function(a, b) {
+          return b.metrics.totalAnnualReturn - a.metrics.totalAnnualReturn;
+        })[0];
+
+        return {
+          totalROI: bestTotalROI,
+          capRate: bestCapRate,
+          cashFlow: bestCashFlow,
+          cheapest: cheapestEntry,
+        };
+      },
+
+      // Rent-to-price ratio helper
+      rentToPrice: function(n) {
+        if (!n || n.medianPrice <= 0) return 0;
+        return n.expectedRent / n.medianPrice;
+      },
+
+      // Get coordinates for a zipcode
+      getZipCoords: function(zipcode) {
+        return window.ZIPCODE_COORDS ? window.ZIPCODE_COORDS[zipcode] : null;
       },
 
       // ── Formatting Helpers ────────────────────────────────────
