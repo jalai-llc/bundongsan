@@ -16,6 +16,8 @@ window.CA_DEFAULTS = {
   managementFee: 0.0,               // 0% — self-managed default
   annualInsurance: 1500,            // CA homeowners avg
   appreciationRate: 0.03,           // 3% CA long-term avg
+  inflation5yr: 0.045,              // 4.5% — 2020-2025 CPI (high inflation period)
+  inflationLongTerm: 0.025,         // 2.5% — 20-year historical average
 };
 
 // Comfort level presets for affordability calculation

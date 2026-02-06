@@ -115,7 +115,67 @@ window.Formulas = {
       }
       var homeValue = purchasePrice * Math.pow(1 + annualAppreciation, year);
       var equity = homeValue - remainingBalance;
-      projections.push({ year: year, homeValue: homeValue, remainingBalance: remainingBalance, equity: equity });
+      var appreciationGain = homeValue - purchasePrice;
+      var principalPaid = loanAmount - remainingBalance;
+      projections.push({
+        year: year,
+        homeValue: homeValue,
+        remainingBalance: remainingBalance,
+        equity: equity,
+        appreciationGain: appreciationGain,
+        principalPaid: principalPaid,
+      });
+    }
+    return projections;
+  },
+
+  /**
+   * Total value projection over N years.
+   * Combines: appreciation gains + principal paydown + cumulative cash flow.
+   * Returns total wealth generated from the investment.
+   */
+  totalValueProjection: function(purchasePrice, downPayment, loanAmount, annualRate, termYears, annualAppreciation, annualCashFlow, years) {
+    var projections = [];
+    var r = annualRate / 12;
+    var monthlyPayment = this.monthlyMortgagePI(loanAmount, annualRate, termYears);
+    var remainingBalance = loanAmount;
+    var cumulativeCashFlow = 0;
+    var cashInvested = downPayment; // Note: closing costs handled separately
+
+    for (var year = 1; year <= years; year++) {
+      for (var m = 0; m < 12; m++) {
+        if (remainingBalance <= 0) break;
+        var interestPayment = remainingBalance * r;
+        var principalPayment = monthlyPayment - interestPayment;
+        remainingBalance = Math.max(0, remainingBalance - principalPayment);
+      }
+      cumulativeCashFlow += annualCashFlow;
+
+      var homeValue = purchasePrice * Math.pow(1 + annualAppreciation, year);
+      var appreciationGain = homeValue - purchasePrice;
+      var principalPaid = loanAmount - remainingBalance;
+      var equity = homeValue - remainingBalance;
+
+      // Total value = equity (if sold) + cash flow collected
+      var totalValue = equity + cumulativeCashFlow;
+      // Net gain = total value - what you put in
+      var netGain = totalValue - cashInvested;
+      // Annualized return (simple ROI / years)
+      var totalROI = cashInvested > 0 ? (netGain / cashInvested) : 0;
+      var annualizedROI = totalROI / year;
+
+      projections.push({
+        year: year,
+        homeValue: homeValue,
+        appreciationGain: appreciationGain,
+        principalPaid: principalPaid,
+        cumulativeCashFlow: cumulativeCashFlow,
+        equity: equity,
+        totalValue: totalValue,
+        netGain: netGain,
+        totalROI: totalROI,
+        annualizedROI: annualizedROI,
+      });
     }
     return projections;
   },

@@ -17,7 +17,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2,
-    "currentRentIfBuying": 1616
+    "currentRentIfBuying": 1616,
+    "appreciation5yr": 9.8
   },
   {
     "zipcode": "92536",
@@ -33,7 +34,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.6,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.8
   },
   {
     "zipcode": "92305",
@@ -49,7 +51,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -8,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 5.9
   },
   {
     "zipcode": "92539",
@@ -65,7 +68,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -5.5,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 4.2
   },
   {
     "zipcode": "92307",
@@ -81,7 +85,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2,
-    "currentRentIfBuying": 1576
+    "currentRentIfBuying": 1576,
+    "appreciation5yr": 8.5
   },
   {
     "zipcode": "92308",
@@ -97,7 +102,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 1609
+    "currentRentIfBuying": 1609,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "92220",
@@ -113,7 +119,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.7,
-    "currentRentIfBuying": 1646
+    "currentRentIfBuying": 1646,
+    "appreciation5yr": 7.3
   },
   {
     "zipcode": "92311",
@@ -129,7 +136,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.9,
-    "currentRentIfBuying": 1108
+    "currentRentIfBuying": 1108,
+    "appreciation5yr": 10.5
   },
   {
     "zipcode": "92223",
@@ -145,7 +153,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.2,
-    "currentRentIfBuying": 2510
+    "currentRentIfBuying": 2510,
+    "appreciation5yr": 7.8
   },
   {
     "zipcode": "92314",
@@ -161,7 +170,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -6.7,
-    "currentRentIfBuying": 1712
+    "currentRentIfBuying": 1712,
+    "appreciation5yr": 8.2
   },
   {
     "zipcode": "92315",
@@ -177,7 +187,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -7.3,
-    "currentRentIfBuying": 1693
+    "currentRentIfBuying": 1693,
+    "appreciation5yr": 7.9
   },
   {
     "zipcode": "92316",
@@ -193,7 +204,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.4,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.6
   },
   {
     "zipcode": "92225",
@@ -209,7 +221,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -8.2,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 5.8
   },
   {
     "zipcode": "92230",
@@ -225,7 +238,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.6,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 9.9
   },
   {
     "zipcode": "92320",
@@ -241,7 +255,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.7,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.3
   },
   {
     "zipcode": "92234",
@@ -257,7 +272,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -5,
-    "currentRentIfBuying": 2122
+    "currentRentIfBuying": 2122,
+    "appreciation5yr": 8.4
   },
   {
     "zipcode": "91708",
@@ -273,7 +289,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.6,
-    "currentRentIfBuying": 2814
+    "currentRentIfBuying": 2814,
+    "appreciation5yr": 8
   },
   {
     "zipcode": "91710",
@@ -289,7 +306,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.7,
-    "currentRentIfBuying": 2682
+    "currentRentIfBuying": 2682,
+    "appreciation5yr": 7.9
   },
   {
     "zipcode": "91709",
@@ -305,7 +323,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.8,
-    "currentRentIfBuying": 2699
+    "currentRentIfBuying": 2699,
+    "appreciation5yr": 8.5
   },
   {
     "zipcode": "92236",
@@ -321,7 +340,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.7,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 9.4
   },
   {
     "zipcode": "92324",
@@ -337,7 +357,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.5,
-    "currentRentIfBuying": 1582
+    "currentRentIfBuying": 1582,
+    "appreciation5yr": 8.7
   },
   {
     "zipcode": "92879",
@@ -353,7 +374,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.1,
-    "currentRentIfBuying": 2100
+    "currentRentIfBuying": 2100,
+    "appreciation5yr": 8.6
   },
   {
     "zipcode": "92881",
@@ -369,7 +391,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 3006
+    "currentRentIfBuying": 3006,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "92882",
@@ -385,7 +408,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.8,
-    "currentRentIfBuying": 2580
+    "currentRentIfBuying": 2580,
+    "appreciation5yr": 8.4
   },
   {
     "zipcode": "92883",
@@ -401,7 +425,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 2735
+    "currentRentIfBuying": 2735,
+    "appreciation5yr": 8
   },
   {
     "zipcode": "92322",
@@ -417,7 +442,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -6.1,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.7
   },
   {
     "zipcode": "92325",
@@ -433,7 +459,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -6.9,
-    "currentRentIfBuying": 1833
+    "currentRentIfBuying": 1833,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "92398",
@@ -449,7 +476,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -11.3,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 3
   },
   {
     "zipcode": "92240",
@@ -465,7 +493,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.8,
-    "currentRentIfBuying": 1704
+    "currentRentIfBuying": 1704,
+    "appreciation5yr": 9.3
   },
   {
     "zipcode": "92241",
@@ -481,7 +510,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.1,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.6
   },
   {
     "zipcode": "92258",
@@ -497,7 +527,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.5,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 3.4
   },
   {
     "zipcode": "92242",
@@ -513,7 +544,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.1,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": -1.9
   },
   {
     "zipcode": "92880",
@@ -529,7 +561,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.8,
-    "currentRentIfBuying": 2708
+    "currentRentIfBuying": 2708,
+    "appreciation5yr": 9
   },
   {
     "zipcode": "92333",
@@ -545,7 +578,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -7.9,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.2
   },
   {
     "zipcode": "92335",
@@ -561,7 +595,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3,
-    "currentRentIfBuying": 1857
+    "currentRentIfBuying": 1857,
+    "appreciation5yr": 8.5
   },
   {
     "zipcode": "92336",
@@ -577,7 +612,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.6,
-    "currentRentIfBuying": 2782
+    "currentRentIfBuying": 2782,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "92337",
@@ -593,7 +629,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3,
-    "currentRentIfBuying": 2672
+    "currentRentIfBuying": 2672,
+    "appreciation5yr": 7.7
   },
   {
     "zipcode": "92339",
@@ -609,7 +646,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.1,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.7
   },
   {
     "zipcode": "92313",
@@ -625,7 +663,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.5,
-    "currentRentIfBuying": 1834
+    "currentRentIfBuying": 1834,
+    "appreciation5yr": 7.6
   },
   {
     "zipcode": "92341",
@@ -641,7 +680,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -10.5,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.4
   },
   {
     "zipcode": "92342",
@@ -657,7 +697,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.4,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.8
   },
   {
     "zipcode": "92543",
@@ -673,7 +714,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.1,
-    "currentRentIfBuying": 1539
+    "currentRentIfBuying": 1539,
+    "appreciation5yr": 9
   },
   {
     "zipcode": "92544",
@@ -689,7 +731,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.2,
-    "currentRentIfBuying": 1712
+    "currentRentIfBuying": 1712,
+    "appreciation5yr": 9
   },
   {
     "zipcode": "92545",
@@ -705,7 +748,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3,
-    "currentRentIfBuying": 1710
+    "currentRentIfBuying": 1710,
+    "appreciation5yr": 8.1
   },
   {
     "zipcode": "92344",
@@ -721,7 +765,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.4,
-    "currentRentIfBuying": 2218
+    "currentRentIfBuying": 2218,
+    "appreciation5yr": 8.2
   },
   {
     "zipcode": "92345",
@@ -737,7 +782,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.4,
-    "currentRentIfBuying": 1783
+    "currentRentIfBuying": 1783,
+    "appreciation5yr": 9.2
   },
   {
     "zipcode": "92346",
@@ -753,7 +799,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2,
-    "currentRentIfBuying": 2070
+    "currentRentIfBuying": 2070,
+    "appreciation5yr": 8.2
   },
   {
     "zipcode": "92347",
@@ -769,7 +816,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.4,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": -3.4
   },
   {
     "zipcode": "92548",
@@ -785,7 +833,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.2,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.7
   },
   {
     "zipcode": "92549",
@@ -801,7 +850,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -6.5,
-    "currentRentIfBuying": 1573
+    "currentRentIfBuying": 1573,
+    "appreciation5yr": 6.6
   },
   {
     "zipcode": "92210",
@@ -817,7 +867,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.3,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 10.9
   },
   {
     "zipcode": "92201",
@@ -833,7 +884,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.5,
-    "currentRentIfBuying": 2043
+    "currentRentIfBuying": 2043,
+    "appreciation5yr": 9.5
   },
   {
     "zipcode": "92203",
@@ -849,7 +901,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.8,
-    "currentRentIfBuying": 2376
+    "currentRentIfBuying": 2376,
+    "appreciation5yr": 8.6
   },
   {
     "zipcode": "92252",
@@ -865,7 +918,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -9.2,
-    "currentRentIfBuying": 1879
+    "currentRentIfBuying": 1879,
+    "appreciation5yr": 9.4
   },
   {
     "zipcode": "91752",
@@ -881,7 +935,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.1,
-    "currentRentIfBuying": 2424
+    "currentRentIfBuying": 2424,
+    "appreciation5yr": 8.2
   },
   {
     "zipcode": "92509",
@@ -897,7 +952,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.1,
-    "currentRentIfBuying": 2110
+    "currentRentIfBuying": 2110,
+    "appreciation5yr": 8.4
   },
   {
     "zipcode": "92253",
@@ -913,7 +969,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.9,
-    "currentRentIfBuying": 3023
+    "currentRentIfBuying": 3023,
+    "appreciation5yr": 9
   },
   {
     "zipcode": "92321",
@@ -929,7 +986,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -13.2,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.7
   },
   {
     "zipcode": "92352",
@@ -945,7 +1003,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -6.9,
-    "currentRentIfBuying": 1850
+    "currentRentIfBuying": 1850,
+    "appreciation5yr": 7.1
   },
   {
     "zipcode": "92378",
@@ -961,7 +1020,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -6.3,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 9.2
   },
   {
     "zipcode": "92385",
@@ -977,7 +1037,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.8,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.9
   },
   {
     "zipcode": "92391",
@@ -993,7 +1054,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -9.1,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8
   },
   {
     "zipcode": "92530",
@@ -1009,7 +1071,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 1960
+    "currentRentIfBuying": 1960,
+    "appreciation5yr": 8.5
   },
   {
     "zipcode": "92532",
@@ -1025,7 +1088,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 2427
+    "currentRentIfBuying": 2427,
+    "appreciation5yr": 8.7
   },
   {
     "zipcode": "92285",
@@ -1041,7 +1105,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -13.8,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.7
   },
   {
     "zipcode": "92354",
@@ -1057,7 +1122,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.2,
-    "currentRentIfBuying": 1965
+    "currentRentIfBuying": 1965,
+    "appreciation5yr": 7.5
   },
   {
     "zipcode": "92356",
@@ -1073,7 +1139,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.6,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.5
   },
   {
     "zipcode": "91759",
@@ -1089,7 +1156,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -7.5,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 4.8
   },
   {
     "zipcode": "92358",
@@ -1105,7 +1173,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.7,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "92254",
@@ -1121,7 +1190,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 2.4,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 9.5
   },
   {
     "zipcode": "92584",
@@ -1137,7 +1207,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.5,
-    "currentRentIfBuying": 2451
+    "currentRentIfBuying": 2451,
+    "appreciation5yr": 8.1
   },
   {
     "zipcode": "92585",
@@ -1153,7 +1224,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2,
-    "currentRentIfBuying": 2247
+    "currentRentIfBuying": 2247,
+    "appreciation5yr": 7.9
   },
   {
     "zipcode": "92586",
@@ -1169,7 +1241,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4,
-    "currentRentIfBuying": 1897
+    "currentRentIfBuying": 1897,
+    "appreciation5yr": 7
   },
   {
     "zipcode": "92587",
@@ -1185,7 +1258,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.6,
-    "currentRentIfBuying": 2580
+    "currentRentIfBuying": 2580,
+    "appreciation5yr": 8
   },
   {
     "zipcode": "92359",
@@ -1201,7 +1275,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.8,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "91763",
@@ -1217,7 +1292,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.1,
-    "currentRentIfBuying": 2097
+    "currentRentIfBuying": 2097,
+    "appreciation5yr": 7.9
   },
   {
     "zipcode": "92551",
@@ -1233,7 +1309,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.6,
-    "currentRentIfBuying": 2077
+    "currentRentIfBuying": 2077,
+    "appreciation5yr": 8.6
   },
   {
     "zipcode": "92553",
@@ -1249,7 +1326,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.1,
-    "currentRentIfBuying": 1862
+    "currentRentIfBuying": 1862,
+    "appreciation5yr": 9
   },
   {
     "zipcode": "92555",
@@ -1265,7 +1343,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.3,
-    "currentRentIfBuying": 2162
+    "currentRentIfBuying": 2162,
+    "appreciation5yr": 8.8
   },
   {
     "zipcode": "92557",
@@ -1281,7 +1360,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3,
-    "currentRentIfBuying": 2207
+    "currentRentIfBuying": 2207,
+    "appreciation5yr": 8.5
   },
   {
     "zipcode": "92256",
@@ -1297,7 +1377,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.3,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.9
   },
   {
     "zipcode": "92268",
@@ -1313,7 +1394,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -5.2,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 9.4
   },
   {
     "zipcode": "92561",
@@ -1329,7 +1411,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.2,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.1
   },
   {
     "zipcode": "92562",
@@ -1345,7 +1428,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.3,
-    "currentRentIfBuying": 2096
+    "currentRentIfBuying": 2096,
+    "appreciation5yr": 8.4
   },
   {
     "zipcode": "92563",
@@ -1361,7 +1445,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.1,
-    "currentRentIfBuying": 2403
+    "currentRentIfBuying": 2403,
+    "appreciation5yr": 8.6
   },
   {
     "zipcode": "92363",
@@ -1377,7 +1462,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -6.4,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.4
   },
   {
     "zipcode": "92860",
@@ -1393,7 +1479,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.6,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.7
   },
   {
     "zipcode": "92567",
@@ -1409,7 +1496,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.3,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.8
   },
   {
     "zipcode": "91761",
@@ -1425,7 +1513,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.2,
-    "currentRentIfBuying": 2159
+    "currentRentIfBuying": 2159,
+    "appreciation5yr": 8
   },
   {
     "zipcode": "91762",
@@ -1441,7 +1530,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2,
-    "currentRentIfBuying": 2113
+    "currentRentIfBuying": 2113,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "91764",
@@ -1457,7 +1547,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.7,
-    "currentRentIfBuying": 2102
+    "currentRentIfBuying": 2102,
+    "appreciation5yr": 7.9
   },
   {
     "zipcode": "92368",
@@ -1473,7 +1564,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 6,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 10.5
   },
   {
     "zipcode": "92211",
@@ -1489,7 +1581,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.1,
-    "currentRentIfBuying": 2324
+    "currentRentIfBuying": 2324,
+    "appreciation5yr": 7.6
   },
   {
     "zipcode": "92260",
@@ -1505,7 +1598,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.6,
-    "currentRentIfBuying": 2066
+    "currentRentIfBuying": 2066,
+    "appreciation5yr": 8.9
   },
   {
     "zipcode": "92262",
@@ -1521,7 +1615,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -5.8,
-    "currentRentIfBuying": 1669
+    "currentRentIfBuying": 1669,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "92264",
@@ -1537,7 +1632,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.1,
-    "currentRentIfBuying": 1924
+    "currentRentIfBuying": 1924,
+    "appreciation5yr": 8.6
   },
   {
     "zipcode": "92570",
@@ -1553,7 +1649,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.7,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.5
   },
   {
     "zipcode": "92571",
@@ -1569,7 +1666,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.5,
-    "currentRentIfBuying": 2482
+    "currentRentIfBuying": 2482,
+    "appreciation5yr": 8.7
   },
   {
     "zipcode": "92371",
@@ -1585,7 +1683,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.5,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.4
   },
   {
     "zipcode": "92372",
@@ -1601,7 +1700,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.6,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.4
   },
   {
     "zipcode": "91701",
@@ -1617,7 +1717,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.5,
-    "currentRentIfBuying": 2152
+    "currentRentIfBuying": 2152,
+    "appreciation5yr": 8.1
   },
   {
     "zipcode": "91730",
@@ -1633,7 +1734,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.4,
-    "currentRentIfBuying": 2332
+    "currentRentIfBuying": 2332,
+    "appreciation5yr": 8.1
   },
   {
     "zipcode": "91737",
@@ -1649,7 +1751,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.6,
-    "currentRentIfBuying": 2485
+    "currentRentIfBuying": 2485,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "91739",
@@ -1665,7 +1768,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.2,
-    "currentRentIfBuying": 2234
+    "currentRentIfBuying": 2234,
+    "appreciation5yr": 8.2
   },
   {
     "zipcode": "92270",
@@ -1681,7 +1785,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.5,
-    "currentRentIfBuying": 3096
+    "currentRentIfBuying": 3096,
+    "appreciation5yr": 10.1
   },
   {
     "zipcode": "92373",
@@ -1697,7 +1802,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.4,
-    "currentRentIfBuying": 1936
+    "currentRentIfBuying": 1936,
+    "appreciation5yr": 6.6
   },
   {
     "zipcode": "92374",
@@ -1713,7 +1819,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.8,
-    "currentRentIfBuying": 2010
+    "currentRentIfBuying": 2010,
+    "appreciation5yr": 7.6
   },
   {
     "zipcode": "92376",
@@ -1729,7 +1836,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 2235
+    "currentRentIfBuying": 2235,
+    "appreciation5yr": 8.6
   },
   {
     "zipcode": "92377",
@@ -1745,7 +1853,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.9,
-    "currentRentIfBuying": 2869
+    "currentRentIfBuying": 2869,
+    "appreciation5yr": 8.1
   },
   {
     "zipcode": "92501",
@@ -1761,7 +1870,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.7,
-    "currentRentIfBuying": 1907
+    "currentRentIfBuying": 1907,
+    "appreciation5yr": 8.2
   },
   {
     "zipcode": "92503",
@@ -1777,7 +1887,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.1,
-    "currentRentIfBuying": 2095
+    "currentRentIfBuying": 2095,
+    "appreciation5yr": 8
   },
   {
     "zipcode": "92504",
@@ -1793,7 +1904,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.7,
-    "currentRentIfBuying": 2057
+    "currentRentIfBuying": 2057,
+    "appreciation5yr": 8.1
   },
   {
     "zipcode": "92505",
@@ -1809,7 +1921,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.1,
-    "currentRentIfBuying": 2000
+    "currentRentIfBuying": 2000,
+    "appreciation5yr": 8.1
   },
   {
     "zipcode": "92506",
@@ -1825,7 +1938,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.2,
-    "currentRentIfBuying": 2360
+    "currentRentIfBuying": 2360,
+    "appreciation5yr": 7.9
   },
   {
     "zipcode": "92507",
@@ -1841,7 +1955,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.9,
-    "currentRentIfBuying": 1959
+    "currentRentIfBuying": 1959,
+    "appreciation5yr": 8.2
   },
   {
     "zipcode": "92508",
@@ -1857,7 +1972,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 2215
+    "currentRentIfBuying": 2215,
+    "appreciation5yr": 8.1
   },
   {
     "zipcode": "92382",
@@ -1873,7 +1989,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -6.6,
-    "currentRentIfBuying": 1913
+    "currentRentIfBuying": 1913,
+    "appreciation5yr": 9
   },
   {
     "zipcode": "92401",
@@ -1889,7 +2006,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.7,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 11.9
   },
   {
     "zipcode": "92404",
@@ -1905,7 +2023,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.5,
-    "currentRentIfBuying": 1863
+    "currentRentIfBuying": 1863,
+    "appreciation5yr": 9.4
   },
   {
     "zipcode": "92405",
@@ -1921,7 +2040,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.5,
-    "currentRentIfBuying": 1440
+    "currentRentIfBuying": 1440,
+    "appreciation5yr": 9.1
   },
   {
     "zipcode": "92407",
@@ -1937,7 +2057,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.3,
-    "currentRentIfBuying": 1842
+    "currentRentIfBuying": 1842,
+    "appreciation5yr": 8.8
   },
   {
     "zipcode": "92408",
@@ -1953,7 +2074,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.3,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.5
   },
   {
     "zipcode": "92410",
@@ -1969,7 +2091,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.6,
-    "currentRentIfBuying": 1387
+    "currentRentIfBuying": 1387,
+    "appreciation5yr": 8.9
   },
   {
     "zipcode": "92411",
@@ -1985,7 +2108,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.3,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 9.2
   },
   {
     "zipcode": "92582",
@@ -2001,7 +2125,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.4,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.5
   },
   {
     "zipcode": "92583",
@@ -2017,7 +2142,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.6,
-    "currentRentIfBuying": 1959
+    "currentRentIfBuying": 1959,
+    "appreciation5yr": 8.9
   },
   {
     "zipcode": "92386",
@@ -2033,7 +2159,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -10.6,
-    "currentRentIfBuying": 1403
+    "currentRentIfBuying": 1403,
+    "appreciation5yr": 9.3
   },
   {
     "zipcode": "92590",
@@ -2049,7 +2176,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.1,
-    "currentRentIfBuying": 2059
+    "currentRentIfBuying": 2059,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "92591",
@@ -2065,7 +2193,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.5,
-    "currentRentIfBuying": 2256
+    "currentRentIfBuying": 2256,
+    "appreciation5yr": 9
   },
   {
     "zipcode": "92592",
@@ -2081,7 +2210,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.7,
-    "currentRentIfBuying": 2763
+    "currentRentIfBuying": 2763,
+    "appreciation5yr": 8.8
   },
   {
     "zipcode": "92274",
@@ -2097,7 +2227,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 4.6,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 11.2
   },
   {
     "zipcode": "92276",
@@ -2113,7 +2244,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -6.5,
-    "currentRentIfBuying": 1488
+    "currentRentIfBuying": 1488,
+    "appreciation5yr": 7.5
   },
   {
     "zipcode": "92277",
@@ -2129,7 +2261,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -5,
-    "currentRentIfBuying": 1339
+    "currentRentIfBuying": 1339,
+    "appreciation5yr": 9.6
   },
   {
     "zipcode": "92317",
@@ -2145,7 +2278,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -7.5,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 5.9
   },
   {
     "zipcode": "92365",
@@ -2161,7 +2295,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.7,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 5.1
   },
   {
     "zipcode": "91784",
@@ -2177,7 +2312,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.7,
-    "currentRentIfBuying": 3088
+    "currentRentIfBuying": 3088,
+    "appreciation5yr": 7.9
   },
   {
     "zipcode": "91786",
@@ -2193,7 +2329,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.8,
-    "currentRentIfBuying": 1958
+    "currentRentIfBuying": 1958,
+    "appreciation5yr": 7.9
   },
   {
     "zipcode": "92392",
@@ -2209,7 +2346,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.3,
-    "currentRentIfBuying": 1936
+    "currentRentIfBuying": 1936,
+    "appreciation5yr": 8.8
   },
   {
     "zipcode": "92394",
@@ -2225,7 +2363,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.5,
-    "currentRentIfBuying": 2062
+    "currentRentIfBuying": 2062,
+    "appreciation5yr": 9.1
   },
   {
     "zipcode": "92395",
@@ -2241,7 +2380,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.1,
-    "currentRentIfBuying": 1658
+    "currentRentIfBuying": 1658,
+    "appreciation5yr": 9.3
   },
   {
     "zipcode": "92282",
@@ -2257,7 +2397,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.7,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 9.2
   },
   {
     "zipcode": "92595",
@@ -2273,7 +2414,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.9,
-    "currentRentIfBuying": 2183
+    "currentRentIfBuying": 2183,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "92596",
@@ -2289,7 +2431,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.4,
-    "currentRentIfBuying": 2718
+    "currentRentIfBuying": 2718,
+    "appreciation5yr": 8.1
   },
   {
     "zipcode": "92397",
@@ -2305,7 +2448,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.6,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.7
   },
   {
     "zipcode": "92399",
@@ -2321,7 +2465,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.9,
-    "currentRentIfBuying": 2054
+    "currentRentIfBuying": 2054,
+    "appreciation5yr": 7.3
   },
   {
     "zipcode": "92284",
@@ -2337,7 +2482,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.5,
-    "currentRentIfBuying": 1511
+    "currentRentIfBuying": 1511,
+    "appreciation5yr": 10.2
   },
   {
     "zipcode": "93510",
@@ -2353,7 +2499,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.9,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.7
   },
   {
     "zipcode": "91301",
@@ -2369,7 +2516,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.9,
-    "currentRentIfBuying": 3154
+    "currentRentIfBuying": 3154,
+    "appreciation5yr": 7.7
   },
   {
     "zipcode": "91801",
@@ -2385,7 +2533,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.1,
-    "currentRentIfBuying": 2103
+    "currentRentIfBuying": 2103,
+    "appreciation5yr": 5.7
   },
   {
     "zipcode": "91803",
@@ -2401,7 +2550,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.4,
-    "currentRentIfBuying": 1888
+    "currentRentIfBuying": 1888,
+    "appreciation5yr": 6.3
   },
   {
     "zipcode": "91001",
@@ -2417,7 +2567,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -12.9,
-    "currentRentIfBuying": 3641
+    "currentRentIfBuying": 3641,
+    "appreciation5yr": 6.6
   },
   {
     "zipcode": "91006",
@@ -2433,7 +2584,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 2.1,
-    "currentRentIfBuying": 3069
+    "currentRentIfBuying": 3069,
+    "appreciation5yr": 6.3
   },
   {
     "zipcode": "91007",
@@ -2449,7 +2601,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 2.5,
-    "currentRentIfBuying": 2740
+    "currentRentIfBuying": 2740,
+    "appreciation5yr": 5.5
   },
   {
     "zipcode": "90701",
@@ -2465,7 +2618,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.6,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.5
   },
   {
     "zipcode": "90704",
@@ -2481,7 +2635,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.7,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 5.2
   },
   {
     "zipcode": "91702",
@@ -2497,7 +2652,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.4,
-    "currentRentIfBuying": 2296
+    "currentRentIfBuying": 2296,
+    "appreciation5yr": 7.3
   },
   {
     "zipcode": "91706",
@@ -2513,7 +2669,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.3,
-    "currentRentIfBuying": 2561
+    "currentRentIfBuying": 2561,
+    "appreciation5yr": 7.1
   },
   {
     "zipcode": "90201",
@@ -2529,7 +2686,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.4,
-    "currentRentIfBuying": 1846
+    "currentRentIfBuying": 1846,
+    "appreciation5yr": 7
   },
   {
     "zipcode": "90706",
@@ -2545,7 +2703,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.5,
-    "currentRentIfBuying": 1812
+    "currentRentIfBuying": 1812,
+    "appreciation5yr": 6.7
   },
   {
     "zipcode": "90210",
@@ -2561,7 +2720,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.4,
-    "currentRentIfBuying": 9771
+    "currentRentIfBuying": 9771,
+    "appreciation5yr": 2.2
   },
   {
     "zipcode": "90211",
@@ -2577,7 +2737,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0,
-    "currentRentIfBuying": 3092
+    "currentRentIfBuying": 3092,
+    "appreciation5yr": 2.9
   },
   {
     "zipcode": "90212",
@@ -2593,7 +2754,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.4,
-    "currentRentIfBuying": 3306
+    "currentRentIfBuying": 3306,
+    "appreciation5yr": -0.9
   },
   {
     "zipcode": "91008",
@@ -2609,7 +2771,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.1,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 4.2
   },
   {
     "zipcode": "91501",
@@ -2625,7 +2788,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.3,
-    "currentRentIfBuying": 2428
+    "currentRentIfBuying": 2428,
+    "appreciation5yr": 7.8
   },
   {
     "zipcode": "91502",
@@ -2641,7 +2805,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.7,
-    "currentRentIfBuying": 2079
+    "currentRentIfBuying": 2079,
+    "appreciation5yr": 5.7
   },
   {
     "zipcode": "91504",
@@ -2657,7 +2822,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.9,
-    "currentRentIfBuying": 2627
+    "currentRentIfBuying": 2627,
+    "appreciation5yr": 7
   },
   {
     "zipcode": "91505",
@@ -2673,7 +2839,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.2,
-    "currentRentIfBuying": 2540
+    "currentRentIfBuying": 2540,
+    "appreciation5yr": 6.2
   },
   {
     "zipcode": "91506",
@@ -2689,7 +2856,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.3,
-    "currentRentIfBuying": 1987
+    "currentRentIfBuying": 1987,
+    "appreciation5yr": 6.6
   },
   {
     "zipcode": "91302",
@@ -2705,7 +2873,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.1,
-    "currentRentIfBuying": 3574
+    "currentRentIfBuying": 3574,
+    "appreciation5yr": 8
   },
   {
     "zipcode": "90745",
@@ -2721,7 +2890,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.8,
-    "currentRentIfBuying": 2836
+    "currentRentIfBuying": 2836,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "90746",
@@ -2737,7 +2907,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.3,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.5
   },
   {
     "zipcode": "91384",
@@ -2753,7 +2924,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.8,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.5
   },
   {
     "zipcode": "90703",
@@ -2769,7 +2941,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.5,
-    "currentRentIfBuying": 2934
+    "currentRentIfBuying": 2934,
+    "appreciation5yr": 7.8
   },
   {
     "zipcode": "91711",
@@ -2785,7 +2958,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.4,
-    "currentRentIfBuying": 2712
+    "currentRentIfBuying": 2712,
+    "appreciation5yr": 7
   },
   {
     "zipcode": "90040",
@@ -2801,7 +2975,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.1,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.3
   },
   {
     "zipcode": "90220",
@@ -2817,7 +2992,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.8,
-    "currentRentIfBuying": 1856
+    "currentRentIfBuying": 1856,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "90221",
@@ -2833,7 +3009,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.5,
-    "currentRentIfBuying": 2068
+    "currentRentIfBuying": 2068,
+    "appreciation5yr": 6.5
   },
   {
     "zipcode": "90222",
@@ -2849,7 +3026,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.8,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.7
   },
   {
     "zipcode": "91722",
@@ -2865,7 +3043,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.7,
-    "currentRentIfBuying": 2079
+    "currentRentIfBuying": 2079,
+    "appreciation5yr": 7
   },
   {
     "zipcode": "91723",
@@ -2881,7 +3060,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.9,
-    "currentRentIfBuying": 1835
+    "currentRentIfBuying": 1835,
+    "appreciation5yr": 7.3
   },
   {
     "zipcode": "91724",
@@ -2897,7 +3077,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.5,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.9
   },
   {
     "zipcode": "90230",
@@ -2913,7 +3094,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.2,
-    "currentRentIfBuying": 2609
+    "currentRentIfBuying": 2609,
+    "appreciation5yr": 3.8
   },
   {
     "zipcode": "90232",
@@ -2929,7 +3111,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.7,
-    "currentRentIfBuying": 2913
+    "currentRentIfBuying": 2913,
+    "appreciation5yr": 3.6
   },
   {
     "zipcode": "91765",
@@ -2945,7 +3128,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.8,
-    "currentRentIfBuying": 2796
+    "currentRentIfBuying": 2796,
+    "appreciation5yr": 7.5
   },
   {
     "zipcode": "90240",
@@ -2961,7 +3145,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.7,
-    "currentRentIfBuying": 2570
+    "currentRentIfBuying": 2570,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "90241",
@@ -2977,7 +3162,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0,
-    "currentRentIfBuying": 2009
+    "currentRentIfBuying": 2009,
+    "appreciation5yr": 7
   },
   {
     "zipcode": "90242",
@@ -2993,7 +3179,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.2,
-    "currentRentIfBuying": 1740
+    "currentRentIfBuying": 1740,
+    "appreciation5yr": 6.8
   },
   {
     "zipcode": "91010",
@@ -3009,7 +3196,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.8,
-    "currentRentIfBuying": 2446
+    "currentRentIfBuying": 2446,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "90022",
@@ -3025,7 +3213,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.1,
-    "currentRentIfBuying": 1987
+    "currentRentIfBuying": 1987,
+    "appreciation5yr": 5.8
   },
   {
     "zipcode": "90063",
@@ -3041,7 +3230,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.8,
-    "currentRentIfBuying": 2237
+    "currentRentIfBuying": 2237,
+    "appreciation5yr": 5.5
   },
   {
     "zipcode": "91731",
@@ -3057,7 +3247,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.2,
-    "currentRentIfBuying": 2324
+    "currentRentIfBuying": 2324,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "91732",
@@ -3073,7 +3264,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.4,
-    "currentRentIfBuying": 2255
+    "currentRentIfBuying": 2255,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "90245",
@@ -3089,7 +3281,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.5,
-    "currentRentIfBuying": 2411
+    "currentRentIfBuying": 2411,
+    "appreciation5yr": 6.2
   },
   {
     "zipcode": "90001",
@@ -3105,7 +3298,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.8,
-    "currentRentIfBuying": 2190
+    "currentRentIfBuying": 2190,
+    "appreciation5yr": 5.9
   },
   {
     "zipcode": "90247",
@@ -3121,7 +3315,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.5,
-    "currentRentIfBuying": 2003
+    "currentRentIfBuying": 2003,
+    "appreciation5yr": 5.6
   },
   {
     "zipcode": "90248",
@@ -3137,7 +3332,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.5,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 5.8
   },
   {
     "zipcode": "90249",
@@ -3153,7 +3349,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.4,
-    "currentRentIfBuying": 1806
+    "currentRentIfBuying": 1806,
+    "appreciation5yr": 5.9
   },
   {
     "zipcode": "91201",
@@ -3169,7 +3366,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.8,
-    "currentRentIfBuying": 2094
+    "currentRentIfBuying": 2094,
+    "appreciation5yr": 7.1
   },
   {
     "zipcode": "91202",
@@ -3185,7 +3383,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.9,
-    "currentRentIfBuying": 2316
+    "currentRentIfBuying": 2316,
+    "appreciation5yr": 7.4
   },
   {
     "zipcode": "91203",
@@ -3201,7 +3400,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.1,
-    "currentRentIfBuying": 2518
+    "currentRentIfBuying": 2518,
+    "appreciation5yr": 5.4
   },
   {
     "zipcode": "91204",
@@ -3217,7 +3417,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.8,
-    "currentRentIfBuying": 2356
+    "currentRentIfBuying": 2356,
+    "appreciation5yr": 5.9
   },
   {
     "zipcode": "91205",
@@ -3233,7 +3434,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.5,
-    "currentRentIfBuying": 1938
+    "currentRentIfBuying": 1938,
+    "appreciation5yr": 5.9
   },
   {
     "zipcode": "91206",
@@ -3249,7 +3451,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.7,
-    "currentRentIfBuying": 2196
+    "currentRentIfBuying": 2196,
+    "appreciation5yr": 7.1
   },
   {
     "zipcode": "91207",
@@ -3265,7 +3468,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.7,
-    "currentRentIfBuying": 2320
+    "currentRentIfBuying": 2320,
+    "appreciation5yr": 8.7
   },
   {
     "zipcode": "91208",
@@ -3281,7 +3485,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.9,
-    "currentRentIfBuying": 3061
+    "currentRentIfBuying": 3061,
+    "appreciation5yr": 7.5
   },
   {
     "zipcode": "91210",
@@ -3297,7 +3502,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.7,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 3.6
   },
   {
     "zipcode": "91740",
@@ -3313,7 +3519,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.7,
-    "currentRentIfBuying": 2070
+    "currentRentIfBuying": 2070,
+    "appreciation5yr": 6.6
   },
   {
     "zipcode": "91741",
@@ -3329,7 +3536,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.3,
-    "currentRentIfBuying": 2635
+    "currentRentIfBuying": 2635,
+    "appreciation5yr": 7
   },
   {
     "zipcode": "91745",
@@ -3345,7 +3553,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.5,
-    "currentRentIfBuying": 2519
+    "currentRentIfBuying": 2519,
+    "appreciation5yr": 8
   },
   {
     "zipcode": "90716",
@@ -3361,7 +3570,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.8,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.4
   },
   {
     "zipcode": "90250",
@@ -3377,7 +3587,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2,
-    "currentRentIfBuying": 1697
+    "currentRentIfBuying": 1697,
+    "appreciation5yr": 4.5
   },
   {
     "zipcode": "90254",
@@ -3393,7 +3604,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 2,
-    "currentRentIfBuying": 3122
+    "currentRentIfBuying": 3122,
+    "appreciation5yr": 5.5
   },
   {
     "zipcode": "90255",
@@ -3409,7 +3621,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.8,
-    "currentRentIfBuying": 1447
+    "currentRentIfBuying": 1447,
+    "appreciation5yr": 6.6
   },
   {
     "zipcode": "90301",
@@ -3425,7 +3638,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2,
-    "currentRentIfBuying": 2474
+    "currentRentIfBuying": 2474,
+    "appreciation5yr": 5.5
   },
   {
     "zipcode": "90302",
@@ -3441,7 +3655,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.1,
-    "currentRentIfBuying": 1983
+    "currentRentIfBuying": 1983,
+    "appreciation5yr": 4.3
   },
   {
     "zipcode": "90303",
@@ -3457,7 +3672,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.9,
-    "currentRentIfBuying": 1952
+    "currentRentIfBuying": 1952,
+    "appreciation5yr": 5
   },
   {
     "zipcode": "90304",
@@ -3473,7 +3689,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.3,
-    "currentRentIfBuying": 2422
+    "currentRentIfBuying": 2422,
+    "appreciation5yr": 5
   },
   {
     "zipcode": "90305",
@@ -3489,7 +3706,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.4,
-    "currentRentIfBuying": 2231
+    "currentRentIfBuying": 2231,
+    "appreciation5yr": 4.9
   },
   {
     "zipcode": "91011",
@@ -3505,7 +3723,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.3,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.5
   },
   {
     "zipcode": "91020",
@@ -3521,7 +3740,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.1,
-    "currentRentIfBuying": 2148
+    "currentRentIfBuying": 2148,
+    "appreciation5yr": 5.2
   },
   {
     "zipcode": "91214",
@@ -3537,7 +3757,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.1,
-    "currentRentIfBuying": 2753
+    "currentRentIfBuying": 2753,
+    "appreciation5yr": 6.8
   },
   {
     "zipcode": "90638",
@@ -3553,7 +3774,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.6,
-    "currentRentIfBuying": 2510
+    "currentRentIfBuying": 2510,
+    "appreciation5yr": 7
   },
   {
     "zipcode": "91744",
@@ -3569,7 +3791,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2,
-    "currentRentIfBuying": 2071
+    "currentRentIfBuying": 2071,
+    "appreciation5yr": 7.3
   },
   {
     "zipcode": "91746",
@@ -3585,7 +3808,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.3,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7
   },
   {
     "zipcode": "91750",
@@ -3601,7 +3825,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.2,
-    "currentRentIfBuying": 2349
+    "currentRentIfBuying": 2349,
+    "appreciation5yr": 7.3
   },
   {
     "zipcode": "90056",
@@ -3617,7 +3842,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.4,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.8
   },
   {
     "zipcode": "93532",
@@ -3633,7 +3859,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "90712",
@@ -3649,7 +3876,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.3,
-    "currentRentIfBuying": 2720
+    "currentRentIfBuying": 2720,
+    "appreciation5yr": 6.7
   },
   {
     "zipcode": "90713",
@@ -3665,7 +3893,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.4,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.8
   },
   {
     "zipcode": "90715",
@@ -3681,7 +3910,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.6,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.5
   },
   {
     "zipcode": "93534",
@@ -3697,7 +3927,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4,
-    "currentRentIfBuying": 1709
+    "currentRentIfBuying": 1709,
+    "appreciation5yr": 8
   },
   {
     "zipcode": "93535",
@@ -3713,7 +3944,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.4,
-    "currentRentIfBuying": 2257
+    "currentRentIfBuying": 2257,
+    "appreciation5yr": 8.4
   },
   {
     "zipcode": "93536",
@@ -3729,7 +3961,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.6,
-    "currentRentIfBuying": 2407
+    "currentRentIfBuying": 2407,
+    "appreciation5yr": 7.2
   },
   {
     "zipcode": "90260",
@@ -3745,7 +3978,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.6,
-    "currentRentIfBuying": 2330
+    "currentRentIfBuying": 2330,
+    "appreciation5yr": 5.6
   },
   {
     "zipcode": "93543",
@@ -3761,7 +3995,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.4,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.4
   },
   {
     "zipcode": "93544",
@@ -3777,7 +4012,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.6,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 5.8
   },
   {
     "zipcode": "90717",
@@ -3793,7 +4029,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.3,
-    "currentRentIfBuying": 2600
+    "currentRentIfBuying": 2600,
+    "appreciation5yr": 5.4
   },
   {
     "zipcode": "90802",
@@ -3809,7 +4046,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -5.1,
-    "currentRentIfBuying": 2072
+    "currentRentIfBuying": 2072,
+    "appreciation5yr": 4.2
   },
   {
     "zipcode": "90803",
@@ -3825,7 +4063,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.4,
-    "currentRentIfBuying": 2077
+    "currentRentIfBuying": 2077,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "90804",
@@ -3841,7 +4080,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.5,
-    "currentRentIfBuying": 1838
+    "currentRentIfBuying": 1838,
+    "appreciation5yr": 5.6
   },
   {
     "zipcode": "90805",
@@ -3857,7 +4097,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.7,
-    "currentRentIfBuying": 1768
+    "currentRentIfBuying": 1768,
+    "appreciation5yr": 6.6
   },
   {
     "zipcode": "90806",
@@ -3873,7 +4114,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.6,
-    "currentRentIfBuying": 1604
+    "currentRentIfBuying": 1604,
+    "appreciation5yr": 6
   },
   {
     "zipcode": "90807",
@@ -3889,7 +4131,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.2,
-    "currentRentIfBuying": 1836
+    "currentRentIfBuying": 1836,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "90808",
@@ -3905,7 +4148,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1,
-    "currentRentIfBuying": 2666
+    "currentRentIfBuying": 2666,
+    "appreciation5yr": 7
   },
   {
     "zipcode": "90810",
@@ -3921,7 +4165,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.2,
-    "currentRentIfBuying": 1726
+    "currentRentIfBuying": 1726,
+    "appreciation5yr": 7.1
   },
   {
     "zipcode": "90813",
@@ -3937,7 +4182,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.4,
-    "currentRentIfBuying": 1589
+    "currentRentIfBuying": 1589,
+    "appreciation5yr": 5.5
   },
   {
     "zipcode": "90814",
@@ -3953,7 +4199,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.3,
-    "currentRentIfBuying": 2043
+    "currentRentIfBuying": 2043,
+    "appreciation5yr": 5.6
   },
   {
     "zipcode": "90815",
@@ -3969,7 +4216,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.2,
-    "currentRentIfBuying": 2407
+    "currentRentIfBuying": 2407,
+    "appreciation5yr": 7.2
   },
   {
     "zipcode": "90002",
@@ -3985,7 +4233,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.1,
-    "currentRentIfBuying": 1993
+    "currentRentIfBuying": 1993,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "90003",
@@ -4001,7 +4250,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.6,
-    "currentRentIfBuying": 2485
+    "currentRentIfBuying": 2485,
+    "appreciation5yr": 5.7
   },
   {
     "zipcode": "90004",
@@ -4017,7 +4267,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.1,
-    "currentRentIfBuying": 1889
+    "currentRentIfBuying": 1889,
+    "appreciation5yr": 3
   },
   {
     "zipcode": "90005",
@@ -4033,7 +4284,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -5.9,
-    "currentRentIfBuying": 2037
+    "currentRentIfBuying": 2037,
+    "appreciation5yr": 0.7
   },
   {
     "zipcode": "90006",
@@ -4049,7 +4301,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -5,
-    "currentRentIfBuying": 1652
+    "currentRentIfBuying": 1652,
+    "appreciation5yr": 2.2
   },
   {
     "zipcode": "90007",
@@ -4065,7 +4318,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.1,
-    "currentRentIfBuying": 2421
+    "currentRentIfBuying": 2421,
+    "appreciation5yr": 4
   },
   {
     "zipcode": "90008",
@@ -4081,7 +4335,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.4,
-    "currentRentIfBuying": 1880
+    "currentRentIfBuying": 1880,
+    "appreciation5yr": 5.1
   },
   {
     "zipcode": "90010",
@@ -4097,7 +4352,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -5.7,
-    "currentRentIfBuying": 2634
+    "currentRentIfBuying": 2634,
+    "appreciation5yr": 1.1
   },
   {
     "zipcode": "90011",
@@ -4113,7 +4369,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.4,
-    "currentRentIfBuying": 2469
+    "currentRentIfBuying": 2469,
+    "appreciation5yr": 5.6
   },
   {
     "zipcode": "90012",
@@ -4129,7 +4386,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -7.7,
-    "currentRentIfBuying": 2117
+    "currentRentIfBuying": 2117,
+    "appreciation5yr": 0.9
   },
   {
     "zipcode": "90013",
@@ -4145,7 +4403,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.1,
-    "currentRentIfBuying": 2293
+    "currentRentIfBuying": 2293,
+    "appreciation5yr": -2.2
   },
   {
     "zipcode": "90014",
@@ -4161,7 +4420,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -7.7,
-    "currentRentIfBuying": 2100
+    "currentRentIfBuying": 2100,
+    "appreciation5yr": -2.6
   },
   {
     "zipcode": "90015",
@@ -4177,7 +4437,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -8.1,
-    "currentRentIfBuying": 2283
+    "currentRentIfBuying": 2283,
+    "appreciation5yr": -2.5
   },
   {
     "zipcode": "90016",
@@ -4193,7 +4454,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.5,
-    "currentRentIfBuying": 2916
+    "currentRentIfBuying": 2916,
+    "appreciation5yr": 4.5
   },
   {
     "zipcode": "90017",
@@ -4209,7 +4471,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -7.5,
-    "currentRentIfBuying": 2219
+    "currentRentIfBuying": 2219,
+    "appreciation5yr": -4.6
   },
   {
     "zipcode": "90018",
@@ -4225,7 +4488,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -7.2,
-    "currentRentIfBuying": 2154
+    "currentRentIfBuying": 2154,
+    "appreciation5yr": 3.5
   },
   {
     "zipcode": "90019",
@@ -4241,7 +4505,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.1,
-    "currentRentIfBuying": 2362
+    "currentRentIfBuying": 2362,
+    "appreciation5yr": 2.2
   },
   {
     "zipcode": "90020",
@@ -4257,7 +4522,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -7.2,
-    "currentRentIfBuying": 1635
+    "currentRentIfBuying": 1635,
+    "appreciation5yr": 0.9
   },
   {
     "zipcode": "90021",
@@ -4273,7 +4539,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.5,
-    "currentRentIfBuying": 2542
+    "currentRentIfBuying": 2542,
+    "appreciation5yr": -0.1
   },
   {
     "zipcode": "90023",
@@ -4289,7 +4556,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.1,
-    "currentRentIfBuying": 1860
+    "currentRentIfBuying": 1860,
+    "appreciation5yr": 5.6
   },
   {
     "zipcode": "90024",
@@ -4305,7 +4573,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.5,
-    "currentRentIfBuying": 3409
+    "currentRentIfBuying": 3409,
+    "appreciation5yr": 1.6
   },
   {
     "zipcode": "90025",
@@ -4321,7 +4590,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4,
-    "currentRentIfBuying": 2633
+    "currentRentIfBuying": 2633,
+    "appreciation5yr": 1.5
   },
   {
     "zipcode": "90026",
@@ -4337,7 +4607,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.9,
-    "currentRentIfBuying": 2238
+    "currentRentIfBuying": 2238,
+    "appreciation5yr": 1.8
   },
   {
     "zipcode": "90027",
@@ -4353,7 +4624,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -5,
-    "currentRentIfBuying": 2262
+    "currentRentIfBuying": 2262,
+    "appreciation5yr": 4.1
   },
   {
     "zipcode": "90028",
@@ -4369,7 +4641,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -8.4,
-    "currentRentIfBuying": 2279
+    "currentRentIfBuying": 2279,
+    "appreciation5yr": -0.2
   },
   {
     "zipcode": "90029",
@@ -4385,7 +4658,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -8.8,
-    "currentRentIfBuying": 1971
+    "currentRentIfBuying": 1971,
+    "appreciation5yr": 0.5
   },
   {
     "zipcode": "90031",
@@ -4401,7 +4675,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2,
-    "currentRentIfBuying": 2071
+    "currentRentIfBuying": 2071,
+    "appreciation5yr": 5.2
   },
   {
     "zipcode": "90032",
@@ -4417,7 +4692,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.4,
-    "currentRentIfBuying": 2338
+    "currentRentIfBuying": 2338,
+    "appreciation5yr": 5.8
   },
   {
     "zipcode": "90033",
@@ -4433,7 +4709,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.8,
-    "currentRentIfBuying": 2060
+    "currentRentIfBuying": 2060,
+    "appreciation5yr": 4.9
   },
   {
     "zipcode": "90034",
@@ -4449,7 +4726,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1,
-    "currentRentIfBuying": 2309
+    "currentRentIfBuying": 2309,
+    "appreciation5yr": 3.9
   },
   {
     "zipcode": "90035",
@@ -4465,7 +4743,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.5,
-    "currentRentIfBuying": 2853
+    "currentRentIfBuying": 2853,
+    "appreciation5yr": 2.2
   },
   {
     "zipcode": "90036",
@@ -4481,7 +4760,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.9,
-    "currentRentIfBuying": 2499
+    "currentRentIfBuying": 2499,
+    "appreciation5yr": 2.2
   },
   {
     "zipcode": "90037",
@@ -4497,7 +4777,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.8,
-    "currentRentIfBuying": 1886
+    "currentRentIfBuying": 1886,
+    "appreciation5yr": 4.8
   },
   {
     "zipcode": "90038",
@@ -4513,7 +4794,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -6.1,
-    "currentRentIfBuying": 2240
+    "currentRentIfBuying": 2240,
+    "appreciation5yr": 0
   },
   {
     "zipcode": "90039",
@@ -4529,7 +4811,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.8,
-    "currentRentIfBuying": 2748
+    "currentRentIfBuying": 2748,
+    "appreciation5yr": 4.2
   },
   {
     "zipcode": "90041",
@@ -4545,7 +4828,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.4,
-    "currentRentIfBuying": 2869
+    "currentRentIfBuying": 2869,
+    "appreciation5yr": 5.7
   },
   {
     "zipcode": "90042",
@@ -4561,7 +4845,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0,
-    "currentRentIfBuying": 2404
+    "currentRentIfBuying": 2404,
+    "appreciation5yr": 5.7
   },
   {
     "zipcode": "90043",
@@ -4577,7 +4862,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.2,
-    "currentRentIfBuying": 1982
+    "currentRentIfBuying": 1982,
+    "appreciation5yr": 5.1
   },
   {
     "zipcode": "90044",
@@ -4593,7 +4879,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.7,
-    "currentRentIfBuying": 2088
+    "currentRentIfBuying": 2088,
+    "appreciation5yr": 5.6
   },
   {
     "zipcode": "90045",
@@ -4609,7 +4896,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.3,
-    "currentRentIfBuying": 2364
+    "currentRentIfBuying": 2364,
+    "appreciation5yr": 4.9
   },
   {
     "zipcode": "90046",
@@ -4625,7 +4913,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.1,
-    "currentRentIfBuying": 2358
+    "currentRentIfBuying": 2358,
+    "appreciation5yr": 2.1
   },
   {
     "zipcode": "90047",
@@ -4641,7 +4930,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.6,
-    "currentRentIfBuying": 2249
+    "currentRentIfBuying": 2249,
+    "appreciation5yr": 5.4
   },
   {
     "zipcode": "90048",
@@ -4657,7 +4947,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.7,
-    "currentRentIfBuying": 3022
+    "currentRentIfBuying": 3022,
+    "appreciation5yr": 1.8
   },
   {
     "zipcode": "90049",
@@ -4673,7 +4964,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.4,
-    "currentRentIfBuying": 3411
+    "currentRentIfBuying": 3411,
+    "appreciation5yr": 5.4
   },
   {
     "zipcode": "90057",
@@ -4689,7 +4981,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -9.9,
-    "currentRentIfBuying": 1782
+    "currentRentIfBuying": 1782,
+    "appreciation5yr": 0.9
   },
   {
     "zipcode": "90058",
@@ -4705,7 +4998,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.8,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.3
   },
   {
     "zipcode": "90061",
@@ -4721,7 +5015,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.7,
-    "currentRentIfBuying": 2366
+    "currentRentIfBuying": 2366,
+    "appreciation5yr": 5.8
   },
   {
     "zipcode": "90062",
@@ -4737,7 +5032,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.8,
-    "currentRentIfBuying": 2310
+    "currentRentIfBuying": 2310,
+    "appreciation5yr": 4.5
   },
   {
     "zipcode": "90064",
@@ -4753,7 +5049,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 2934
+    "currentRentIfBuying": 2934,
+    "appreciation5yr": 3.5
   },
   {
     "zipcode": "90065",
@@ -4769,7 +5066,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.2,
-    "currentRentIfBuying": 2380
+    "currentRentIfBuying": 2380,
+    "appreciation5yr": 5.5
   },
   {
     "zipcode": "90066",
@@ -4785,7 +5083,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.9,
-    "currentRentIfBuying": 2554
+    "currentRentIfBuying": 2554,
+    "appreciation5yr": 4.1
   },
   {
     "zipcode": "90067",
@@ -4801,7 +5100,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.4,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 2.3
   },
   {
     "zipcode": "90068",
@@ -4817,7 +5117,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.3,
-    "currentRentIfBuying": 2829
+    "currentRentIfBuying": 2829,
+    "appreciation5yr": 4.1
   },
   {
     "zipcode": "90077",
@@ -4833,7 +5134,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.1,
-    "currentRentIfBuying": 10719
+    "currentRentIfBuying": 10719,
+    "appreciation5yr": 4.8
   },
   {
     "zipcode": "90094",
@@ -4849,7 +5151,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.3,
-    "currentRentIfBuying": 3775
+    "currentRentIfBuying": 3775,
+    "appreciation5yr": 3.6
   },
   {
     "zipcode": "90272",
@@ -4865,7 +5168,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -8.5,
-    "currentRentIfBuying": 5239
+    "currentRentIfBuying": 5239,
+    "appreciation5yr": 4
   },
   {
     "zipcode": "90291",
@@ -4881,7 +5185,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.1,
-    "currentRentIfBuying": 3043
+    "currentRentIfBuying": 3043,
+    "appreciation5yr": 0.1
   },
   {
     "zipcode": "90293",
@@ -4897,7 +5202,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -5.4,
-    "currentRentIfBuying": 2926
+    "currentRentIfBuying": 2926,
+    "appreciation5yr": 1.3
   },
   {
     "zipcode": "90710",
@@ -4913,7 +5219,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.1,
-    "currentRentIfBuying": 2180
+    "currentRentIfBuying": 2180,
+    "appreciation5yr": 6.5
   },
   {
     "zipcode": "90731",
@@ -4929,7 +5236,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.4,
-    "currentRentIfBuying": 2163
+    "currentRentIfBuying": 2163,
+    "appreciation5yr": 5.5
   },
   {
     "zipcode": "90732",
@@ -4945,7 +5253,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.6,
-    "currentRentIfBuying": 3162
+    "currentRentIfBuying": 3162,
+    "appreciation5yr": 5.8
   },
   {
     "zipcode": "90744",
@@ -4961,7 +5270,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.4,
-    "currentRentIfBuying": 1884
+    "currentRentIfBuying": 1884,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "91040",
@@ -4977,7 +5287,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.7,
-    "currentRentIfBuying": 2151
+    "currentRentIfBuying": 2151,
+    "appreciation5yr": 6.6
   },
   {
     "zipcode": "91042",
@@ -4993,7 +5304,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.8,
-    "currentRentIfBuying": 2065
+    "currentRentIfBuying": 2065,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "91303",
@@ -5009,7 +5321,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.9,
-    "currentRentIfBuying": 2167
+    "currentRentIfBuying": 2167,
+    "appreciation5yr": 7.3
   },
   {
     "zipcode": "91304",
@@ -5025,7 +5338,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.7,
-    "currentRentIfBuying": 2123
+    "currentRentIfBuying": 2123,
+    "appreciation5yr": 6.8
   },
   {
     "zipcode": "91306",
@@ -5041,7 +5355,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.5,
-    "currentRentIfBuying": 2806
+    "currentRentIfBuying": 2806,
+    "appreciation5yr": 7.4
   },
   {
     "zipcode": "91307",
@@ -5057,7 +5372,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.7,
-    "currentRentIfBuying": 3761
+    "currentRentIfBuying": 3761,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "91311",
@@ -5073,7 +5389,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.5,
-    "currentRentIfBuying": 2867
+    "currentRentIfBuying": 2867,
+    "appreciation5yr": 7
   },
   {
     "zipcode": "91316",
@@ -5089,7 +5406,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2,
-    "currentRentIfBuying": 2573
+    "currentRentIfBuying": 2573,
+    "appreciation5yr": 6.3
   },
   {
     "zipcode": "91324",
@@ -5105,7 +5423,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.5,
-    "currentRentIfBuying": 2313
+    "currentRentIfBuying": 2313,
+    "appreciation5yr": 7.1
   },
   {
     "zipcode": "91325",
@@ -5121,7 +5440,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.1,
-    "currentRentIfBuying": 2134
+    "currentRentIfBuying": 2134,
+    "appreciation5yr": 8
   },
   {
     "zipcode": "91326",
@@ -5137,7 +5457,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3,
-    "currentRentIfBuying": 3216
+    "currentRentIfBuying": 3216,
+    "appreciation5yr": 7.9
   },
   {
     "zipcode": "91331",
@@ -5153,7 +5474,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.7,
-    "currentRentIfBuying": 2890
+    "currentRentIfBuying": 2890,
+    "appreciation5yr": 7.5
   },
   {
     "zipcode": "91335",
@@ -5169,7 +5491,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.5,
-    "currentRentIfBuying": 2475
+    "currentRentIfBuying": 2475,
+    "appreciation5yr": 7.2
   },
   {
     "zipcode": "91342",
@@ -5185,7 +5508,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.9,
-    "currentRentIfBuying": 2525
+    "currentRentIfBuying": 2525,
+    "appreciation5yr": 7.2
   },
   {
     "zipcode": "91343",
@@ -5201,7 +5525,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.7,
-    "currentRentIfBuying": 2219
+    "currentRentIfBuying": 2219,
+    "appreciation5yr": 7.6
   },
   {
     "zipcode": "91344",
@@ -5217,7 +5542,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.1,
-    "currentRentIfBuying": 2834
+    "currentRentIfBuying": 2834,
+    "appreciation5yr": 7.4
   },
   {
     "zipcode": "91345",
@@ -5233,7 +5559,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.6,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.4
   },
   {
     "zipcode": "91352",
@@ -5249,7 +5576,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2,
-    "currentRentIfBuying": 2487
+    "currentRentIfBuying": 2487,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "91356",
@@ -5265,7 +5593,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.8,
-    "currentRentIfBuying": 2511
+    "currentRentIfBuying": 2511,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "91364",
@@ -5281,7 +5610,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.1,
-    "currentRentIfBuying": 3462
+    "currentRentIfBuying": 3462,
+    "appreciation5yr": 7.8
   },
   {
     "zipcode": "91367",
@@ -5297,7 +5627,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.1,
-    "currentRentIfBuying": 2448
+    "currentRentIfBuying": 2448,
+    "appreciation5yr": 8.4
   },
   {
     "zipcode": "91401",
@@ -5313,7 +5644,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.5,
-    "currentRentIfBuying": 1964
+    "currentRentIfBuying": 1964,
+    "appreciation5yr": 6
   },
   {
     "zipcode": "91402",
@@ -5329,7 +5661,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2,
-    "currentRentIfBuying": 1809
+    "currentRentIfBuying": 1809,
+    "appreciation5yr": 7.4
   },
   {
     "zipcode": "91403",
@@ -5345,7 +5678,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.6,
-    "currentRentIfBuying": 2457
+    "currentRentIfBuying": 2457,
+    "appreciation5yr": 7.5
   },
   {
     "zipcode": "91405",
@@ -5361,7 +5695,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.7,
-    "currentRentIfBuying": 1973
+    "currentRentIfBuying": 1973,
+    "appreciation5yr": 7.3
   },
   {
     "zipcode": "91406",
@@ -5377,7 +5712,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.1,
-    "currentRentIfBuying": 1916
+    "currentRentIfBuying": 1916,
+    "appreciation5yr": 6.5
   },
   {
     "zipcode": "91411",
@@ -5393,7 +5729,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.3,
-    "currentRentIfBuying": 2149
+    "currentRentIfBuying": 2149,
+    "appreciation5yr": 6.5
   },
   {
     "zipcode": "91423",
@@ -5409,7 +5746,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.9,
-    "currentRentIfBuying": 2226
+    "currentRentIfBuying": 2226,
+    "appreciation5yr": 6.9
   },
   {
     "zipcode": "91436",
@@ -5425,7 +5763,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.3,
-    "currentRentIfBuying": 4776
+    "currentRentIfBuying": 4776,
+    "appreciation5yr": 7.4
   },
   {
     "zipcode": "91601",
@@ -5441,7 +5780,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.3,
-    "currentRentIfBuying": 2202
+    "currentRentIfBuying": 2202,
+    "appreciation5yr": 5.4
   },
   {
     "zipcode": "91602",
@@ -5457,7 +5797,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 2393
+    "currentRentIfBuying": 2393,
+    "appreciation5yr": 5.2
   },
   {
     "zipcode": "91604",
@@ -5473,7 +5814,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.4,
-    "currentRentIfBuying": 2790
+    "currentRentIfBuying": 2790,
+    "appreciation5yr": 5.9
   },
   {
     "zipcode": "91605",
@@ -5489,7 +5831,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.4,
-    "currentRentIfBuying": 1889
+    "currentRentIfBuying": 1889,
+    "appreciation5yr": 7.1
   },
   {
     "zipcode": "91606",
@@ -5505,7 +5848,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1,
-    "currentRentIfBuying": 2376
+    "currentRentIfBuying": 2376,
+    "appreciation5yr": 6.5
   },
   {
     "zipcode": "91607",
@@ -5521,7 +5865,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0,
-    "currentRentIfBuying": 2318
+    "currentRentIfBuying": 2318,
+    "appreciation5yr": 6.2
   },
   {
     "zipcode": "90262",
@@ -5537,7 +5882,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1,
-    "currentRentIfBuying": 1732
+    "currentRentIfBuying": 1732,
+    "appreciation5yr": 6.5
   },
   {
     "zipcode": "90265",
@@ -5553,7 +5899,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.2,
-    "currentRentIfBuying": 10843
+    "currentRentIfBuying": 10843,
+    "appreciation5yr": 6.6
   },
   {
     "zipcode": "90266",
@@ -5569,7 +5916,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 2.3,
-    "currentRentIfBuying": 4568
+    "currentRentIfBuying": 4568,
+    "appreciation5yr": 5.6
   },
   {
     "zipcode": "90292",
@@ -5585,7 +5933,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3,
-    "currentRentIfBuying": 3241
+    "currentRentIfBuying": 3241,
+    "appreciation5yr": 1.3
   },
   {
     "zipcode": "90270",
@@ -5601,7 +5950,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.6,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.1
   },
   {
     "zipcode": "91016",
@@ -5617,7 +5967,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.1,
-    "currentRentIfBuying": 2487
+    "currentRentIfBuying": 2487,
+    "appreciation5yr": 5.6
   },
   {
     "zipcode": "90640",
@@ -5633,7 +5984,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.2,
-    "currentRentIfBuying": 1942
+    "currentRentIfBuying": 1942,
+    "appreciation5yr": 6.3
   },
   {
     "zipcode": "91754",
@@ -5649,7 +6001,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.1,
-    "currentRentIfBuying": 2242
+    "currentRentIfBuying": 2242,
+    "appreciation5yr": 6.3
   },
   {
     "zipcode": "91755",
@@ -5665,7 +6018,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.5,
-    "currentRentIfBuying": 2352
+    "currentRentIfBuying": 2352,
+    "appreciation5yr": 6.7
   },
   {
     "zipcode": "90650",
@@ -5681,7 +6035,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.9,
-    "currentRentIfBuying": 2294
+    "currentRentIfBuying": 2294,
+    "appreciation5yr": 7.3
   },
   {
     "zipcode": "93550",
@@ -5697,7 +6052,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.1,
-    "currentRentIfBuying": 1995
+    "currentRentIfBuying": 1995,
+    "appreciation5yr": 8
   },
   {
     "zipcode": "93551",
@@ -5713,7 +6069,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.6,
-    "currentRentIfBuying": 2523
+    "currentRentIfBuying": 2523,
+    "appreciation5yr": 7.1
   },
   {
     "zipcode": "93552",
@@ -5729,7 +6086,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.3,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.7
   },
   {
     "zipcode": "93591",
@@ -5745,7 +6103,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.5,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.8
   },
   {
     "zipcode": "90723",
@@ -5761,7 +6120,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.6,
-    "currentRentIfBuying": 2182
+    "currentRentIfBuying": 2182,
+    "appreciation5yr": 6.9
   },
   {
     "zipcode": "91101",
@@ -5777,7 +6137,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.1,
-    "currentRentIfBuying": 2425
+    "currentRentIfBuying": 2425,
+    "appreciation5yr": 4.5
   },
   {
     "zipcode": "91103",
@@ -5793,7 +6154,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2,
-    "currentRentIfBuying": 2750
+    "currentRentIfBuying": 2750,
+    "appreciation5yr": 6.5
   },
   {
     "zipcode": "91104",
@@ -5809,7 +6171,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.9,
-    "currentRentIfBuying": 2290
+    "currentRentIfBuying": 2290,
+    "appreciation5yr": 7.6
   },
   {
     "zipcode": "91105",
@@ -5825,7 +6188,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 4.1,
-    "currentRentIfBuying": 2771
+    "currentRentIfBuying": 2771,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "91106",
@@ -5841,7 +6205,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 2328
+    "currentRentIfBuying": 2328,
+    "appreciation5yr": 5.1
   },
   {
     "zipcode": "91107",
@@ -5857,7 +6222,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.6,
-    "currentRentIfBuying": 2425
+    "currentRentIfBuying": 2425,
+    "appreciation5yr": 6.9
   },
   {
     "zipcode": "93553",
@@ -5873,7 +6239,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6
   },
   {
     "zipcode": "90660",
@@ -5889,7 +6256,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.9,
-    "currentRentIfBuying": 1850
+    "currentRentIfBuying": 1850,
+    "appreciation5yr": 7.2
   },
   {
     "zipcode": "91766",
@@ -5905,7 +6273,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.1,
-    "currentRentIfBuying": 2451
+    "currentRentIfBuying": 2451,
+    "appreciation5yr": 7.5
   },
   {
     "zipcode": "91767",
@@ -5921,7 +6290,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 2189
+    "currentRentIfBuying": 2189,
+    "appreciation5yr": 7.7
   },
   {
     "zipcode": "91768",
@@ -5937,7 +6307,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.8,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.4
   },
   {
     "zipcode": "90275",
@@ -5953,7 +6324,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3,
-    "currentRentIfBuying": 3486
+    "currentRentIfBuying": 3486,
+    "appreciation5yr": 7.7
   },
   {
     "zipcode": "90277",
@@ -5969,7 +6341,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.3,
-    "currentRentIfBuying": 3056
+    "currentRentIfBuying": 3056,
+    "appreciation5yr": 6.5
   },
   {
     "zipcode": "90278",
@@ -5985,7 +6358,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.5,
-    "currentRentIfBuying": 2922
+    "currentRentIfBuying": 2922,
+    "appreciation5yr": 6.3
   },
   {
     "zipcode": "90274",
@@ -6001,7 +6375,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.7,
-    "currentRentIfBuying": 4793
+    "currentRentIfBuying": 4793,
+    "appreciation5yr": 7.3
   },
   {
     "zipcode": "91770",
@@ -6017,7 +6392,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.5,
-    "currentRentIfBuying": 2471
+    "currentRentIfBuying": 2471,
+    "appreciation5yr": 6.6
   },
   {
     "zipcode": "91748",
@@ -6033,7 +6409,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.2,
-    "currentRentIfBuying": 2292
+    "currentRentIfBuying": 2292,
+    "appreciation5yr": 6.7
   },
   {
     "zipcode": "91773",
@@ -6049,7 +6426,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.7,
-    "currentRentIfBuying": 2285
+    "currentRentIfBuying": 2285,
+    "appreciation5yr": 7.4
   },
   {
     "zipcode": "91340",
@@ -6065,7 +6443,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.7,
-    "currentRentIfBuying": 1878
+    "currentRentIfBuying": 1878,
+    "appreciation5yr": 7.5
   },
   {
     "zipcode": "91775",
@@ -6081,7 +6460,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 3.2,
-    "currentRentIfBuying": 2360
+    "currentRentIfBuying": 2360,
+    "appreciation5yr": 6.7
   },
   {
     "zipcode": "91776",
@@ -6097,7 +6477,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 2.2,
-    "currentRentIfBuying": 2356
+    "currentRentIfBuying": 2356,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "91108",
@@ -6113,7 +6494,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 5.4,
-    "currentRentIfBuying": 5412
+    "currentRentIfBuying": 5412,
+    "appreciation5yr": 3.6
   },
   {
     "zipcode": "91321",
@@ -6129,7 +6511,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.1,
-    "currentRentIfBuying": 2141
+    "currentRentIfBuying": 2141,
+    "appreciation5yr": 6.5
   },
   {
     "zipcode": "91350",
@@ -6145,7 +6528,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.4,
-    "currentRentIfBuying": 2751
+    "currentRentIfBuying": 2751,
+    "appreciation5yr": 6.6
   },
   {
     "zipcode": "91351",
@@ -6161,7 +6545,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.1,
-    "currentRentIfBuying": 1975
+    "currentRentIfBuying": 1975,
+    "appreciation5yr": 7.3
   },
   {
     "zipcode": "91354",
@@ -6177,7 +6562,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.7,
-    "currentRentIfBuying": 2890
+    "currentRentIfBuying": 2890,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "91355",
@@ -6193,7 +6579,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.3,
-    "currentRentIfBuying": 2403
+    "currentRentIfBuying": 2403,
+    "appreciation5yr": 6.5
   },
   {
     "zipcode": "91387",
@@ -6209,7 +6596,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.7,
-    "currentRentIfBuying": 2250
+    "currentRentIfBuying": 2250,
+    "appreciation5yr": 6.5
   },
   {
     "zipcode": "91390",
@@ -6225,7 +6613,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.2
   },
   {
     "zipcode": "90670",
@@ -6241,7 +6630,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.6
   },
   {
     "zipcode": "90401",
@@ -6257,7 +6647,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.3,
-    "currentRentIfBuying": 3123
+    "currentRentIfBuying": 3123,
+    "appreciation5yr": -0.4
   },
   {
     "zipcode": "90402",
@@ -6273,7 +6664,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 5.2,
-    "currentRentIfBuying": 6356
+    "currentRentIfBuying": 6356,
+    "appreciation5yr": 3.5
   },
   {
     "zipcode": "90403",
@@ -6289,7 +6681,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.8,
-    "currentRentIfBuying": 3125
+    "currentRentIfBuying": 3125,
+    "appreciation5yr": 1.2
   },
   {
     "zipcode": "90404",
@@ -6305,7 +6698,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.1,
-    "currentRentIfBuying": 2950
+    "currentRentIfBuying": 2950,
+    "appreciation5yr": 2.2
   },
   {
     "zipcode": "90405",
@@ -6321,7 +6715,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.4,
-    "currentRentIfBuying": 2777
+    "currentRentIfBuying": 2777,
+    "appreciation5yr": 3.4
   },
   {
     "zipcode": "91024",
@@ -6337,7 +6732,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.2,
-    "currentRentIfBuying": 2627
+    "currentRentIfBuying": 2627,
+    "appreciation5yr": 7.1
   },
   {
     "zipcode": "90755",
@@ -6353,7 +6749,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4,
-    "currentRentIfBuying": 2587
+    "currentRentIfBuying": 2587,
+    "appreciation5yr": 5.3
   },
   {
     "zipcode": "91733",
@@ -6369,7 +6766,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.6,
-    "currentRentIfBuying": 2266
+    "currentRentIfBuying": 2266,
+    "appreciation5yr": 7.6
   },
   {
     "zipcode": "90280",
@@ -6385,7 +6783,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.1,
-    "currentRentIfBuying": 1629
+    "currentRentIfBuying": 1629,
+    "appreciation5yr": 6.5
   },
   {
     "zipcode": "91030",
@@ -6401,7 +6800,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 2.9,
-    "currentRentIfBuying": 2400
+    "currentRentIfBuying": 2400,
+    "appreciation5yr": 7.2
   },
   {
     "zipcode": "91381",
@@ -6417,7 +6817,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3,
-    "currentRentIfBuying": 2573
+    "currentRentIfBuying": 2573,
+    "appreciation5yr": 7.8
   },
   {
     "zipcode": "91780",
@@ -6433,7 +6834,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1,
-    "currentRentIfBuying": 2966
+    "currentRentIfBuying": 2966,
+    "appreciation5yr": 5.8
   },
   {
     "zipcode": "90290",
@@ -6449,7 +6851,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.9,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.1
   },
   {
     "zipcode": "90501",
@@ -6465,7 +6868,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.3,
-    "currentRentIfBuying": 2024
+    "currentRentIfBuying": 2024,
+    "appreciation5yr": 5.6
   },
   {
     "zipcode": "90503",
@@ -6481,7 +6885,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.7,
-    "currentRentIfBuying": 2378
+    "currentRentIfBuying": 2378,
+    "appreciation5yr": 7.7
   },
   {
     "zipcode": "90504",
@@ -6497,7 +6902,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0,
-    "currentRentIfBuying": 2290
+    "currentRentIfBuying": 2290,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "90505",
@@ -6513,7 +6919,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1,
-    "currentRentIfBuying": 2986
+    "currentRentIfBuying": 2986,
+    "appreciation5yr": 7.6
   },
   {
     "zipcode": "91789",
@@ -6529,7 +6936,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.5,
-    "currentRentIfBuying": 3020
+    "currentRentIfBuying": 3020,
+    "appreciation5yr": 7.5
   },
   {
     "zipcode": "90502",
@@ -6545,7 +6953,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.3,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.7
   },
   {
     "zipcode": "91790",
@@ -6561,7 +6970,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.1,
-    "currentRentIfBuying": 2271
+    "currentRentIfBuying": 2271,
+    "appreciation5yr": 7.5
   },
   {
     "zipcode": "91791",
@@ -6577,7 +6987,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.4,
-    "currentRentIfBuying": 2644
+    "currentRentIfBuying": 2644,
+    "appreciation5yr": 7.3
   },
   {
     "zipcode": "91792",
@@ -6593,7 +7004,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2,
-    "currentRentIfBuying": 2117
+    "currentRentIfBuying": 2117,
+    "appreciation5yr": 7.8
   },
   {
     "zipcode": "90069",
@@ -6609,7 +7021,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.4,
-    "currentRentIfBuying": 3159
+    "currentRentIfBuying": 3159,
+    "appreciation5yr": 1.8
   },
   {
     "zipcode": "90601",
@@ -6625,7 +7038,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.1,
-    "currentRentIfBuying": 1799
+    "currentRentIfBuying": 1799,
+    "appreciation5yr": 7
   },
   {
     "zipcode": "90602",
@@ -6641,7 +7055,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.7,
-    "currentRentIfBuying": 1907
+    "currentRentIfBuying": 1907,
+    "appreciation5yr": 6.8
   },
   {
     "zipcode": "90603",
@@ -6657,7 +7072,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.8
   },
   {
     "zipcode": "90604",
@@ -6673,7 +7089,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.6,
-    "currentRentIfBuying": 2194
+    "currentRentIfBuying": 2194,
+    "appreciation5yr": 7.3
   },
   {
     "zipcode": "90605",
@@ -6689,7 +7106,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.1,
-    "currentRentIfBuying": 2217
+    "currentRentIfBuying": 2217,
+    "appreciation5yr": 6.9
   },
   {
     "zipcode": "90606",
@@ -6705,7 +7123,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.7,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.9
   },
   {
     "zipcode": "90059",
@@ -6721,7 +7140,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.3,
-    "currentRentIfBuying": 2528
+    "currentRentIfBuying": 2528,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "92656",
@@ -6737,7 +7157,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.2,
-    "currentRentIfBuying": 2810
+    "currentRentIfBuying": 2810,
+    "appreciation5yr": 10.1
   },
   {
     "zipcode": "92801",
@@ -6753,7 +7174,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.1,
-    "currentRentIfBuying": 2147
+    "currentRentIfBuying": 2147,
+    "appreciation5yr": 8.2
   },
   {
     "zipcode": "92802",
@@ -6769,7 +7191,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.2,
-    "currentRentIfBuying": 2198
+    "currentRentIfBuying": 2198,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "92804",
@@ -6785,7 +7208,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.8,
-    "currentRentIfBuying": 2057
+    "currentRentIfBuying": 2057,
+    "appreciation5yr": 8.4
   },
   {
     "zipcode": "92805",
@@ -6801,7 +7225,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.7,
-    "currentRentIfBuying": 2377
+    "currentRentIfBuying": 2377,
+    "appreciation5yr": 7.7
   },
   {
     "zipcode": "92806",
@@ -6817,7 +7242,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.2,
-    "currentRentIfBuying": 2136
+    "currentRentIfBuying": 2136,
+    "appreciation5yr": 7.9
   },
   {
     "zipcode": "92807",
@@ -6833,7 +7259,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1,
-    "currentRentIfBuying": 2584
+    "currentRentIfBuying": 2584,
+    "appreciation5yr": 8.7
   },
   {
     "zipcode": "92808",
@@ -6849,7 +7276,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.2,
-    "currentRentIfBuying": 2675
+    "currentRentIfBuying": 2675,
+    "appreciation5yr": 9.5
   },
   {
     "zipcode": "92821",
@@ -6865,7 +7293,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.7,
-    "currentRentIfBuying": 2171
+    "currentRentIfBuying": 2171,
+    "appreciation5yr": 8.2
   },
   {
     "zipcode": "92823",
@@ -6881,7 +7310,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.4,
-    "currentRentIfBuying": 3070
+    "currentRentIfBuying": 3070,
+    "appreciation5yr": 8.5
   },
   {
     "zipcode": "90620",
@@ -6897,7 +7327,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.3,
-    "currentRentIfBuying": 2208
+    "currentRentIfBuying": 2208,
+    "appreciation5yr": 7.7
   },
   {
     "zipcode": "90621",
@@ -6913,7 +7344,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1,
-    "currentRentIfBuying": 2418
+    "currentRentIfBuying": 2418,
+    "appreciation5yr": 7.6
   },
   {
     "zipcode": "92626",
@@ -6929,7 +7361,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.7,
-    "currentRentIfBuying": 2529
+    "currentRentIfBuying": 2529,
+    "appreciation5yr": 10.3
   },
   {
     "zipcode": "92627",
@@ -6945,7 +7378,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 3.6,
-    "currentRentIfBuying": 2837
+    "currentRentIfBuying": 2837,
+    "appreciation5yr": 9.2
   },
   {
     "zipcode": "92679",
@@ -6961,7 +7395,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.7,
-    "currentRentIfBuying": 3322
+    "currentRentIfBuying": 3322,
+    "appreciation5yr": 11.2
   },
   {
     "zipcode": "90630",
@@ -6977,7 +7412,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.5,
-    "currentRentIfBuying": 2423
+    "currentRentIfBuying": 2423,
+    "appreciation5yr": 8.6
   },
   {
     "zipcode": "92624",
@@ -6993,7 +7429,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.4,
-    "currentRentIfBuying": 3798
+    "currentRentIfBuying": 3798,
+    "appreciation5yr": 11
   },
   {
     "zipcode": "92629",
@@ -7009,7 +7446,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 3.2,
-    "currentRentIfBuying": 3169
+    "currentRentIfBuying": 3169,
+    "appreciation5yr": 11.4
   },
   {
     "zipcode": "92708",
@@ -7025,7 +7463,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.8,
-    "currentRentIfBuying": 2402
+    "currentRentIfBuying": 2402,
+    "appreciation5yr": 10.5
   },
   {
     "zipcode": "92831",
@@ -7041,7 +7480,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.8,
-    "currentRentIfBuying": 2166
+    "currentRentIfBuying": 2166,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "92832",
@@ -7057,7 +7497,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.4,
-    "currentRentIfBuying": 2347
+    "currentRentIfBuying": 2347,
+    "appreciation5yr": 7.4
   },
   {
     "zipcode": "92833",
@@ -7073,7 +7514,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.7,
-    "currentRentIfBuying": 2688
+    "currentRentIfBuying": 2688,
+    "appreciation5yr": 7.8
   },
   {
     "zipcode": "92835",
@@ -7089,7 +7531,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.2,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 9.1
   },
   {
     "zipcode": "92840",
@@ -7105,7 +7548,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0,
-    "currentRentIfBuying": 2040
+    "currentRentIfBuying": 2040,
+    "appreciation5yr": 8.6
   },
   {
     "zipcode": "92841",
@@ -7121,7 +7565,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.2,
-    "currentRentIfBuying": 2092
+    "currentRentIfBuying": 2092,
+    "appreciation5yr": 8.5
   },
   {
     "zipcode": "92843",
@@ -7137,7 +7582,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.5,
-    "currentRentIfBuying": 2025
+    "currentRentIfBuying": 2025,
+    "appreciation5yr": 8.8
   },
   {
     "zipcode": "92844",
@@ -7153,7 +7599,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.9,
-    "currentRentIfBuying": 2247
+    "currentRentIfBuying": 2247,
+    "appreciation5yr": 9.2
   },
   {
     "zipcode": "92845",
@@ -7169,7 +7616,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.5,
-    "currentRentIfBuying": 3613
+    "currentRentIfBuying": 3613,
+    "appreciation5yr": 8.9
   },
   {
     "zipcode": "90742",
@@ -7185,7 +7633,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.4,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.3
   },
   {
     "zipcode": "92646",
@@ -7201,7 +7650,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 2.4,
-    "currentRentIfBuying": 2695
+    "currentRentIfBuying": 2695,
+    "appreciation5yr": 10.1
   },
   {
     "zipcode": "92647",
@@ -7217,7 +7667,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1,
-    "currentRentIfBuying": 2343
+    "currentRentIfBuying": 2343,
+    "appreciation5yr": 9.2
   },
   {
     "zipcode": "92648",
@@ -7233,7 +7684,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 3.6,
-    "currentRentIfBuying": 2939
+    "currentRentIfBuying": 2939,
+    "appreciation5yr": 8.8
   },
   {
     "zipcode": "92649",
@@ -7249,7 +7701,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 2.1,
-    "currentRentIfBuying": 2685
+    "currentRentIfBuying": 2685,
+    "appreciation5yr": 8.9
   },
   {
     "zipcode": "92602",
@@ -7265,7 +7718,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0,
-    "currentRentIfBuying": 3097
+    "currentRentIfBuying": 3097,
+    "appreciation5yr": 13.7
   },
   {
     "zipcode": "92603",
@@ -7281,7 +7735,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 5.4,
-    "currentRentIfBuying": 3573
+    "currentRentIfBuying": 3573,
+    "appreciation5yr": 13.8
   },
   {
     "zipcode": "92604",
@@ -7297,7 +7752,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1,
-    "currentRentIfBuying": 3182
+    "currentRentIfBuying": 3182,
+    "appreciation5yr": 12.4
   },
   {
     "zipcode": "92606",
@@ -7313,7 +7769,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.9,
-    "currentRentIfBuying": 2904
+    "currentRentIfBuying": 2904,
+    "appreciation5yr": 13.4
   },
   {
     "zipcode": "92612",
@@ -7329,7 +7786,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.9,
-    "currentRentIfBuying": 2837
+    "currentRentIfBuying": 2837,
+    "appreciation5yr": 10.4
   },
   {
     "zipcode": "92614",
@@ -7345,7 +7803,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1,
-    "currentRentIfBuying": 2768
+    "currentRentIfBuying": 2768,
+    "appreciation5yr": 10.6
   },
   {
     "zipcode": "92617",
@@ -7361,7 +7820,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.7,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.6
   },
   {
     "zipcode": "92618",
@@ -7377,7 +7837,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 2982
+    "currentRentIfBuying": 2982,
+    "appreciation5yr": 12.1
   },
   {
     "zipcode": "92620",
@@ -7393,7 +7854,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.9,
-    "currentRentIfBuying": 3189
+    "currentRentIfBuying": 3189,
+    "appreciation5yr": 13
   },
   {
     "zipcode": "90631",
@@ -7409,7 +7871,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.2,
-    "currentRentIfBuying": 2300
+    "currentRentIfBuying": 2300,
+    "appreciation5yr": 7.9
   },
   {
     "zipcode": "90623",
@@ -7425,7 +7888,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.7,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 9.2
   },
   {
     "zipcode": "92694",
@@ -7441,7 +7905,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.1,
-    "currentRentIfBuying": 3020
+    "currentRentIfBuying": 3020,
+    "appreciation5yr": 10.3
   },
   {
     "zipcode": "92651",
@@ -7457,7 +7922,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.2,
-    "currentRentIfBuying": 3754
+    "currentRentIfBuying": 3754,
+    "appreciation5yr": 9
   },
   {
     "zipcode": "92653",
@@ -7473,7 +7939,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.6,
-    "currentRentIfBuying": 2604
+    "currentRentIfBuying": 2604,
+    "appreciation5yr": 10.5
   },
   {
     "zipcode": "92677",
@@ -7489,7 +7956,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 2,
-    "currentRentIfBuying": 2700
+    "currentRentIfBuying": 2700,
+    "appreciation5yr": 12.1
   },
   {
     "zipcode": "92637",
@@ -7505,7 +7973,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.8,
-    "currentRentIfBuying": 2490
+    "currentRentIfBuying": 2490,
+    "appreciation5yr": 5.7
   },
   {
     "zipcode": "92610",
@@ -7521,7 +7990,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.2,
-    "currentRentIfBuying": 2653
+    "currentRentIfBuying": 2653,
+    "appreciation5yr": 10.4
   },
   {
     "zipcode": "92630",
@@ -7537,7 +8007,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.6,
-    "currentRentIfBuying": 2574
+    "currentRentIfBuying": 2574,
+    "appreciation5yr": 10.4
   },
   {
     "zipcode": "90720",
@@ -7553,7 +8024,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.1,
-    "currentRentIfBuying": 2749
+    "currentRentIfBuying": 2749,
+    "appreciation5yr": 8.5
   },
   {
     "zipcode": "92691",
@@ -7569,7 +8041,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.4,
-    "currentRentIfBuying": 2972
+    "currentRentIfBuying": 2972,
+    "appreciation5yr": 10.7
   },
   {
     "zipcode": "92692",
@@ -7585,7 +8058,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.8,
-    "currentRentIfBuying": 2794
+    "currentRentIfBuying": 2794,
+    "appreciation5yr": 10.1
   },
   {
     "zipcode": "92625",
@@ -7601,7 +8075,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 3.6,
-    "currentRentIfBuying": 7737
+    "currentRentIfBuying": 7737,
+    "appreciation5yr": 10.2
   },
   {
     "zipcode": "92657",
@@ -7617,7 +8092,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 7.7,
-    "currentRentIfBuying": 6032
+    "currentRentIfBuying": 6032,
+    "appreciation5yr": 13.4
   },
   {
     "zipcode": "92660",
@@ -7633,7 +8109,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 4.7,
-    "currentRentIfBuying": 3477
+    "currentRentIfBuying": 3477,
+    "appreciation5yr": 11.8
   },
   {
     "zipcode": "92661",
@@ -7649,7 +8126,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 2.4,
-    "currentRentIfBuying": 3386
+    "currentRentIfBuying": 3386,
+    "appreciation5yr": 10.9
   },
   {
     "zipcode": "92662",
@@ -7665,7 +8143,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.2,
-    "currentRentIfBuying": 6565
+    "currentRentIfBuying": 6565,
+    "appreciation5yr": 7.4
   },
   {
     "zipcode": "92663",
@@ -7681,7 +8160,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 5.4,
-    "currentRentIfBuying": 2241
+    "currentRentIfBuying": 2241,
+    "appreciation5yr": 11
   },
   {
     "zipcode": "92705",
@@ -7697,7 +8177,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.3,
-    "currentRentIfBuying": 2572
+    "currentRentIfBuying": 2572,
+    "appreciation5yr": 10.5
   },
   {
     "zipcode": "92865",
@@ -7713,7 +8194,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1,
-    "currentRentIfBuying": 2712
+    "currentRentIfBuying": 2712,
+    "appreciation5yr": 9.5
   },
   {
     "zipcode": "92866",
@@ -7729,7 +8211,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.2,
-    "currentRentIfBuying": 2503
+    "currentRentIfBuying": 2503,
+    "appreciation5yr": 8.8
   },
   {
     "zipcode": "92867",
@@ -7745,7 +8228,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.6,
-    "currentRentIfBuying": 2667
+    "currentRentIfBuying": 2667,
+    "appreciation5yr": 9
   },
   {
     "zipcode": "92868",
@@ -7761,7 +8245,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.5,
-    "currentRentIfBuying": 2503
+    "currentRentIfBuying": 2503,
+    "appreciation5yr": 8.5
   },
   {
     "zipcode": "92869",
@@ -7777,7 +8262,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.3,
-    "currentRentIfBuying": 3545
+    "currentRentIfBuying": 3545,
+    "appreciation5yr": 10
   },
   {
     "zipcode": "92870",
@@ -7793,7 +8279,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.5,
-    "currentRentIfBuying": 2341
+    "currentRentIfBuying": 2341,
+    "appreciation5yr": 9.1
   },
   {
     "zipcode": "92688",
@@ -7809,7 +8296,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 2499
+    "currentRentIfBuying": 2499,
+    "appreciation5yr": 9.7
   },
   {
     "zipcode": "92672",
@@ -7825,7 +8313,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.4,
-    "currentRentIfBuying": 2804
+    "currentRentIfBuying": 2804,
+    "appreciation5yr": 11.8
   },
   {
     "zipcode": "92673",
@@ -7841,7 +8330,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.3,
-    "currentRentIfBuying": 3260
+    "currentRentIfBuying": 3260,
+    "appreciation5yr": 12.4
   },
   {
     "zipcode": "92675",
@@ -7857,7 +8347,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.6,
-    "currentRentIfBuying": 3777
+    "currentRentIfBuying": 3777,
+    "appreciation5yr": 10.5
   },
   {
     "zipcode": "92701",
@@ -7873,7 +8364,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.2,
-    "currentRentIfBuying": 2219
+    "currentRentIfBuying": 2219,
+    "appreciation5yr": 8.2
   },
   {
     "zipcode": "92703",
@@ -7889,7 +8381,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.9,
-    "currentRentIfBuying": 2037
+    "currentRentIfBuying": 2037,
+    "appreciation5yr": 7.7
   },
   {
     "zipcode": "92704",
@@ -7905,7 +8398,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.4,
-    "currentRentIfBuying": 2194
+    "currentRentIfBuying": 2194,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "92706",
@@ -7921,7 +8415,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.4,
-    "currentRentIfBuying": 2461
+    "currentRentIfBuying": 2461,
+    "appreciation5yr": 7.9
   },
   {
     "zipcode": "92707",
@@ -7937,7 +8432,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.3,
-    "currentRentIfBuying": 2295
+    "currentRentIfBuying": 2295,
+    "appreciation5yr": 7.9
   },
   {
     "zipcode": "90740",
@@ -7953,7 +8449,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.2,
-    "currentRentIfBuying": 2587
+    "currentRentIfBuying": 2587,
+    "appreciation5yr": 8.2
   },
   {
     "zipcode": "92676",
@@ -7969,7 +8466,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.4,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7
   },
   {
     "zipcode": "90680",
@@ -7985,7 +8483,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.4,
-    "currentRentIfBuying": 2282
+    "currentRentIfBuying": 2282,
+    "appreciation5yr": 8.4
   },
   {
     "zipcode": "92780",
@@ -8001,7 +8500,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.5,
-    "currentRentIfBuying": 2279
+    "currentRentIfBuying": 2279,
+    "appreciation5yr": 10.2
   },
   {
     "zipcode": "92782",
@@ -8017,7 +8517,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.1,
-    "currentRentIfBuying": 2972
+    "currentRentIfBuying": 2972,
+    "appreciation5yr": 10.7
   },
   {
     "zipcode": "92655",
@@ -8033,7 +8534,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.5,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.2
   },
   {
     "zipcode": "92861",
@@ -8049,7 +8551,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.5,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 11.6
   },
   {
     "zipcode": "92683",
@@ -8065,7 +8568,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.4,
-    "currentRentIfBuying": 2348
+    "currentRentIfBuying": 2348,
+    "appreciation5yr": 8.4
   },
   {
     "zipcode": "92886",
@@ -8081,7 +8585,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.3,
-    "currentRentIfBuying": 3758
+    "currentRentIfBuying": 3758,
+    "appreciation5yr": 9.5
   },
   {
     "zipcode": "92887",
@@ -8097,7 +8602,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 9.9
   },
   {
     "zipcode": "91901",
@@ -8113,7 +8619,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.1,
-    "currentRentIfBuying": 1835
+    "currentRentIfBuying": 1835,
+    "appreciation5yr": 8.5
   },
   {
     "zipcode": "91902",
@@ -8129,7 +8636,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.1,
-    "currentRentIfBuying": 2617
+    "currentRentIfBuying": 2617,
+    "appreciation5yr": 9.8
   },
   {
     "zipcode": "92003",
@@ -8145,7 +8653,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.9,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "91905",
@@ -8161,7 +8670,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.9,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 5.1
   },
   {
     "zipcode": "91906",
@@ -8177,7 +8687,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.8,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.3
   },
   {
     "zipcode": "91963",
@@ -8193,7 +8704,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -17.5,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 3.8
   },
   {
     "zipcode": "92008",
@@ -8209,7 +8721,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 41.7,
-    "currentRentIfBuying": 2697
+    "currentRentIfBuying": 2697,
+    "appreciation5yr": 14
   },
   {
     "zipcode": "92009",
@@ -8225,7 +8738,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.1,
-    "currentRentIfBuying": 3151
+    "currentRentIfBuying": 3151,
+    "appreciation5yr": 12.3
   },
   {
     "zipcode": "92010",
@@ -8241,7 +8755,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.3,
-    "currentRentIfBuying": 2952
+    "currentRentIfBuying": 2952,
+    "appreciation5yr": 11.4
   },
   {
     "zipcode": "92011",
@@ -8257,7 +8772,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.2,
-    "currentRentIfBuying": 3455
+    "currentRentIfBuying": 3455,
+    "appreciation5yr": 11.1
   },
   {
     "zipcode": "91910",
@@ -8273,7 +8789,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.7,
-    "currentRentIfBuying": 2212
+    "currentRentIfBuying": 2212,
+    "appreciation5yr": 8.1
   },
   {
     "zipcode": "91911",
@@ -8289,7 +8806,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.5,
-    "currentRentIfBuying": 2480
+    "currentRentIfBuying": 2480,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "91913",
@@ -8305,7 +8823,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.4,
-    "currentRentIfBuying": 2580
+    "currentRentIfBuying": 2580,
+    "appreciation5yr": 9
   },
   {
     "zipcode": "91914",
@@ -8321,7 +8840,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.9,
-    "currentRentIfBuying": 3165
+    "currentRentIfBuying": 3165,
+    "appreciation5yr": 10.2
   },
   {
     "zipcode": "91915",
@@ -8337,7 +8857,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.8,
-    "currentRentIfBuying": 2679
+    "currentRentIfBuying": 2679,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "92118",
@@ -8353,7 +8874,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.9,
-    "currentRentIfBuying": 3877
+    "currentRentIfBuying": 3877,
+    "appreciation5yr": 8.5
   },
   {
     "zipcode": "91916",
@@ -8369,7 +8891,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.6,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.9
   },
   {
     "zipcode": "91962",
@@ -8385,7 +8908,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.6,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "91917",
@@ -8401,7 +8925,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.4,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.4
   },
   {
     "zipcode": "92019",
@@ -8417,7 +8942,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.2,
-    "currentRentIfBuying": 2172
+    "currentRentIfBuying": 2172,
+    "appreciation5yr": 8.8
   },
   {
     "zipcode": "92020",
@@ -8433,7 +8959,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.4,
-    "currentRentIfBuying": 1876
+    "currentRentIfBuying": 1876,
+    "appreciation5yr": 7.9
   },
   {
     "zipcode": "92021",
@@ -8449,7 +8976,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.3,
-    "currentRentIfBuying": 1833
+    "currentRentIfBuying": 1833,
+    "appreciation5yr": 7.8
   },
   {
     "zipcode": "92007",
@@ -8465,7 +8993,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 2.4,
-    "currentRentIfBuying": 3484
+    "currentRentIfBuying": 3484,
+    "appreciation5yr": 10.1
   },
   {
     "zipcode": "92024",
@@ -8481,7 +9010,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.2,
-    "currentRentIfBuying": 3550
+    "currentRentIfBuying": 3550,
+    "appreciation5yr": 10.3
   },
   {
     "zipcode": "92025",
@@ -8497,7 +9027,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3,
-    "currentRentIfBuying": 2101
+    "currentRentIfBuying": 2101,
+    "appreciation5yr": 8.4
   },
   {
     "zipcode": "92026",
@@ -8513,7 +9044,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.9,
-    "currentRentIfBuying": 2198
+    "currentRentIfBuying": 2198,
+    "appreciation5yr": 8.1
   },
   {
     "zipcode": "92027",
@@ -8529,7 +9061,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.8,
-    "currentRentIfBuying": 1979
+    "currentRentIfBuying": 1979,
+    "appreciation5yr": 8.2
   },
   {
     "zipcode": "92029",
@@ -8545,7 +9078,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 10.5
   },
   {
     "zipcode": "92028",
@@ -8561,7 +9095,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.9,
-    "currentRentIfBuying": 2553
+    "currentRentIfBuying": 2553,
+    "appreciation5yr": 8.1
   },
   {
     "zipcode": "91932",
@@ -8577,7 +9112,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.5,
-    "currentRentIfBuying": 2306
+    "currentRentIfBuying": 2306,
+    "appreciation5yr": 5.5
   },
   {
     "zipcode": "91934",
@@ -8593,7 +9129,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.1,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.2
   },
   {
     "zipcode": "91935",
@@ -8609,7 +9146,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.2,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.9
   },
   {
     "zipcode": "92036",
@@ -8625,7 +9163,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.8,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.7
   },
   {
     "zipcode": "91941",
@@ -8641,7 +9180,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.4,
-    "currentRentIfBuying": 2122
+    "currentRentIfBuying": 2122,
+    "appreciation5yr": 9.2
   },
   {
     "zipcode": "91942",
@@ -8657,7 +9197,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.4,
-    "currentRentIfBuying": 2239
+    "currentRentIfBuying": 2239,
+    "appreciation5yr": 8.4
   },
   {
     "zipcode": "92040",
@@ -8673,7 +9214,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2,
-    "currentRentIfBuying": 2009
+    "currentRentIfBuying": 2009,
+    "appreciation5yr": 7.9
   },
   {
     "zipcode": "91945",
@@ -8689,7 +9231,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.4,
-    "currentRentIfBuying": 2377
+    "currentRentIfBuying": 2377,
+    "appreciation5yr": 8
   },
   {
     "zipcode": "91950",
@@ -8705,7 +9248,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1,
-    "currentRentIfBuying": 2098
+    "currentRentIfBuying": 2098,
+    "appreciation5yr": 7.2
   },
   {
     "zipcode": "92054",
@@ -8721,7 +9265,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.1,
-    "currentRentIfBuying": 2517
+    "currentRentIfBuying": 2517,
+    "appreciation5yr": 9.5
   },
   {
     "zipcode": "92056",
@@ -8737,7 +9282,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 2434
+    "currentRentIfBuying": 2434,
+    "appreciation5yr": 9.1
   },
   {
     "zipcode": "92057",
@@ -8753,7 +9299,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.3,
-    "currentRentIfBuying": 2398
+    "currentRentIfBuying": 2398,
+    "appreciation5yr": 8.9
   },
   {
     "zipcode": "92058",
@@ -8769,7 +9316,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 2203
+    "currentRentIfBuying": 2203,
+    "appreciation5yr": 8.9
   },
   {
     "zipcode": "92059",
@@ -8785,7 +9333,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 1.2,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 9.6
   },
   {
     "zipcode": "92060",
@@ -8801,7 +9350,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -10.8,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 3.8
   },
   {
     "zipcode": "92061",
@@ -8817,7 +9367,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.4,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.6
   },
   {
     "zipcode": "92064",
@@ -8833,7 +9384,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.8,
-    "currentRentIfBuying": 2609
+    "currentRentIfBuying": 2609,
+    "appreciation5yr": 9.8
   },
   {
     "zipcode": "92065",
@@ -8849,7 +9401,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 1972
+    "currentRentIfBuying": 1972,
+    "appreciation5yr": 7.1
   },
   {
     "zipcode": "92066",
@@ -8865,7 +9418,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.1,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 4.9
   },
   {
     "zipcode": "92067",
@@ -8881,7 +9435,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 2.5,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 11.6
   },
   {
     "zipcode": "92091",
@@ -8897,7 +9452,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.7,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 11.7
   },
   {
     "zipcode": "92014",
@@ -8913,7 +9469,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.7,
-    "currentRentIfBuying": 4214
+    "currentRentIfBuying": 4214,
+    "appreciation5yr": 10.6
   },
   {
     "zipcode": "92037",
@@ -8929,7 +9486,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 3.3,
-    "currentRentIfBuying": 3444
+    "currentRentIfBuying": 3444,
+    "appreciation5yr": 9.7
   },
   {
     "zipcode": "92101",
@@ -8945,7 +9503,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -7.7,
-    "currentRentIfBuying": 2411
+    "currentRentIfBuying": 2411,
+    "appreciation5yr": 4
   },
   {
     "zipcode": "92102",
@@ -8961,7 +9520,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.4,
-    "currentRentIfBuying": 2056
+    "currentRentIfBuying": 2056,
+    "appreciation5yr": 6.5
   },
   {
     "zipcode": "92103",
@@ -8977,7 +9537,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.2,
-    "currentRentIfBuying": 2337
+    "currentRentIfBuying": 2337,
+    "appreciation5yr": 6.4
   },
   {
     "zipcode": "92104",
@@ -8993,7 +9554,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.9,
-    "currentRentIfBuying": 2072
+    "currentRentIfBuying": 2072,
+    "appreciation5yr": 5.5
   },
   {
     "zipcode": "92105",
@@ -9009,7 +9571,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.8,
-    "currentRentIfBuying": 1738
+    "currentRentIfBuying": 1738,
+    "appreciation5yr": 7.8
   },
   {
     "zipcode": "92106",
@@ -9025,7 +9588,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.1,
-    "currentRentIfBuying": 2292
+    "currentRentIfBuying": 2292,
+    "appreciation5yr": 9.3
   },
   {
     "zipcode": "92107",
@@ -9041,7 +9605,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.7,
-    "currentRentIfBuying": 2324
+    "currentRentIfBuying": 2324,
+    "appreciation5yr": 7.3
   },
   {
     "zipcode": "92108",
@@ -9057,7 +9622,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -6.1,
-    "currentRentIfBuying": 2598
+    "currentRentIfBuying": 2598,
+    "appreciation5yr": 7.3
   },
   {
     "zipcode": "92109",
@@ -9073,7 +9639,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.9,
-    "currentRentIfBuying": 2576
+    "currentRentIfBuying": 2576,
+    "appreciation5yr": 8.3
   },
   {
     "zipcode": "92110",
@@ -9089,7 +9656,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.9,
-    "currentRentIfBuying": 2504
+    "currentRentIfBuying": 2504,
+    "appreciation5yr": 8.8
   },
   {
     "zipcode": "92111",
@@ -9105,7 +9673,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.1,
-    "currentRentIfBuying": 2410
+    "currentRentIfBuying": 2410,
+    "appreciation5yr": 9.5
   },
   {
     "zipcode": "92113",
@@ -9121,7 +9690,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.3,
-    "currentRentIfBuying": 1969
+    "currentRentIfBuying": 1969,
+    "appreciation5yr": 6.7
   },
   {
     "zipcode": "92114",
@@ -9137,7 +9707,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.6,
-    "currentRentIfBuying": 2326
+    "currentRentIfBuying": 2326,
+    "appreciation5yr": 8.6
   },
   {
     "zipcode": "92115",
@@ -9153,7 +9724,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.5,
-    "currentRentIfBuying": 3845
+    "currentRentIfBuying": 3845,
+    "appreciation5yr": 8
   },
   {
     "zipcode": "92116",
@@ -9169,7 +9741,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.4,
-    "currentRentIfBuying": 2088
+    "currentRentIfBuying": 2088,
+    "appreciation5yr": 6
   },
   {
     "zipcode": "92117",
@@ -9185,7 +9758,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -5.5,
-    "currentRentIfBuying": 2293
+    "currentRentIfBuying": 2293,
+    "appreciation5yr": 8.7
   },
   {
     "zipcode": "92119",
@@ -9201,7 +9775,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.4,
-    "currentRentIfBuying": 2191
+    "currentRentIfBuying": 2191,
+    "appreciation5yr": 9.4
   },
   {
     "zipcode": "92120",
@@ -9217,7 +9792,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.4,
-    "currentRentIfBuying": 2329
+    "currentRentIfBuying": 2329,
+    "appreciation5yr": 9.1
   },
   {
     "zipcode": "92121",
@@ -9233,7 +9809,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.4,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 8.5
   },
   {
     "zipcode": "92122",
@@ -9249,7 +9826,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.9,
-    "currentRentIfBuying": 2690
+    "currentRentIfBuying": 2690,
+    "appreciation5yr": 8.6
   },
   {
     "zipcode": "92123",
@@ -9265,7 +9843,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.3,
-    "currentRentIfBuying": 2576
+    "currentRentIfBuying": 2576,
+    "appreciation5yr": 9.1
   },
   {
     "zipcode": "92124",
@@ -9281,7 +9860,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.8,
-    "currentRentIfBuying": 2491
+    "currentRentIfBuying": 2491,
+    "appreciation5yr": 9.6
   },
   {
     "zipcode": "92126",
@@ -9297,7 +9877,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.8,
-    "currentRentIfBuying": 2367
+    "currentRentIfBuying": 2367,
+    "appreciation5yr": 10.1
   },
   {
     "zipcode": "92127",
@@ -9313,7 +9894,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -4.6,
-    "currentRentIfBuying": 2805
+    "currentRentIfBuying": 2805,
+    "appreciation5yr": 11.9
   },
   {
     "zipcode": "92128",
@@ -9329,7 +9911,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -5.5,
-    "currentRentIfBuying": 2443
+    "currentRentIfBuying": 2443,
+    "appreciation5yr": 9.4
   },
   {
     "zipcode": "92129",
@@ -9345,7 +9928,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -6,
-    "currentRentIfBuying": 2846
+    "currentRentIfBuying": 2846,
+    "appreciation5yr": 11.6
   },
   {
     "zipcode": "92130",
@@ -9361,7 +9945,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1,
-    "currentRentIfBuying": 3363
+    "currentRentIfBuying": 3363,
+    "appreciation5yr": 12.7
   },
   {
     "zipcode": "92131",
@@ -9377,7 +9962,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 2869
+    "currentRentIfBuying": 2869,
+    "appreciation5yr": 11.7
   },
   {
     "zipcode": "92139",
@@ -9393,7 +9979,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.4,
-    "currentRentIfBuying": 2960
+    "currentRentIfBuying": 2960,
+    "appreciation5yr": 8.6
   },
   {
     "zipcode": "92154",
@@ -9409,7 +9996,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.5,
-    "currentRentIfBuying": 2389
+    "currentRentIfBuying": 2389,
+    "appreciation5yr": 8
   },
   {
     "zipcode": "92173",
@@ -9425,7 +10013,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.5,
-    "currentRentIfBuying": 2053
+    "currentRentIfBuying": 2053,
+    "appreciation5yr": 9.2
   },
   {
     "zipcode": "92069",
@@ -9441,7 +10030,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 2706
+    "currentRentIfBuying": 2706,
+    "appreciation5yr": 8.6
   },
   {
     "zipcode": "92078",
@@ -9457,7 +10047,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.8,
-    "currentRentIfBuying": 2700
+    "currentRentIfBuying": 2700,
+    "appreciation5yr": 9.2
   },
   {
     "zipcode": "92070",
@@ -9473,7 +10064,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -0.6,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 6.6
   },
   {
     "zipcode": "92071",
@@ -9489,7 +10081,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.7,
-    "currentRentIfBuying": 2262
+    "currentRentIfBuying": 2262,
+    "appreciation5yr": 8.2
   },
   {
     "zipcode": "92075",
@@ -9505,7 +10098,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": 0.9,
-    "currentRentIfBuying": 3934
+    "currentRentIfBuying": 3934,
+    "appreciation5yr": 10
   },
   {
     "zipcode": "91977",
@@ -9521,7 +10115,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -3.2,
-    "currentRentIfBuying": 1992
+    "currentRentIfBuying": 1992,
+    "appreciation5yr": 7.8
   },
   {
     "zipcode": "91978",
@@ -9537,7 +10132,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.8,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 7.9
   },
   {
     "zipcode": "92082",
@@ -9553,7 +10149,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.4,
-    "currentRentIfBuying": 3483
+    "currentRentIfBuying": 3483,
+    "appreciation5yr": 7.6
   },
   {
     "zipcode": "92081",
@@ -9569,7 +10166,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.6,
-    "currentRentIfBuying": 2239
+    "currentRentIfBuying": 2239,
+    "appreciation5yr": 9.4
   },
   {
     "zipcode": "92083",
@@ -9585,7 +10183,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.2,
-    "currentRentIfBuying": 2270
+    "currentRentIfBuying": 2270,
+    "appreciation5yr": 8.9
   },
   {
     "zipcode": "92084",
@@ -9601,7 +10200,8 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -1.5,
-    "currentRentIfBuying": 2273
+    "currentRentIfBuying": 2273,
+    "appreciation5yr": 9
   },
   {
     "zipcode": "92086",
@@ -9617,6 +10217,7 @@ window.CA_NEIGHBORHOODS = [
     "maintenanceRate": 1,
     "managementFee": 0,
     "appreciationRate": -2.6,
-    "currentRentIfBuying": 0
+    "currentRentIfBuying": 0,
+    "appreciation5yr": 4.4
   }
 ];
