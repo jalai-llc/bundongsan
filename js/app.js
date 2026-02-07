@@ -6,11 +6,9 @@ document.addEventListener('alpine:init', function() {
     return {
       // ── Financial Inputs (persisted) ──────────────────────────
       grossAnnualIncome: Alpine.$persist(0).as('fin_grossAnnualIncome'),
-      monthlyDebts: Alpine.$persist(0).as('fin_monthlyDebts'),
+      monthlyExpenses: Alpine.$persist(0).as('fin_monthlyExpenses'),
       currentRent: Alpine.$persist(0).as('fin_currentRent'),
-      otherExpenses: Alpine.$persist(0).as('fin_otherExpenses'),
       savingsAvailable: Alpine.$persist(0).as('fin_savings'),
-      monthlySavings: Alpine.$persist(0).as('fin_monthlySavings'),
       effectiveTaxRate: Alpine.$persist(35).as('fin_effectiveTaxRate'),
 
       // Comfort level (conservative, standard, aggressive)
@@ -63,11 +61,11 @@ document.addEventListener('alpine:init', function() {
 
         // DTI constraints using comfort level settings
         var maxHousingFront = grossMonthly * comfort.frontEndDTI;
-        var maxHousingBack = grossMonthly * comfort.backEndDTI - this.monthlyDebts;
+        var maxHousingBack = grossMonthly * comfort.backEndDTI - this.monthlyExpenses;
 
         // Budget constraint: income - debts - other expenses - buffer
         var buffer = grossMonthly * comfort.bufferRate;
-        var maxHousingBudget = grossMonthly - this.monthlyDebts - this.otherExpenses - buffer;
+        var maxHousingBudget = grossMonthly - this.monthlyExpenses - buffer;
 
         // Take the most restrictive of all three
         var maxMonthlyHousing = Math.min(maxHousingFront, maxHousingBack, maxHousingBudget);
@@ -105,8 +103,8 @@ document.addEventListener('alpine:init', function() {
         var comfort = this.comfortConfig;
 
         var frontEnd = grossMonthly * comfort.frontEndDTI;
-        var backEnd = grossMonthly * comfort.backEndDTI - this.monthlyDebts;
-        var budgetBased = grossMonthly - this.monthlyDebts - this.otherExpenses - (grossMonthly * comfort.bufferRate);
+        var backEnd = grossMonthly * comfort.backEndDTI - this.monthlyExpenses;
+        var budgetBased = grossMonthly - this.monthlyExpenses - (grossMonthly * comfort.bufferRate);
 
         return Math.max(0, Math.min(frontEnd, backEnd, budgetBased));
       },
@@ -146,7 +144,7 @@ document.addEventListener('alpine:init', function() {
         if (netMonthly <= 0) return 0;
         var piti = this.pitiAtMaxPrice;
         var housing = piti ? piti.total : 0;
-        return netMonthly - this.monthlyDebts - this.otherExpenses - housing;
+        return netMonthly - this.monthlyExpenses - housing;
       },
 
       // Cash needed for down payment + closing at max price
@@ -157,20 +155,139 @@ document.addEventListener('alpine:init', function() {
         return price * (dpPct + ccPct);
       },
 
-      // Months until user can afford max price
-      get monthsToAfford() {
-        if (this.monthlySavings <= 0) return Infinity;
-        var needed = this.cashNeededAtMaxPrice;
-        var have = this.savingsAvailable;
-        if (have >= needed) return 0;
-        return Math.ceil((needed - have) / this.monthlySavings);
+      // Breakdown of upfront cash at max price
+      get downPaymentAtMaxPrice() {
+        return this.maxAffordablePrice * (this.downPaymentPercent / 100);
       },
 
-      // Savings progress percentage
-      get savingsProgress() {
-        var needed = this.cashNeededAtMaxPrice;
-        if (needed <= 0) return 100;
-        return Math.min(100, (this.savingsAvailable / needed) * 100);
+      get closingCostsAtMaxPrice() {
+        return this.maxAffordablePrice * (this.closingCostRate / 100);
+      },
+
+      get loanAtMaxPrice() {
+        return this.maxAffordablePrice * (1 - this.downPaymentPercent / 100);
+      },
+
+      // Max affordable price at each comfort level (for comparison display)
+      get maxPriceByComfort() {
+        if (!this.hasFinancials) return null;
+        var self = this;
+        var levels = window.COMFORT_LEVELS;
+        var result = {};
+        for (var key in levels) {
+          var maxByIncome = self._calcMaxPriceByIncomeForComfort(levels[key]);
+          result[key] = Math.min(maxByIncome, self.maxPriceByCash);
+        }
+        return result;
+      },
+
+      // ── Down Payment Optimizer ────────────────────────────────
+      // Helper: calculate max price by income for a given comfort config
+      _calcMaxPriceByIncomeForComfort: function(comfort) {
+        var grossMonthly = this.grossMonthlyIncome;
+        if (grossMonthly <= 0) return 0;
+
+        var dpPct = this.downPaymentPercent / 100;
+        var rate = this.interestRate / 100;
+        var taxRate = this.propertyTaxRate / 100;
+        var insRate = D.homeownersInsuranceRate;
+
+        var maxHousingFront = grossMonthly * comfort.frontEndDTI;
+        var maxHousingBack = grossMonthly * comfort.backEndDTI - this.monthlyExpenses;
+        var buffer = grossMonthly * comfort.bufferRate;
+        var maxHousingBudget = grossMonthly - this.monthlyExpenses - buffer;
+        var maxMonthlyHousing = Math.min(maxHousingFront, maxHousingBack, maxHousingBudget);
+        if (maxMonthlyHousing <= 0) return 0;
+
+        var lo = 0, hi = 10000000;
+        for (var i = 0; i < 50; i++) {
+          var mid = (lo + hi) / 2;
+          var loan = mid * (1 - dpPct);
+          if (loan <= 0) { lo = mid; continue; }
+          var piti = F.monthlyPITI(loan, rate, this.loanTermYears, mid * taxRate, mid * insRate);
+          var ltv = mid > 0 ? loan / mid : 0;
+          var pmi = ltv > 0.8 ? F.monthlyPMI(loan, D.pmiRate) : 0;
+          if (piti.total + pmi < maxMonthlyHousing) lo = mid;
+          else hi = mid;
+        }
+        return Math.floor(lo);
+      },
+
+      // Helper: calculate max price by income at a specific DP% (uses current comfort)
+      _calcMaxPriceByIncomeAtDP: function(dpPercent) {
+        var grossMonthly = this.grossMonthlyIncome;
+        if (grossMonthly <= 0) return 0;
+
+        var dpPct = dpPercent / 100;
+        var rate = this.interestRate / 100;
+        var taxRate = this.propertyTaxRate / 100;
+        var insRate = D.homeownersInsuranceRate;
+        var comfort = this.comfortConfig;
+
+        var maxHousingFront = grossMonthly * comfort.frontEndDTI;
+        var maxHousingBack = grossMonthly * comfort.backEndDTI - this.monthlyExpenses;
+        var buffer = grossMonthly * comfort.bufferRate;
+        var maxHousingBudget = grossMonthly - this.monthlyExpenses - buffer;
+        var maxMonthlyHousing = Math.min(maxHousingFront, maxHousingBack, maxHousingBudget);
+        if (maxMonthlyHousing <= 0) return 0;
+
+        var lo = 0, hi = 10000000;
+        for (var i = 0; i < 50; i++) {
+          var mid = (lo + hi) / 2;
+          var loan = mid * (1 - dpPct);
+          if (loan <= 0) { lo = mid; continue; }
+          var piti = F.monthlyPITI(loan, rate, this.loanTermYears, mid * taxRate, mid * insRate);
+          var ltv = mid > 0 ? loan / mid : 0;
+          var pmi = ltv > 0.8 ? F.monthlyPMI(loan, D.pmiRate) : 0;
+          if (piti.total + pmi < maxMonthlyHousing) lo = mid;
+          else hi = mid;
+        }
+        return Math.floor(lo);
+      },
+
+      // Curve data for the down payment optimizer chart
+      get dpCurveData() {
+        if (!this.hasFinancials) return null;
+
+        var points = [];
+        var currentDP = this.downPaymentPercent;
+        var ccPct = this.closingCostRate / 100;
+
+        // Generate points from 3% to 100%
+        var MAX_PRICE = 10000000; // $10M cap
+        for (var dp = 3; dp <= 100; dp++) {
+          var dpPct = dp / 100;
+          var maxByCash = Math.min(MAX_PRICE, Math.floor(this.savingsAvailable / (dpPct + ccPct)));
+          var maxByIncome = Math.min(MAX_PRICE, this._calcMaxPriceByIncomeAtDP(dp));
+          var maxAffordable = Math.min(maxByCash, maxByIncome);
+
+          points.push({
+            dp: dp,
+            maxByCash: maxByCash,
+            maxByIncome: maxByIncome,
+            maxAffordable: maxAffordable,
+            limitedBy: maxByCash <= maxByIncome ? 'cash' : 'income',
+          });
+        }
+
+        // Find optimal (max of maxAffordable)
+        var optimal = points.reduce(function(best, p) {
+          return p.maxAffordable > best.maxAffordable ? p : best;
+        }, points[0]);
+
+        // Find current position
+        var current = points.find(function(p) { return p.dp === currentDP; }) || points[0];
+
+        // Calculate potential gain
+        var potentialGain = optimal.maxAffordable - current.maxAffordable;
+
+        return {
+          points: points,
+          optimal: optimal,
+          current: current,
+          potentialGain: potentialGain,
+          isAtOptimal: Math.abs(currentDP - optimal.dp) <= 1,
+        };
       },
 
       // ── Neighborhood State (persisted) ────────────────────────
@@ -186,6 +303,14 @@ document.addEventListener('alpine:init', function() {
       filterDistanceMiles: 50,
       mode: Alpine.$persist('investment').as('hood_mode'),
       showAddForm: false,
+
+      // ── Map State ───────────────────────────────────────────────
+      showMapView: Alpine.$persist(false).as('hood_showMapView'),
+      mapColorMetric: Alpine.$persist('auto').as('hood_mapColorMetric'),
+      mapInstance: null,
+      geoJsonLayer: null,
+      zipBoundaries: null,
+      mapLoading: false,
 
       form: {
         zipcode: '',
@@ -229,6 +354,43 @@ document.addEventListener('alpine:init', function() {
           if (newZip && newZip.length === 5 && self.getZipCoords(newZip) && !self.seededLoaded) {
             self.loadSeededNeighborhoods();
           }
+          // Recenter map if showing
+          if (self.showMapView && self.mapInstance) {
+            self.recenterMap();
+            self.updateMapStyles();
+          }
+        });
+
+        // Watch for distance changes to recenter map
+        this.$watch('filterDistanceMiles', function() {
+          if (self.showMapView && self.mapInstance) {
+            self.recenterMap();
+            self.updateMapStyles();
+          }
+        });
+
+        // Watch for mode changes to update map tooltips
+        this.$watch('mode', function() {
+          if (self.showMapView && self.mapInstance) {
+            self.updateMapStyles();
+          }
+        });
+
+        // Watch for financial changes to update affordability colors
+        this.$watch('grossAnnualIncome', function() {
+          if (self.showMapView && self.mapInstance) {
+            self.updateMapStyles();
+          }
+        });
+        this.$watch('savingsAvailable', function() {
+          if (self.showMapView && self.mapInstance) {
+            self.updateMapStyles();
+          }
+        });
+        this.$watch('downPaymentPercent', function() {
+          if (self.showMapView && self.mapInstance) {
+            self.updateMapStyles();
+          }
         });
       },
 
@@ -261,11 +423,9 @@ document.addEventListener('alpine:init', function() {
       resetAll: function() {
         // Reset financial inputs
         this.grossAnnualIncome = 0;
-        this.monthlyDebts = 0;
+        this.monthlyExpenses = 0;
         this.currentRent = 0;
-        this.otherExpenses = 0;
         this.savingsAvailable = 0;
-        this.monthlySavings = 0;
         this.effectiveTaxRate = 35;
         this.comfortLevel = 'standard';
         // Reset loan preferences
@@ -468,7 +628,7 @@ document.addEventListener('alpine:init', function() {
         var ltv = n.medianPrice > 0 ? loan / n.medianPrice : 0;
         var pmi = ltv > 0.8 ? F.monthlyPMI(loan, D.pmiRate) : 0;
         var totalHousing = piti.total + pmi + (n.monthlyHOA || 0);
-        var backEndDTI = F.backEndDTI(totalHousing, this.monthlyDebts, grossMonthly);
+        var backEndDTI = F.backEndDTI(totalHousing, this.monthlyExpenses, grossMonthly);
         var canAffordDTI = backEndDTI <= D.backEndDTIMax;
 
         var isJumbo = loan > this.conformingLimit;
@@ -679,6 +839,307 @@ document.addEventListener('alpine:init', function() {
       // Get coordinates for a zipcode
       getZipCoords: function(zipcode) {
         return window.ZIPCODE_COORDS ? window.ZIPCODE_COORDS[zipcode] : null;
+      },
+
+      // ── Map Methods ──────────────────────────────────────────
+      initMap: function() {
+        if (this.mapInstance) {
+          // Map already initialized, just update styles
+          this.updateMapStyles();
+          return;
+        }
+        if (!window.L) {
+          console.error('Leaflet not loaded');
+          return;
+        }
+
+        var mapEl = document.getElementById('neighborhood-map');
+        if (!mapEl) return;
+
+        // Get center from user's zipcode or default to LA
+        var center = this.getZipCoords(this.filterFromZipcode);
+        if (!center) center = { lat: 34.05, lng: -118.25 };
+
+        // Calculate zoom based on distance filter
+        var zoom = this.filterDistanceMiles <= 25 ? 11 : (this.filterDistanceMiles <= 50 ? 10 : 9);
+
+        this.mapInstance = L.map('neighborhood-map').setView([center.lat, center.lng], zoom);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
+        }).addTo(this.mapInstance);
+
+        // Load boundaries if not loaded
+        if (!this.zipBoundaries) {
+          this.loadBoundaries();
+        } else {
+          this.renderBoundaries();
+        }
+      },
+
+      loadBoundaries: function() {
+        var self = this;
+        this.mapLoading = true;
+
+        // Fetch CA ZIP code GeoJSON from jsDelivr CDN
+        var url = 'https://cdn.jsdelivr.net/gh/OpenDataDE/State-zip-code-GeoJSON@master/ca_california_zip_codes_geo.min.json';
+
+        fetch(url)
+          .then(function(response) {
+            if (!response.ok) throw new Error('Failed to load boundaries');
+            return response.json();
+          })
+          .then(function(geojson) {
+            // Filter to only our neighborhoods
+            var ourZips = {};
+            if (window.CA_NEIGHBORHOODS) {
+              window.CA_NEIGHBORHOODS.forEach(function(n) {
+                if (n.zipcode) ourZips[n.zipcode] = true;
+              });
+            }
+            // Also include any custom neighborhoods
+            self.neighborhoods.forEach(function(n) {
+              if (n.zipcode) ourZips[n.zipcode] = true;
+            });
+
+            // Filter features to only our ZIPs
+            var filtered = {
+              type: 'FeatureCollection',
+              features: geojson.features.filter(function(f) {
+                var zip = f.properties.ZCTA5CE10 || f.properties.zip_code || f.properties.GEOID10;
+                return ourZips[zip];
+              })
+            };
+
+            self.zipBoundaries = filtered;
+            self.renderBoundaries();
+            self.mapLoading = false;
+          })
+          .catch(function(err) {
+            console.error('Error loading boundaries:', err);
+            self.mapLoading = false;
+            // Fallback: show circles instead
+            self.renderCircleFallback();
+          });
+      },
+
+      renderBoundaries: function() {
+        var self = this;
+        if (!this.mapInstance || !this.zipBoundaries) return;
+
+        // Remove existing layer
+        if (this.geoJsonLayer) {
+          this.mapInstance.removeLayer(this.geoJsonLayer);
+        }
+
+        // Create lookup of ranked neighborhoods by zipcode
+        var zipLookup = {};
+        this.rankedNeighborhoods.forEach(function(n) {
+          if (n.zipcode) zipLookup[n.zipcode] = n;
+        });
+
+        this.geoJsonLayer = L.geoJSON(this.zipBoundaries, {
+          style: function(feature) {
+            var zip = feature.properties.ZCTA5CE10 || feature.properties.zip_code || feature.properties.GEOID10;
+            var n = zipLookup[zip];
+            var color = self.getZipColor(n);
+            var isInRange = !!n;
+
+            return {
+              fillColor: color,
+              fillOpacity: isInRange ? 0.6 : 0.1,
+              color: isInRange ? '#ffffff' : '#94a3b8',
+              weight: isInRange ? 1.5 : 0.5,
+              opacity: 1
+            };
+          },
+          onEachFeature: function(feature, layer) {
+            var zip = feature.properties.ZCTA5CE10 || feature.properties.zip_code || feature.properties.GEOID10;
+            var n = zipLookup[zip];
+
+            if (n) {
+              // Bind tooltip
+              layer.bindTooltip(self.buildTooltipHtml(n), {
+                className: 'map-tooltip',
+                direction: 'top',
+                sticky: true
+              });
+
+              // Hover effects
+              layer.on('mouseover', function() {
+                layer.setStyle({
+                  weight: 3,
+                  color: '#3b82f6',
+                  fillOpacity: 0.8
+                });
+                layer.bringToFront();
+              });
+
+              layer.on('mouseout', function() {
+                self.geoJsonLayer.resetStyle(layer);
+              });
+
+              // Click to zoom
+              layer.on('click', function() {
+                self.mapInstance.fitBounds(layer.getBounds(), { padding: [50, 50] });
+              });
+            }
+          }
+        }).addTo(this.mapInstance);
+      },
+
+      renderCircleFallback: function() {
+        // Fallback when GeoJSON fails to load - use circle markers
+        var self = this;
+        if (!this.mapInstance) return;
+
+        this.rankedNeighborhoods.forEach(function(n) {
+          var coords = self.getZipCoords(n.zipcode);
+          if (!coords) return;
+
+          var color = self.getZipColor(n);
+          var marker = L.circleMarker([coords.lat, coords.lng], {
+            radius: 10,
+            fillColor: color,
+            fillOpacity: 0.7,
+            color: '#ffffff',
+            weight: 2
+          });
+
+          marker.bindTooltip(self.buildTooltipHtml(n), {
+            className: 'map-tooltip',
+            direction: 'top'
+          });
+
+          marker.on('mouseover', function() { this.setRadius(14); });
+          marker.on('mouseout', function() { this.setRadius(10); });
+
+          marker.addTo(self.mapInstance);
+        });
+      },
+
+      updateMapStyles: function() {
+        var self = this;
+        if (!this.geoJsonLayer || !this.mapInstance) return;
+
+        // Rebuild the lookup with current data
+        var zipLookup = {};
+        this.rankedNeighborhoods.forEach(function(n) {
+          if (n.zipcode) zipLookup[n.zipcode] = n;
+        });
+
+        // Update each layer's style
+        this.geoJsonLayer.eachLayer(function(layer) {
+          var feature = layer.feature;
+          var zip = feature.properties.ZCTA5CE10 || feature.properties.zip_code || feature.properties.GEOID10;
+          var n = zipLookup[zip];
+          var color = self.getZipColor(n);
+          var isInRange = !!n;
+
+          layer.setStyle({
+            fillColor: color,
+            fillOpacity: isInRange ? 0.6 : 0.1,
+            color: isInRange ? '#ffffff' : '#94a3b8',
+            weight: isInRange ? 1.5 : 0.5
+          });
+
+          // Update tooltip content
+          if (n) {
+            layer.setTooltipContent(self.buildTooltipHtml(n));
+          }
+        });
+      },
+
+      getZipColor: function(n) {
+        if (!n) return '#94a3b8'; // gray for out-of-range
+
+        var metric = this.mapColorMetric;
+        if (metric === 'auto') {
+          metric = this.mode === 'investment' ? 'totalROI' : 'affordability';
+        }
+
+        // Affordability - binary color
+        if (metric === 'affordability') {
+          if (!this.hasFinancials) return '#94a3b8'; // gray
+          return n.affordability.affordable ? '#22c55e' : '#ef4444'; // green/red
+        }
+
+        // Numeric metrics - HSL scale (red -> yellow -> green)
+        var value, min, max;
+        if (metric === 'totalROI') {
+          value = n.metrics.totalAnnualReturn;
+          min = -0.05; max = 0.15;
+        } else if (metric === 'capRate') {
+          value = n.metrics.capRate;
+          min = 0; max = 0.08;
+        } else if (metric === 'cashFlow') {
+          value = n.metrics.monthlyCashFlow;
+          min = -500; max = 500;
+        } else if (metric === 'netGain5') {
+          var proj = n.metrics.totalValueProjection[4];
+          value = proj ? proj.netGain : 0;
+          min = -50000; max = 200000;
+        } else {
+          // Default to total ROI
+          value = n.metrics.totalAnnualReturn;
+          min = -0.05; max = 0.15;
+        }
+
+        // Normalize to 0-1 and convert to HSL
+        var pct = Math.max(0, Math.min(1, (value - min) / (max - min)));
+        var hue = pct * 120; // red (0) -> green (120)
+        return 'hsl(' + hue + ', 70%, 45%)';
+      },
+
+      buildTooltipHtml: function(n) {
+        var html = '<div class="map-tooltip-header">' + n.zipcode + ' - ' + n.city + '</div>';
+        html += '<div class="map-tooltip-row"><span class="map-tooltip-label">Price</span><span class="map-tooltip-value">' + this.fmt(n.medianPrice) + '</span></div>';
+        html += '<div class="map-tooltip-divider"></div>';
+
+        if (this.mode === 'investment') {
+          html += '<div class="map-tooltip-row"><span class="map-tooltip-label">Cap Rate</span><span class="map-tooltip-value">' + this.pct(n.metrics.capRate) + '</span></div>';
+          html += '<div class="map-tooltip-row"><span class="map-tooltip-label">Cash Flow</span><span class="map-tooltip-value ' + (n.metrics.monthlyCashFlow >= 0 ? 'map-tooltip-good' : 'map-tooltip-bad') + '">' + this.fmt(n.metrics.monthlyCashFlow) + '/mo</span></div>';
+          html += '<div class="map-tooltip-row"><span class="map-tooltip-label">Total ROI</span><span class="map-tooltip-value ' + (n.metrics.totalAnnualReturn >= 0 ? 'map-tooltip-good' : 'map-tooltip-bad') + '">' + this.pct(n.metrics.totalAnnualReturn) + '/yr</span></div>';
+        } else {
+          html += '<div class="map-tooltip-row"><span class="map-tooltip-label">Monthly Cost</span><span class="map-tooltip-value">' + this.fmt(n.metrics.monthlyCostOfOwnership) + '</span></div>';
+          if (this.currentRent > 0) {
+            var diff = n.metrics.rentVsBuyDiff;
+            html += '<div class="map-tooltip-row"><span class="map-tooltip-label">vs. Your Rent</span><span class="map-tooltip-value ' + (diff <= 0 ? 'map-tooltip-good' : 'map-tooltip-bad') + '">' + (diff >= 0 ? '+' : '') + this.fmt(diff) + '/mo</span></div>';
+          }
+          html += '<div class="map-tooltip-row"><span class="map-tooltip-label">Cash Needed</span><span class="map-tooltip-value">' + this.fmt(n.metrics.cashInvested) + '</span></div>';
+        }
+
+        // Projections
+        html += '<div class="map-tooltip-divider"></div>';
+        var p5 = n.metrics.totalValueProjection[4];
+        var p10 = n.metrics.totalValueProjection[9];
+        if (p5) {
+          html += '<div class="map-tooltip-row"><span class="map-tooltip-label">5yr Gain</span><span class="map-tooltip-value ' + (p5.netGain >= 0 ? 'map-tooltip-good' : 'map-tooltip-bad') + '">' + (p5.netGain >= 0 ? '+' : '') + this.fmt(p5.netGain) + '</span></div>';
+        }
+        if (p10) {
+          html += '<div class="map-tooltip-row"><span class="map-tooltip-label">10yr Gain</span><span class="map-tooltip-value ' + (p10.netGain >= 0 ? 'map-tooltip-good' : 'map-tooltip-bad') + '">' + (p10.netGain >= 0 ? '+' : '') + this.fmt(p10.netGain) + '</span></div>';
+        }
+
+        // Affordability
+        if (this.hasFinancials) {
+          html += '<div class="map-tooltip-divider"></div>';
+          if (n.affordability.affordable) {
+            html += '<div class="map-tooltip-good" style="text-align:center;font-weight:600;">Affordable</div>';
+          } else {
+            html += '<div class="map-tooltip-bad" style="text-align:center;">Need ' + this.fmt(n.affordability.cashShortfall) + ' more</div>';
+          }
+        }
+
+        return html;
+      },
+
+      recenterMap: function() {
+        if (!this.mapInstance) return;
+        var coords = this.getZipCoords(this.filterFromZipcode);
+        if (coords) {
+          var zoom = this.filterDistanceMiles <= 25 ? 11 : (this.filterDistanceMiles <= 50 ? 10 : 9);
+          this.mapInstance.setView([coords.lat, coords.lng], zoom);
+        }
       },
 
       // ── Formatting Helpers ────────────────────────────────────
