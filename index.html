@@ -77,14 +77,14 @@
         <p class="text-xs text-slate-400">Your Path to Homeownership & Investment</p>
       </div>
 
-      <!-- Right: Subtle Attribution (hidden on mobile) -->
-      <div class="hidden sm:flex items-center gap-3 text-xs">
+      <!-- Right: Attribution + CTA -->
+      <div class="flex items-center gap-2 sm:gap-3 text-xs">
         <div class="text-right">
-          <p class="text-slate-400">Powered by</p>
-          <p class="text-white font-medium">Andrew Luong, DRE #02040575</p>
+          <p class="text-slate-400 hidden sm:block">Powered by</p>
+          <p class="text-white font-medium text-[10px] sm:text-xs">Andrew Luong<span class="hidden sm:inline">, DRE #02040575</span></p>
         </div>
         <a href="tel:6264667111"
-           class="bg-blue-600 hover:bg-blue-700 transition-colors px-3 py-1.5 rounded-lg font-medium whitespace-nowrap">
+           class="bg-blue-600 hover:bg-blue-700 transition-colors px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg font-medium whitespace-nowrap">
           Free Consult
         </a>
       </div>
@@ -106,7 +106,7 @@
       <span class="text-slate-300 hidden sm:inline">→</span>
       <div class="flex items-center gap-2">
         <span class="flex items-center justify-center w-5 h-5 rounded-full bg-slate-900 text-white text-xs font-medium">3</span>
-        <span>Explore neighborhoods you can afford</span>
+        <span>Explore neighborhoods based on your buying power</span>
       </div>
     </div>
 
@@ -249,7 +249,7 @@
 
     <!-- Buying Power Placeholder (when no financials entered) -->
     <section x-show="!hasFinancials" class="text-center py-16 bg-slate-50 rounded-lg border border-dashed border-slate-300">
-      <div class="text-slate-300 text-5xl mb-4">💰</div>
+      <div class="text-slate-300 mb-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mx-auto"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"/></svg></div>
       <p class="text-lg text-slate-600 mb-2">Your Buying Power</p>
       <p class="text-sm text-slate-400">Enter your income and savings to see how much home you can afford</p>
     </section>
@@ -430,17 +430,17 @@
 
     <!-- Find Neighborhoods -->
     <section>
-      <h2 class="text-xl font-bold text-slate-800 mb-1">Find Neighborhoods</h2>
-      <p class="text-sm text-slate-500 mb-4">Enter your zipcode to discover investment opportunities nearby</p>
+      <h2 class="text-xl font-bold text-slate-800 mb-1">Explore Neighborhoods</h2>
+      <p class="text-sm text-slate-500 mb-4">Search by zipcode to explore homes and investment opportunities</p>
 
       <!-- Zipcode Entry - Always Visible -->
       <div class="bg-white rounded-lg border p-4 mb-4">
         <div class="flex flex-wrap items-center gap-4">
           <div class="flex items-center gap-2">
-            <label class="text-sm font-medium text-slate-600">Your Zipcode</label>
+            <label class="text-sm font-medium text-slate-600">Search Area</label>
             <input type="text" x-model="filterFromZipcode" placeholder="e.g. 92618"
               maxlength="5" inputmode="numeric"
-              class="w-24 rounded-lg border border-slate-300 px-3 py-2 text-sm font-mono focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none"
+              class="w-32 rounded-lg border border-slate-300 px-3 py-2.5 text-base font-mono focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none"
               :class="filterFromZipcode && filterFromZipcode.length === 5 && !getZipCoords(filterFromZipcode) ? 'border-red-300 bg-red-50' : ''">
             <span x-show="filterFromZipcode && filterFromZipcode.length === 5 && !getZipCoords(filterFromZipcode)"
               class="text-xs text-red-500">Not found in SoCal</span>
@@ -473,10 +473,10 @@
       </div>
 
       <!-- Prompt to enter zipcode -->
-      <div x-show="!hasValidZipcode" class="text-center py-16 bg-slate-50 rounded-lg border border-dashed border-slate-300">
-        <div class="text-slate-300 text-5xl mb-4">📍</div>
-        <p class="text-lg text-slate-600 mb-2">Where are you looking to invest?</p>
-        <p class="text-sm text-slate-400">Enter your zipcode above to find nearby neighborhoods</p>
+      <div x-show="!filterFromZipcode" class="text-center py-16 bg-slate-50 rounded-lg border border-dashed border-slate-300">
+        <div class="text-slate-300 mb-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mx-auto"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></div>
+        <p class="text-lg text-slate-600 mb-2">Where are you looking to invest or buy?</p>
+        <p class="text-sm text-slate-400">Enter a zipcode above to discover nearby neighborhoods</p>
         <p class="text-xs text-slate-300 mt-4">Currently covers 600+ Southern California zipcodes</p>
       </div>
 
@@ -586,6 +586,10 @@
               <option value="price">Price (Low→High)</option>
               <option value="priceDesc">Price (High→Low)</option>
               <option value="city">City A-Z</option>
+              <option disabled>── Lifestyle ──</option>
+              <option value="schoolScore">School Quality</option>
+              <option value="safetyScore">Safety</option>
+              <option value="walkScore">Walkability</option>
             </select>
             <button @click="sortDirection = sortDirection === 'desc' ? 'asc' : 'desc'"
               x-show="!['city', 'price', 'priceDesc'].includes(sortBy)"
@@ -865,14 +869,14 @@
               <th class="py-3 px-3 cursor-pointer hover:text-slate-700" @click="toggleSort('totalROI')">
                 Total ROI <span x-show="sortBy === 'totalROI'" x-text="sortDirection === 'desc' ? '↓' : '↑'" class="text-blue-600"></span>
               </th>
+              <th class="py-3 px-3">Lifestyle</th>
               <th class="py-3 px-3" x-show="hasFinancials">Afford?</th>
               <th class="py-3 px-3"></th>
             </tr>
           </thead>
           <tbody>
             <template x-for="(n, index) in rankedNeighborhoods" :key="n.id">
-              <tr class="border-b hover:bg-slate-50"
-                :class="hasFinancials && n.affordability.affordable === false ? 'opacity-50 bg-slate-50' : ''">
+              <tr class="border-b hover:bg-slate-50">
                 <td class="py-3 px-3 text-slate-400 text-xs font-medium" x-text="index + 1"></td>
                 <td class="py-3 px-3">
                   <div class="flex items-center gap-2">
@@ -899,6 +903,22 @@
                 <td class="py-3 px-3 font-bold"
                   :class="n.metrics.totalAnnualReturn >= 0.08 ? 'text-emerald-600' : n.metrics.totalAnnualReturn >= 0 ? 'text-amber-600' : 'text-red-600'"
                   x-text="pct(n.metrics.totalAnnualReturn)"></td>
+                <td class="py-3 px-3">
+                  <div class="flex gap-1.5 text-[10px] font-semibold">
+                    <span class="px-1.5 py-0.5 rounded"
+                      :class="n.schoolScore >= 8 ? 'bg-green-100 text-green-700' : n.schoolScore >= 5 ? 'bg-amber-100 text-amber-700' : 'bg-red-100 text-red-700'"
+                      :title="'Schools: ' + (n.schoolScore || '–') + '/10'"
+                      x-text="'S ' + (n.schoolScore || '–')"></span>
+                    <span class="px-1.5 py-0.5 rounded"
+                      :class="n.safetyScore >= 8 ? 'bg-green-100 text-green-700' : n.safetyScore >= 5 ? 'bg-amber-100 text-amber-700' : 'bg-red-100 text-red-700'"
+                      :title="'Safety: ' + (n.safetyScore || '–') + '/10'"
+                      x-text="'C ' + (n.safetyScore || '–')"></span>
+                    <span class="px-1.5 py-0.5 rounded"
+                      :class="n.walkScore >= 8 ? 'bg-green-100 text-green-700' : n.walkScore >= 5 ? 'bg-amber-100 text-amber-700' : 'bg-red-100 text-red-700'"
+                      :title="'Walkability: ' + (n.walkScore || '–') + '/10'"
+                      x-text="'W ' + (n.walkScore || '–')"></span>
+                  </div>
+                </td>
                 <td class="py-3 px-3" x-show="hasFinancials">
                   <span x-show="n.affordability.affordable === true"
                     class="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs font-medium">Yes</span>
@@ -918,8 +938,7 @@
       <!-- Investment Mode: Mobile Cards -->
       <div x-show="!showMapView && mode === 'investment' && rankedNeighborhoods.length > 0" class="md:hidden grid grid-cols-1 gap-4">
         <template x-for="(n, index) in rankedNeighborhoods" :key="n.id">
-          <div class="bg-white rounded-lg border overflow-hidden"
-            :class="hasFinancials && n.affordability.affordable === false ? 'opacity-60' : ''">
+          <div class="bg-white rounded-lg border overflow-hidden">
 
             <!-- Header: Rank, name, affordability, remove -->
             <div class="p-4 pb-3">
@@ -994,6 +1013,28 @@
               </div>
             </div>
 
+            <!-- Lifestyle Scores -->
+            <div class="px-4 pb-4 flex gap-3 border-t border-slate-100 pt-3">
+              <div class="flex-1 text-center">
+                <p class="text-[10px] text-slate-400 mb-0.5">Schools</p>
+                <p class="text-sm font-bold"
+                  :class="n.schoolScore >= 8 ? 'text-green-600' : n.schoolScore >= 5 ? 'text-amber-600' : 'text-red-600'"
+                  x-text="(n.schoolScore || '–') + '/10'"></p>
+              </div>
+              <div class="flex-1 text-center">
+                <p class="text-[10px] text-slate-400 mb-0.5">Safety</p>
+                <p class="text-sm font-bold"
+                  :class="n.safetyScore >= 8 ? 'text-green-600' : n.safetyScore >= 5 ? 'text-amber-600' : 'text-red-600'"
+                  x-text="(n.safetyScore || '–') + '/10'"></p>
+              </div>
+              <div class="flex-1 text-center">
+                <p class="text-[10px] text-slate-400 mb-0.5">Walkability</p>
+                <p class="text-sm font-bold"
+                  :class="n.walkScore >= 8 ? 'text-green-600' : n.walkScore >= 5 ? 'text-amber-600' : 'text-red-600'"
+                  x-text="(n.walkScore || '–') + '/10'"></p>
+              </div>
+            </div>
+
           </div>
         </template>
       </div>
@@ -1001,8 +1042,7 @@
       <!-- Personal Home Mode: Cards -->
       <div x-show="!showMapView && mode === 'personal' && rankedNeighborhoods.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <template x-for="(n, index) in rankedNeighborhoods" :key="n.id">
-          <div class="bg-white rounded-lg border overflow-hidden"
-            :class="hasFinancials && n.affordability.affordable === false ? 'opacity-60' : ''">
+          <div class="bg-white rounded-lg border overflow-hidden">
 
             <!-- Header: Rank, name, remove -->
             <div class="p-4 pb-3">
@@ -1091,15 +1131,37 @@
               </div>
             </div>
 
+            <!-- Lifestyle Scores -->
+            <div class="px-4 pb-4 flex gap-3 border-t border-slate-100 pt-3">
+              <div class="flex-1 text-center">
+                <p class="text-[10px] text-slate-400 mb-0.5">Schools</p>
+                <p class="text-sm font-bold"
+                  :class="n.schoolScore >= 8 ? 'text-green-600' : n.schoolScore >= 5 ? 'text-amber-600' : 'text-red-600'"
+                  x-text="(n.schoolScore || '–') + '/10'"></p>
+              </div>
+              <div class="flex-1 text-center">
+                <p class="text-[10px] text-slate-400 mb-0.5">Safety</p>
+                <p class="text-sm font-bold"
+                  :class="n.safetyScore >= 8 ? 'text-green-600' : n.safetyScore >= 5 ? 'text-amber-600' : 'text-red-600'"
+                  x-text="(n.safetyScore || '–') + '/10'"></p>
+              </div>
+              <div class="flex-1 text-center">
+                <p class="text-[10px] text-slate-400 mb-0.5">Walkability</p>
+                <p class="text-sm font-bold"
+                  :class="n.walkScore >= 8 ? 'text-green-600' : n.walkScore >= 5 ? 'text-amber-600' : 'text-red-600'"
+                  x-text="(n.walkScore || '–') + '/10'"></p>
+              </div>
+            </div>
+
           </div>
         </template>
       </div>
 
       <!-- Empty State: No results in range -->
       <div x-show="!showMapView && rankedNeighborhoods.length === 0 && seededLoaded" class="text-center py-12 bg-slate-50 rounded-lg border">
-        <div class="text-slate-300 text-4xl mb-3">🔍</div>
+        <div class="text-slate-300 mb-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 mx-auto"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg></div>
         <p class="text-slate-600 mb-1">No neighborhoods found within <span x-text="filterDistanceMiles"></span> miles</p>
-        <p class="text-sm text-slate-400">Try increasing the distance or changing your zipcode</p>
+        <p class="text-sm text-slate-400">Try increasing the distance or searching a different zipcode</p>
       </div>
 
       </div><!-- end hasValidZipcode -->

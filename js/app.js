@@ -771,6 +771,9 @@ document.addEventListener('alpine:init', function() {
           }
           else if (sortBy === 'appreciation') { valA = a.metrics.appreciation5yr || 0; valB = b.metrics.appreciation5yr || 0; }
           else if (sortBy === 'appreciation1yr') { valA = a.appreciationRate || 0; valB = b.appreciationRate || 0; }
+          else if (sortBy === 'schoolScore') { valA = a.schoolScore || 0; valB = b.schoolScore || 0; }
+          else if (sortBy === 'safetyScore') { valA = a.safetyScore || 0; valB = b.safetyScore || 0; }
+          else if (sortBy === 'walkScore') { valA = a.walkScore || 0; valB = b.walkScore || 0; }
           else if (sortBy === 'city') { return (a.city || '').localeCompare(b.city || ''); }
           else if (sortBy === 'priceDesc') { valA = a.medianPrice; valB = b.medianPrice; return valB - valA; }
           else if (sortBy === 'price') { valA = a.medianPrice; valB = b.medianPrice; }
